@@ -1,0 +1,78 @@
+/* src/App.css */
+
+/* -------------------- Global Styles -------------------- */
+/* Body, root container, typography resets, etc. can go here */
+.App {
+  /* Root container for the app */
+}
+
+/* -------------------- Layout Sections -------------------- */
+/* High-level layout containers for each major section */
+.left {
+  /* Left sidebar / navigation */
+}
+
+.main-details {
+  /* Main content area */
+}
+
+.hero-image-section {
+  /* Hero / banner section */
+}
+
+.single-project {
+  /* Single project display section */
+}
+
+.side-gallery {
+  /* Gallery or secondary content area */
+}
+
+/* -------------------- Lists -------------------- */
+/* Generic list styles */
+.selected-works,
+.small-list {
+  /* Styles for all ul lists with these classes */
+}
+
+.selected-works li,
+.small-list li {
+  /* Styles for list items */
+}
+
+/* -------------------- Typography -------------------- */
+/* Headings and paragraphs */
+h1 {
+  
+}
+
+h2 {
+  
+}
+
+h3 {
+  
+}
+
+p {
+  
+}
+
+/* Links */
+a {
+  
+}
+
+/* -------------------- Specific Sections -------------------- */
+.contact-details {
+  /* Email / CV download links etc. */
+}
+
+/* -------------------- Future Component-level CSS -------------------- */
+/*
+  When the project grows:
+  - Move .left styles to components/LeftSidebar.css
+  - Move .main-details styles to components/MainDetails.css
+  - Move .single-project styles to components/SingleProject.css
+  - Import these CSS files into their respective components
+*/
