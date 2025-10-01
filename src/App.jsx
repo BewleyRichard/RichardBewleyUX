@@ -3,19 +3,18 @@ import React from "react";
 import './App.css';
 import LeftSidebar from "./components/LeftSidebar.jsx";
 import MainDetails from "./components/MainDetails.jsx";
+import HeroImageSection from "./components/HeroImageSection.jsx";
 
 function App() {
   return (
     <div className="App">
       <LeftSidebar />
       <MainDetails />
+      <HeroImageSection />
 
       
 
-      <div className="hero-image-section">
-        <h1>X</h1>
-        {/* TODO: Add hero image here. This image will be two columns wide on DT and stack at the top of main details column on mobile*/}
-      </div>
+      
 
       <div className="single-project">
         <h1>X</h1>
