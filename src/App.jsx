@@ -11,7 +11,7 @@ function App() {
         </header>
 
         <a className="hyperlink-large">About me</a>
-        <h2>Selected Works:</h2>
+        <h2 className= "indent-header">Selected Works:</h2>
         <ul className="selected-works">
           <li><a>Autonomous Material Handling UI</a></li>
           <li><a>Implementing Granular Alert Subscriptions</a></li>

@@ -105,6 +105,11 @@ p {
   font-size: clamp(0.75rem, 2vw, 1rem);
 }
 
+/* single indented header on h2 */
+.indent-header{
+  text-indent: 1ch;
+}
+
 /* -------------------- Links -------------------- */
 a.hyperlink-large {
   color: inherit;
