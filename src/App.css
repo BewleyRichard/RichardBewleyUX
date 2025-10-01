@@ -1,7 +1,20 @@
 /* src/App.css */
 
 /* -------------------- Global Styles -------------------- */
+
+
 /* Body, root container, typography resets, etc. can go here */
+
+/* Use for global defaults */
+body {
+  /* margin: 0; */
+  /* font-family: system-ui, sans-serif; */
+  color: black;
+  background: white;
+  font-weight: 400;  
+}
+
+/* Root container for the app use for max width, centering and padding*/
 .App {
   /* Root container for the app */
 }
@@ -30,37 +43,91 @@
 
 /* -------------------- Lists -------------------- */
 /* Generic list styles */
-.selected-works,
-.small-list {
-  /* Styles for all ul lists with these classes */
+
+.small-list li {
+  display: inline;       /* flow like a paragraph */
 }
 
-.selected-works li,
-.small-list li {
-  /* Styles for list items */
+.small-list li::after,
+.selected-works li a::after {
+  content: ", ";
+  font-size: inherit;      
+  font-weight: inherit;    
+}
+
+.small-list li:last-child::after,
+.selected-works li:last-child a::after {
+  content: ".";
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* small-list li: min ~16px, max 24px */
+.small-list li,
+.experience-list{
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.selected-works,
+.small-list,
+.experience-list {
+  list-style: none;   /* removes bullets */
+  padding-left: 0;    /* removes default indent */
 }
 
 /* -------------------- Typography -------------------- */
 /* Headings and paragraphs */
+
+/* H1: min ~32px, max 48px */
 h1 {
-  
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
+/* H2: min ~24px, max 32px */
 h2 {
-  
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: inherit;
 }
 
+/* H3: min ~16px, max 24px */
 h3 {
-  
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: inherit;
 }
 
+/* body text: min ~16px, max 24px */
 p {
-  
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-/* Links */
-a {
-  
+/* caption: min ~12px, max 16px */
+.caption {
+  font-size: clamp(0.75rem, 2vw, 1rem);
+}
+
+/* -------------------- Links -------------------- */
+a.hyperlink-large {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Links: min ~24px, max 32px */
+.contact-details a,
+.selected-works a,
+.hyperlink-large {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none; /* removes style by default */
+}
+
+.contact-details a:hover,
+.selected-works a:hover,
+.hyperlink-large:hover,
+.contact-details a:focus,
+.selected-works a:focus,
+.hyperlink-large:focus {
+  text-decoration: underline; /* underline on hover/focus */
 }
 
 /* -------------------- Specific Sections -------------------- */

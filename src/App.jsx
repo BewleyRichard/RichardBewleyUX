@@ -1,5 +1,6 @@
 // src/App.jsx
 import React from "react";
+import './App.css';
 
 function App() {
   return (
@@ -9,12 +10,12 @@ function App() {
           <h1>Richard Bewley U</h1><h1>Design</h1>
         </header>
 
-        <a>About me</a>
+        <a className="hyperlink-large">About me</a>
         <h2>Selected Works:</h2>
         <ul className="selected-works">
-          <li><a>Autonomous Material Handling UI,</a></li>
-          <li><a>Implementing Granular Alert Subscriptions,</a></li>
-          <li><a>LLM Document Reference System.</a></li>
+          <li><a>Autonomous Material Handling UI</a></li>
+          <li><a>Implementing Granular Alert Subscriptions</a></li>
+          <li><a>LLM Document Reference System</a></li>
         </ul>
 
         <div className="contact-details">
@@ -32,18 +33,18 @@ function App() {
         {/* TODO: add an images here */}
         <p>My name is Richard and I express myself digitally in order to experiment, have fun (this is the most important thing), and to understand this world in order to create new ones.</p>
 
-        <h3>Experience</h3>
-        <ul className="small-list">
+        <h3>Experience:</h3>
+        <ul className="experience-list">
           <li>2025 Ada Mode</li>
           <li>2025 Windscope</li>
           <li>2024 Ada Mode</li>
         </ul>
 
-        <h3>Tools</h3>
+        <h3>Tools:</h3>
         <ul className="small-list">
-          <li>Figma,</li>
-          <li>FigJam,</li>
-          <li>Miro.</li>
+          <li>Figma</li>
+          <li>FigJam</li>
+          <li>Miro</li>
         </ul>
       </div>
 
@@ -62,23 +63,23 @@ function App() {
 
         <h3>Client</h3>
 
-        <h3>Deliverables</h3>
+        <h3>Deliverables:</h3>
 
         <ul className="small-list">
-          <li>Journey Maps,</li>
-          <li>Competitive Analysis,</li>
-          <li>User Flows,</li>
-          <li>A/B Testing,</li>
-          <li>Developer Handoff,</li>
-          <li>Wireframes,</li>
-          <li>Heuristic evaluation,</li>
+          <li>Journey Maps</li>
+          <li>Competitive Analysis</li>
+          <li>User Flows</li>
+          <li>A/B Testing</li>
+          <li>Developer Handoff</li>
+          <li>Wireframes</li>
+          <li>Heuristic evaluation</li>
         </ul>
 
-        <h3>Tools</h3>
+        <h3>Tools:</h3>
         <ul className="small-list">
-          <li>Figma,</li>
-          <li>FigJam,</li>
-          <li>Miro.</li>
+          <li>Figma</li>
+          <li>FigJam</li>
+          <li>Miro</li>
         </ul>
       </div>
 
