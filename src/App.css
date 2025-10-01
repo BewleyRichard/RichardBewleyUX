@@ -15,30 +15,37 @@ body {
 }
 
 /* Root container for the app use for max width, centering and padding*/
-.App {
   /* Root container for the app */
+.App {
+  outline: 3px solid purple;
 }
 
 /* -------------------- Layout Sections -------------------- */
 /* High-level layout containers for each major section */
+
+/* Left sidebar / navigation */
 .left {
-  /* Left sidebar / navigation */
+  background:red;
 }
 
+/* Main content area */
 .main-details {
-  /* Main content area */
+  background:orange;
 }
 
+/* Hero / banner section */
 .hero-image-section {
-  /* Hero / banner section */
+  background:yellow;
 }
 
+/* Single project display section */
 .single-project {
-  /* Single project display section */
+  background:green;
 }
 
+/* Gallery or secondary content area */
 .side-gallery {
-  /* Gallery or secondary content area */
+  background: blue;
 }
 
 /* -------------------- Lists -------------------- */
