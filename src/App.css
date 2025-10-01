@@ -24,7 +24,7 @@ body {
 /* High-level layout containers for each major section */
 
 /* Left sidebar / navigation */
-.left {
+.left-sidebar {
   background:red;
 }
 
