@@ -4,4 +4,9 @@
     background: yellow;
     /* Add layout rules later for grid/flex so it takes up 2/3 width on desktop */
   }
-  
+
+.hero-image-section img {
+    width: 67%; /* 2/3 width TODO:change later on when you change the above container */
+    height: auto;
+    display: block;
+  }
