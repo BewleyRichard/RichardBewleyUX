@@ -1,12 +1,11 @@
-import projects from '../../data/projects'; // Adjust the path as necessary
+// src/components/SingleProject/SingleProject.jsx
+import projects from '../../data/projects';
 import "./SingleProject.css";
 
-
-function SingleProject({ projectId }) {
+function SingleProject({ selectedProjectId }) {
   // Find the project object by its ID
-  const project = projects.find(p => p.id === projectId);
+  const project = projects.find((p) => p.id === selectedProjectId);
 
-  // If no project is selected, show nothing
   if (!project) return null;
 
   return (
@@ -16,9 +15,9 @@ function SingleProject({ projectId }) {
       <p>{project.summary}</p>
 
       <h3>{project.year}</h3>
-
+      
       <h3>{project.client}</h3>
-
+      
       <h3>Deliverables</h3>
       <ul className="small-list">
         {project.deliverables.map((item, index) => (

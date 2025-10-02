@@ -6,7 +6,12 @@ const projects = [
       client: "Ada Mode",
       summary: "A system to optimise material handling workflows with a digital interface.",
       deliverables: ["Journey Maps", "Competitive Analysis", "User Flows", "A/B Testing", "Developer Handoff", "Wireframes", "Heuristic Evaluation"],
-      tools: ["Figma", "FigJam", "Miro"]
+      tools: ["Figma", "FigJam", "Miro"],
+      images: [
+        "/images/amhu-1.png",
+        "/images/amhu-2.png",
+        "/images/amhu-3.png"
+      ]
     },
     {
       id: 2,
@@ -15,7 +20,12 @@ const projects = [
       client: "Windscope",
       summary: "Designing a system to allow users to customise alert preferences in a granular way.",
       deliverables: ["User Flows", "Prototypes", "Wireframes"],
-      tools: ["Figma", "Miro"]
+      tools: ["Figma", "Miro"],
+      images: [
+        "/images/amhu-1.png",
+        "/images/amhu-2.png",
+        "/images/amhu-3.png"
+      ]
     },
     {
       id: 3,
@@ -24,7 +34,12 @@ const projects = [
       client: "Ada Mode",
       summary: "Creating a referencing system for an LLM Doc managment system",
       deliverables: ["User Flows", "Prototypes", "Wireframes"],
-      tools: ["Figma", "Miro"]
+      tools: ["Figma", "Miro"],
+      images: [
+        "/images/amhu-1.png",
+        "/images/amhu-2.png",
+        "/images/amhu-3.png"
+      ]
     }
   ];
   

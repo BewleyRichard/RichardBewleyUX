@@ -1,3 +1,4 @@
+// src/App.jsx
 import React, { useState } from "react";
 import './App.css';
 import LeftSidebar from "./components/LeftSidebar/LeftSidebar.jsx";
@@ -8,7 +9,7 @@ import SideGallery from "./components/SideGallery/SideGallery.jsx";
 import projects from "./data/projects";
 
 function App() {
-  const [selectedProjectId, setSelectedProjectId] = useState(projects[0].id); // default first project
+  const [selectedProjectId, setSelectedProjectId] = useState(projects[0].id);
 
   const handleProjectSelect = (id) => {
     setSelectedProjectId(id);
@@ -16,14 +17,11 @@ function App() {
 
   return (
     <div className="App">
-      <LeftSidebar
-        selectedProjectId={selectedProjectId}
-        onSelectProject={handleProjectSelect}
-      />
+      <LeftSidebar onSelectProject={handleProjectSelect} selectedProjectId={selectedProjectId} />
       <MainDetails />
       <HeroImageSection />
-      <SingleProject projectId={selectedProjectId} />
-      <SideGallery />
+      <SingleProject selectedProjectId={selectedProjectId} />
+      <SideGallery selectedProjectId={selectedProjectId} />
     </div>
   );
 }

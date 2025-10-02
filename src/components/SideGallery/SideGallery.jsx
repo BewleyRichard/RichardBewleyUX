@@ -1,12 +1,25 @@
+// src/components/SideGallery/SideGallery.jsx
 import React from "react";
-import "./SideGallery.css"; 
+import projects from "../../data/projects";
+import "./SideGallery.css";
 
+function SideGallery({ selectedProjectId }) {
+  const project = projects.find((p) => p.id === selectedProjectId);
 
-function SideGallery() {
+  if (!project || !project.images) {
+    return <div className="side-gallery">No images available</div>;
+  }
+
   return (
     <div className="side-gallery">
-        {/* TODO: Add project images here. This column will sit below the single project column on mobile view*/}
-      </div>
+      {project.images.map((src, index) => (
+        <img 
+          key={`${project.id}-${index}`} 
+          src={src} 
+          alt={`${project.title} - Image ${index + 1}`} 
+        />
+      ))}
+    </div>
   );
 }
 
