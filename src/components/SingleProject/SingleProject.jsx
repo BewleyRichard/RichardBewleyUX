@@ -1,37 +1,38 @@
-import React from "react";
-import "./SingleProject.css"; 
+import projects from '../../data/projects'; // Adjust the path as necessary
+import "./SingleProject.css";
 
-function SingleProject() {
+
+function SingleProject({ projectId }) {
+  // Find the project object by its ID
+  const project = projects.find(p => p.id === projectId);
+
+  // If no project is selected, show nothing
+  if (!project) return null;
+
   return (
     <div className="single-project">
-        <h1>X</h1>
-        <h1>Project Title</h1>
+      <h1>{project.title}</h1>
 
-        <p>(Project Summary) and I express myself digitally in order to experiment, have fun (this is the most important thing), and to understand this world in order to create new ones.</p>
+      <p>{project.summary}</p>
 
-        <h3>Year</h3>
+      <h3>{project.year}</h3>
 
-        <h3>Client</h3>
+      <h3>{project.client}</h3>
 
-        <h3>Deliverables:</h3>
+      <h3>Deliverables</h3>
+      <ul className="small-list">
+        {project.deliverables.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
 
-        <ul className="small-list">
-          <li>Journey Maps</li>
-          <li>Competitive Analysis</li>
-          <li>User Flows</li>
-          <li>A/B Testing</li>
-          <li>Developer Handoff</li>
-          <li>Wireframes</li>
-          <li>Heuristic evaluation</li>
-        </ul>
-
-        <h3>Tools:</h3>
-        <ul className="small-list">
-          <li>Figma</li>
-          <li>FigJam</li>
-          <li>Miro</li>
-        </ul>
-      </div>
+      <h3>Tools</h3>
+      <ul className="small-list">
+        {project.tools.map((tool, index) => (
+          <li key={index}>{tool}</li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

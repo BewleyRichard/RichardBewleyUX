@@ -68,6 +68,7 @@ a.hyperlink-large {
   text-decoration: none; /* removes style by default */
 }
 
+/* Hover/focus underline for all links */
 .contact-details a:hover,
 .selected-works a:hover,
 .hyperlink-large:hover,
@@ -75,6 +76,11 @@ a.hyperlink-large {
 .selected-works a:focus,
 .hyperlink-large:focus {
   text-decoration: underline; /* underline on hover/focus */
+}
+
+/* Always underline the currently selected project LeftSidebar */
+.selected-works a.selected {
+  text-decoration: underline;
 }
 
 /* -------------------- Lists -------------------- */
