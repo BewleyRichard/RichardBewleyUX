@@ -1,4 +1,6 @@
 import React from "react";
+import "./HeroImageSection.css";
+
 
 function HeroImageSection() {
   return (

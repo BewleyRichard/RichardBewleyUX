@@ -1,7 +1,4 @@
-/* src/App.css */
-
 /* -------------------- Global Styles -------------------- */
-
 
 /* Body, root container, typography resets, etc. can go here */
 
@@ -18,68 +15,6 @@ body {
   /* Root container for the app */
 .App {
   outline: 3px solid purple;
-}
-
-/* -------------------- Layout Sections -------------------- */
-/* High-level layout containers for each major section */
-
-/* Left sidebar / navigation */
-.left-sidebar {
-  background:red;
-}
-
-/* Main content area */
-.main-details {
-  background:orange;
-}
-
-/* Hero / banner section */
-.hero-image-section {
-  background:yellow;
-}
-
-/* Single project display section */
-.single-project {
-  background:green;
-}
-
-/* Gallery or secondary content area */
-.side-gallery {
-  background: blue;
-}
-
-/* -------------------- Lists -------------------- */
-/* Generic list styles */
-
-.small-list li {
-  display: inline;       /* flow like a paragraph */
-}
-
-.small-list li::after,
-.selected-works li a::after {
-  content: ", ";
-  font-size: inherit;      
-  font-weight: inherit;    
-}
-
-.small-list li:last-child::after,
-.selected-works li:last-child a::after {
-  content: ".";
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/* small-list li: min ~16px, max 24px */
-.small-list li,
-.experience-list{
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-}
-
-.selected-works,
-.small-list,
-.experience-list {
-  list-style: none;   /* removes bullets */
-  padding-left: 0;    /* removes default indent */
 }
 
 /* -------------------- Typography -------------------- */
@@ -142,16 +77,36 @@ a.hyperlink-large {
   text-decoration: underline; /* underline on hover/focus */
 }
 
-/* -------------------- Specific Sections -------------------- */
-.contact-details {
-  /* Email / CV download links etc. */
+/* -------------------- Lists -------------------- */
+/* Generic list styles */
+
+.small-list li {
+  display: inline;       /* flow like a paragraph */
 }
 
-/* -------------------- Future Component-level CSS -------------------- */
-/*
-  When the project grows:
-  - Move .left styles to components/LeftSidebar.css
-  - Move .main-details styles to components/MainDetails.css
-  - Move .single-project styles to components/SingleProject.css
-  - Import these CSS files into their respective components
-*/
+.small-list li::after,
+.selected-works li a::after {
+  content: ", ";
+  font-size: inherit;      
+  font-weight: inherit;    
+}
+
+.small-list li:last-child::after,
+.selected-works li:last-child a::after {
+  content: ".";
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* small-list li: min ~16px, max 24px */
+.small-list li,
+.experience-list{
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.selected-works,
+.small-list,
+.experience-list {
+  list-style: none;   /* removes bullets */
+  padding-left: 0;    /* removes default indent */
+}
