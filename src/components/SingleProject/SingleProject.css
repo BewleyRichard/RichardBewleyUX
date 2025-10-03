@@ -1,8 +1,9 @@
-/* Single project display section */
 .single-project {
-    background:green;
-    width: 33.33%;
-    overflow-y: auto;
-    height: 100%;
-    flex-shrink: 0;
-  }
+  background: green;
+  width: 33.33%;
+  height: 100%;
+  flex-shrink: 0;
+  overflow-y: auto;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  position: relative; /* needed for absolute header */
+}

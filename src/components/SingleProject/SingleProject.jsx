@@ -1,25 +1,29 @@
-// src/components/SingleProject/SingleProject.jsx
+import { useRef } from 'react';
 import projects from '../../data/projects';
 import "./SingleProject.css";
+import ScrollTrackingHeader from "../ScrollTrackingHeader.jsx";
 
 function SingleProject({ selectedProjectId }) {
-  // Find the project object by its ID
   const project = projects.find((p) => p.id === selectedProjectId);
+  const containerRef = useRef(null);
 
   if (!project) return null;
 
   return (
-    <div className="single-project">
-      <h1>X</h1>
+    <div
+      className="single-project"
+      ref={containerRef}
+    >
+      {/* Scroll-tracking header */}
+      <ScrollTrackingHeader containerRef={containerRef}>
+        X
+      </ScrollTrackingHeader>
 
       <h1>{project.title}</h1>
-
       <p>{project.summary}</p>
-
       <h3>{project.year}</h3>
-      
       <h3>{project.client}</h3>
-      
+
       <h3>Deliverables</h3>
       <ul className="small-list">
         {project.deliverables.map((item, index) => (
