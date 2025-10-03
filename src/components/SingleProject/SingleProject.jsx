@@ -10,6 +10,8 @@ function SingleProject({ selectedProjectId }) {
 
   return (
     <div className="single-project">
+      <h1>X</h1>
+
       <h1>{project.title}</h1>
 
       <p>{project.summary}</p>

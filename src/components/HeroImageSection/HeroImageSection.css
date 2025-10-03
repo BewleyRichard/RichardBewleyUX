@@ -2,11 +2,14 @@
 
 .hero-image-section {
     background: yellow;
-    /* Add layout rules later for grid/flex so it takes up 2/3 width on desktop */
+    width: 66.6667%;
+    height: 100%;
+    flex-shrink: 0;
+    overflow-y: hidden; /* Prevent vertical scroll */
   }
 
 .hero-image-section img {
-    width: 67%; /* 2/3 width TODO:change later on when you change the above container */
+    width: 100%; /*TODO:change later on when you change the above container */
     height: auto;
     display: block;
   }

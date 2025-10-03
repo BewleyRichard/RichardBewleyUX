@@ -1,18 +1,17 @@
 /* -------------------- SideGallery Styles -------------------- */
 
 .side-gallery {
-    background: blue;
-  }
-  
-  .side-gallery {
+    background: blue;  
     display: flex;
     flex-direction: column; /* stack images vertically */
-    /* gap: 16px; space between images */
-    /* padding: 16px; */
+    width: 33.33%;
+    overflow-y: auto;
+    height: 100%;
+    flex-shrink: 0;
   }
   
   .side-gallery img {
-    width: 33.33%; /* make each image fill the container width change later*/
+    width: 100%; /* make each image fill the container width change later*/
     height: auto; /* maintain aspect ratio */
     object-fit: cover; /* ensure it fills without distortion */
   }

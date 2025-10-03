@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="App">
       <LeftSidebar onSelectProject={handleProjectSelect} selectedProjectId={selectedProjectId} />
-      <MainDetails />
       <HeroImageSection />
+      <MainDetails />
       <SingleProject selectedProjectId={selectedProjectId} />
       <SideGallery selectedProjectId={selectedProjectId} />
     </div>

@@ -3,7 +3,11 @@
 /* Container */
 .left-sidebar {
     background: red;
-  }
+    width: 33.33%;
+    overflow-y: auto;
+    height: 100%;
+    flex-shrink: 0;
+    }
   
   /* Hyperlink (About Me) */
   a.hyperlink-large {

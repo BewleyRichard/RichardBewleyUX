@@ -8,43 +8,76 @@ body {
   /* font-family: system-ui, sans-serif; */
   color: black;
   background: white;
-  font-weight: 400;  
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 /* Root container for the app use for max width, centering and padding*/
   /* Root container for the app */
 .App {
   outline: 3px solid purple;
+  /* display: flex; */
+  height: 100vh;       /* full viewport height */
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* -------------------- Typography -------------------- */
-/* Headings and paragraphs */
 
-/* H1: min ~32px, max 48px */
+/* -------------------- Old styles for ref -------------------- */
+/* H1: min ~32px, max 48px
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
-}
+} */
 
-/* H2: min ~24px, max 32px */
+/* H2: min ~24px, max 32px
 h2 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: inherit;
-}
+} */
 
-/* H3: min ~16px, max 24px */
+/* H3: min ~16px, max 24px
 h3 {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   font-weight: inherit;
-}
+} */
 
-/* body text: min ~16px, max 24px */
+/* body text: min ~16px, max 24px
 p {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
+} */
+
+/* -------------------- responsive styles, temp until layout is set -------------------- */
+
+/* Headings and paragraphs */
+
+/* H1: min ~30px, max 48px */
+h1 {
+  font-size: clamp(3rem, 6vw, 4.8rem);
 }
 
-/* caption: min ~12px, max 16px */
+/* H2: min ~22px, max 32px */
+h2 {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: inherit;
+}
+
+/* H3: min ~18px, max 24px */
+h3 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: inherit;
+}
+
+/* Body text: min ~16px, max 20px */
+p {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+}
+
+/* Caption: min ~14px, max 16px */
 .caption {
-  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(1.4rem, 2vw, 1.6rem);
 }
 
 /* single indented header on h2 */
@@ -58,11 +91,11 @@ a.hyperlink-large {
   text-decoration: none;
 }
 
-/* Links: min ~24px, max 32px */
+/* Links, same as h2: min ~22px, max 32px */
 .contact-details a,
 .selected-works a,
 .hyperlink-large {
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: inherit;
   color: inherit;
   text-decoration: none; /* removes style by default */
@@ -78,7 +111,7 @@ a.hyperlink-large {
   text-decoration: underline; /* underline on hover/focus */
 }
 
-/* Always underline the currently selected project LeftSidebar */
+/* Always underline the currently selected project */
 .selected-works a.selected {
   text-decoration: underline;
 }
@@ -104,10 +137,10 @@ a.hyperlink-large {
   font-weight: inherit;
 }
 
-/* small-list li: min ~16px, max 24px */
+/* Small list, same as Body text: min ~16px, max 20px */
 .small-list li,
 .experience-list{
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
 }
 
 .selected-works,

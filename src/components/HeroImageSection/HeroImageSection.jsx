@@ -7,7 +7,7 @@ function HeroImageSection() {
         <h1>X</h1>
         <img 
         src="/images/hero-image.png" 
-        alt="Hero visual" 
+        alt="Hero image" 
         className="hero-image"
         />
       </div>
