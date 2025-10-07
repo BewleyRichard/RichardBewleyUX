@@ -1,13 +1,18 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./ScrollTrackingHeader.css";
 
-const ScrollTrackingHeader = ({ containerRef, children, offsetTop = 0 }) => {
+const ScrollTrackingHeader = ({
+  containerRef,
+  children,
+  offsetTop = 0,
+  className = "",
+}) => {
   const [translateX, setTranslateX] = useState(0);
   const headerRef = useRef(null);
 
   useEffect(() => {
-    if (!containerRef?.current || !headerRef.current) return;
-    const container = containerRef.current;
-    const header = headerRef.current;
+    const container = containerRef?.current;
+    if (!container || !headerRef.current) return;
 
     const handleScroll = () => {
       const scrollTop = container.scrollTop;
@@ -15,36 +20,28 @@ const ScrollTrackingHeader = ({ containerRef, children, offsetTop = 0 }) => {
       const scrollPercent = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
 
       const containerWidth = container.clientWidth;
-      const headerWidth = header.offsetWidth;
+      const headerWidth = headerRef.current.offsetWidth;
+      const maxTravel = Math.max(containerWidth - headerWidth, 0);
 
-      // Max distance the header can travel
-      const maxTravel = containerWidth - headerWidth;
-
-      // Start left → move right
       setTranslateX(scrollPercent * maxTravel);
     };
 
     handleScroll(); // initialize once
-    container.addEventListener("scroll", handleScroll);
+    container.addEventListener("scroll", handleScroll, { passive: true });
     return () => container.removeEventListener("scroll", handleScroll);
   }, [containerRef]);
 
   return (
-    <h1
+    <div
       ref={headerRef}
+      className={`scroll-tracking-header ${className}`}
       style={{
-        position: "absolute",
         top: `${offsetTop}px`,
-        left: 0,
-        margin: 0,
         transform: `translateX(${translateX}px)`,
-        transition: "transform 0.05s linear",
-        pointerEvents: "none",
-        whiteSpace: "nowrap",
       }}
     >
       {children}
-    </h1>
+    </div>
   );
 };
 

@@ -1,0 +1,20 @@
+/* Core scroll-tracking header styles */
+.scroll-tracking-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  /* Behavior */
+  pointer-events: none; /* makes it overlay-only, not interactive */
+  transition: transform 0.05s linear;
+  white-space: nowrap;
+
+  /* Appearance — add padding here */
+  background: white;
+
+  /* Inherit text styles from children */
+  font: inherit;
+  color: inherit;
+}
+
+
