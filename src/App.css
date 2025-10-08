@@ -4,8 +4,6 @@
 
 /* Use for global defaults */
 body {
-  /* margin: 0; */
-  /* font-family: system-ui, sans-serif; */
   color: black;
   background: white;
   font-weight: 400;
@@ -14,74 +12,51 @@ body {
   overflow-x: hidden;
 }
 
-/* Root container for the app use for max width, centering and padding*/
-  /* Root container for the app */
+/* Root container for the app */
 .App {
   outline: 3px solid purple;
-  /* display: flex; */
-  height: 100vh;       /* full viewport height */
+  display: flex;
+  height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
 
 /* -------------------- Typography -------------------- */
 
-/* -------------------- Old styles for ref -------------------- */
-/* H1: min ~32px, max 48px
-h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-} */
-
-/* H2: min ~24px, max 32px
-h2 {
-  font-size: clamp(1.5rem, 4vw, 2rem);
-  font-weight: inherit;
-} */
-
-/* H3: min ~16px, max 24px
-h3 {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: inherit;
-} */
-
-/* body text: min ~16px, max 24px
-p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-} */
-
-/* -------------------- responsive styles, temp until layout is set -------------------- */
+/* Define shared type variables */
+:root {
+  --font-h1-size: clamp(2rem, 5vw, 3rem);          /* 32–48px */
+  --font-h2-size: clamp(1.5rem, 4vw, 2rem);        /* 24–32px */
+  --font-h3-size: clamp(1.125rem, 2.5vw, 1.5rem);  /* 18–24px */
+  --font-body-size: clamp(1rem, 2.25vw, 1.25rem);  /* 16–20px */
+  --font-caption-size: clamp(0.875rem, 1.5vw, 1rem); /* 14–16px */
+}
 
 /* Headings and paragraphs */
-
-/* H1: min ~30px, max 48px */
 h1 {
-  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-size: var(--font-h1-size);
 }
 
-/* H2: min ~22px, max 32px */
 h2 {
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-size: var(--font-h2-size);
   font-weight: inherit;
 }
 
-/* H3: min ~18px, max 24px */
 h3 {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: var(--font-h3-size);
   font-weight: inherit;
 }
 
-/* Body text: min ~16px, max 20px */
 p {
-  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-size: var(--font-body-size);
 }
 
-/* Caption: min ~14px, max 16px */
 .caption {
-  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  font-size: var(--font-caption-size);
 }
 
 /* single indented header on h2 */
-.indent-header{
+.indent-header {
   text-indent: 1ch;
 }
 
@@ -91,11 +66,11 @@ a.hyperlink-large {
   text-decoration: none;
 }
 
-/* Links, same as h2: min ~22px, max 32px */
+/* Links, same as h2 */
 .contact-details a,
 .selected-works a,
 .hyperlink-large {
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-size: var(--font-h2-size);
   font-weight: inherit;
   color: inherit;
   text-decoration: none; /* removes style by default */
@@ -108,7 +83,7 @@ a.hyperlink-large {
 .contact-details a:focus,
 .selected-works a:focus,
 .hyperlink-large:focus {
-  text-decoration: underline; /* underline on hover/focus */
+  text-decoration: underline;
 }
 
 /* Always underline the currently selected project */
@@ -117,17 +92,15 @@ a.hyperlink-large {
 }
 
 /* -------------------- Lists -------------------- */
-/* Generic list styles */
-
 .small-list li {
-  display: inline;       /* flow like a paragraph */
+  display: inline;
 }
 
 .small-list li::after,
 .selected-works li a::after {
   content: ", ";
-  font-size: inherit;      
-  font-weight: inherit;    
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 .small-list li:last-child::after,
@@ -137,15 +110,15 @@ a.hyperlink-large {
   font-weight: inherit;
 }
 
-/* Small list, same as Body text: min ~16px, max 20px */
+/* Small list, same as Body text */
 .small-list li,
-.experience-list{
-  font-size: clamp(1.6rem, 2.5vw, 2rem);
+.experience-list {
+  font-size: var(--font-body-size);
 }
 
 .selected-works,
 .small-list,
 .experience-list {
-  list-style: none;   /* removes bullets */
-  padding-left: 0;    /* removes default indent */
+  list-style: none;
+  padding-left: 0;
 }

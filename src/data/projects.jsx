@@ -4,8 +4,8 @@ const projects = [
       title: "Autonomous Material Handling UI",
       year: 2025,
       client: "Ada Mode",
-      summary: "A system to optimise material handling workflows with a digital interface.",
-      deliverables: ["Journey Maps", "Competitive Analysis", "User Flows", "A/B Testing", "Developer Handoff", "Wireframes", "Heuristic Evaluation"],
+      summary: "A system to optimise material handling workflows with a digital interface. A system to optimise material handling workflows with a digital interface. A system to optimise material handling workflows with a digital interface.",
+      deliverables: ["Journey Maps", "Competitive Analysis", "User Flows", "A/B Testing", "Developer Handoff", "Wireframes", "Heuristic Evaluation","Journey Maps", "Competitive Analysis", "User Flows", "A/B Testing", "Developer Handoff", "Wireframes", "Heuristic Evaluation","Journey Maps", "Competitive Analysis", "User Flows", "A/B Testing", "Developer Handoff", "Wireframes", "Heuristic Evaluation","Journey Maps", "Competitive Analysis", "User Flows", "A/B Testing", "Developer Handoff", "Wireframes", "Heuristic Evaluation"],
       tools: ["Figma", "FigJam", "Miro"],
       images: [
         "/images/amhu-1.png",
