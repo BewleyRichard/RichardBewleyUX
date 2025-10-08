@@ -1,20 +1,29 @@
-/* Core scroll-tracking header styles */
 .scroll-tracking-header {
   position: sticky;
   top: 0;
   z-index: 10;
 
-  /* Behavior */
-  pointer-events: none; /* makes it overlay-only, not interactive */
+  /* Static white bar background */
+  background: white;
+  width: 100%;
+  overflow: hidden; /* hide moving text overflow */
+  pointer-events: none;
+}
+
+.scroll-tracking-header__inner {
+  display: inline-block;
   transition: transform 0.05s linear;
   white-space: nowrap;
-
-  /* Appearance — add padding here */
-  background: white;
-
-  /* Inherit text styles from children */
   font: inherit;
   color: inherit;
 }
 
-
+/* Remove default heading margins inside */
+.scroll-tracking-header h1,
+.scroll-tracking-header h2,
+.scroll-tracking-header h3,
+.scroll-tracking-header h4,
+.scroll-tracking-header h5,
+.scroll-tracking-header h6 {
+  margin: 0;
+}
