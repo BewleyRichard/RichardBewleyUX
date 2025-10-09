@@ -1,18 +1,37 @@
 /* -------------------- SideGallery Styles -------------------- */
-
 .side-gallery {
-    background: blue;  
-    display: flex;
-    flex-direction: column; /* stack images vertically */
-    width: 33.33%;
-    overflow-y: auto;
-    height: 100%;
-    flex-shrink: 0;
-  }
-  
-  .side-gallery img {
-    width: 100%; /* make each image fill the container width change later*/
-    height: auto; /* maintain aspect ratio */
-    object-fit: cover; /* ensure it fills without distortion */
-  }
-  
+  background: blue;  
+  display: flex;
+  flex-direction: column; /* stack images vertically */
+  width: 33.33%;
+  overflow-y: auto;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.side-gallery img {
+  width: 100%; /* make each image fill the container width change later*/
+  height: auto; /* maintain aspect ratio */
+  object-fit: cover; /* ensure it fills without distortion */
+  cursor: pointer;
+}
+
+/* -------------------- Fullscreen Image Preview; Note: add scrolling to this later-------------------- */
+.image-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.image-preview img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
