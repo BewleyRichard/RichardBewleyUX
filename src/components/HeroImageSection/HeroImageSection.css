@@ -1,12 +1,13 @@
 /* -------------------- Hero Image Section -------------------- */
-
-.hero-image-section {
+@media (min-width: 768px) {
+  .hero-image-section {
     background: yellow;
     width: 66.6667%;
     height: 100%;
     flex-shrink: 0;
-    overflow-y: hidden; /* Prevent vertical scroll */
+    overflow-y: hidden; /* prevent vertical scroll on the hero */
   }
+}
 
 .hero-image-section img {
     width: 100%; /*TODO:change later on when you change the above container */

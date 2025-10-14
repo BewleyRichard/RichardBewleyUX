@@ -2,15 +2,17 @@ import React from "react";
 import "./LeftSidebar.css";
 import projects from "../../data/projects";
 
-function LeftSidebar({ selectedProjectId, onSelectProject }) {
+function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAboutClick }) {
   return (
     <div className="left-sidebar">
-      <header>
+      <header onClick={onHeaderClick} style={{ cursor: "pointer" }}>
         <h1>Richard Bewley U</h1>
         <h1>Design</h1>
       </header>
 
-      <a className="hyperlink-large">About me</a>
+      <a className="hyperlink-large" href="#!" onClick={onAboutClick}>
+        About me
+      </a>
 
       <h2 className="indent-header">Selected Works:</h2>
       <ul className="selected-works">
@@ -29,7 +31,9 @@ function LeftSidebar({ selectedProjectId, onSelectProject }) {
 
       <div className="contact-details">
         <a href="mailto:your-email@example.com">Email</a>
-        <a href="/cv/your-cv.pdf" download>Download CV</a>
+        <a href="/cv/your-cv.pdf" download>
+          Download CV
+        </a>
       </div>
 
       <aside>

@@ -1,9 +1,12 @@
-.single-project {
-  background: green;
-  width: 33.33%;
-  height: 100%;
-  flex-shrink: 0;
-  overflow-y: auto;
-  overflow-x: hidden; /* prevents horizontal scroll */
-  position: relative; /* needed for absolute header */
+/* -------------------- Single Project Section -------------------- */
+@media (min-width: 768px) {
+  .single-project {
+    background: pink;
+    width: 33.33%;
+    overflow-y: auto;
+    height: 100%;
+    flex-shrink: 0;
+    /* overflow-x: hidden; prevents horizontal scroll */
+    /* position: relative; needed for absolute header */
+  }
 }

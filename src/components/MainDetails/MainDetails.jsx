@@ -1,28 +1,54 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./MainDetails.css";
-
+import ScrollTrackingHeader from "../ScrollTrackingHeader.jsx";
 
 function MainDetails() {
+  const containerRef = useRef(null);
+
   return (
-    <div className="main-details">
+    <div className="main-details" ref={containerRef}>
+      <ScrollTrackingHeader containerRef={containerRef}>
         <h1>X</h1>
-        {/* TODO: add an images here */}
-        <p>My name is Richard and I express myself digitally in order to experiment, have fun (this is the most important thing), and to understand this world in order to create new ones.</p>
+      </ScrollTrackingHeader>
 
-        <h3>Experience:</h3>
-        <ul className="experience-list">
-          <li>2025 Ada Mode</li>
-          <li>2025 Windscope</li>
-          <li>2024 Ada Mode</li>
-        </ul>
+      <p>
+        My name is Richard and I express myself digitally in order to experiment,
+        have fun (this is the most important thing), and to understand this world
+        in order to create new ones.
+        My name is Richard and I express myself digitally in order to experiment,
+        have fun (this is the most important thing), and to understand this world
+        in order to create new ones.
+        My name is Richard and I express myself digitally in order to experiment,
+        have fun (this is the most important thing), and to understand this world
+        in order to create new ones.
+        My name is Richard and I express myself digitally in order to experiment,
+        have fun (this is the most important thing), and to understand this world
+        in order to create new ones.
+        My name is Richard and I express myself digitally in order to experiment,
+        have fun (this is the most important thing), and to understand this world
+        in order to create new ones.
+        My name is Richard and I express myself digitally in order to experiment,
+        have fun (this is the most important thing), and to understand this world
+        in order to create new ones.
+        My name is Richard and I express myself digitally in order to experiment,
+        have fun (this is the most important thing), and to understand this world
+        in order to create new ones.
+      </p>
 
-        <h3>Tools:</h3>
-        <ul className="small-list">
-          <li>Figma</li>
-          <li>FigJam</li>
-          <li>Miro</li>
-        </ul>
-      </div>
+      <h3>Experience:</h3>
+      <ul className="experience-list">
+        <li>2025 Ada Mode</li>
+        <li>2025 Windscope</li>
+        <li>2024 Ada Mode</li>
+      </ul>
+
+      <h3>Tools:</h3>
+      <ul className="small-list">
+        <li>Figma</li>
+        <li>FigJam</li>
+        <li>Miro</li>
+      </ul>
+    </div>
   );
 }
 

@@ -1,19 +1,21 @@
 /* -------------------- SideGallery Styles -------------------- */
-.side-gallery {
-  background: blue;  
-  display: flex;
-  flex-direction: column; /* stack images vertically */
-  width: 33.33%;
-  overflow-y: auto;
-  height: 100%;
-  flex-shrink: 0;
-}
+@media (min-width: 768px) {
+  .side-gallery {
+    background: blue;
+    display: flex;
+    flex-direction: column; /* stack images vertically */
+    width: 33.33%;
+    overflow-y: auto;
+    height: 100%;
+    flex-shrink: 0;
+  }
 
-.side-gallery img {
-  width: 100%; /* make each image fill the container width change later*/
-  height: auto; /* maintain aspect ratio */
-  object-fit: cover; /* ensure it fills without distortion */
-  cursor: pointer;
+  .side-gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+  }
 }
 
 /* -------------------- Fullscreen Image Preview; Note: add scrolling to this later-------------------- */
