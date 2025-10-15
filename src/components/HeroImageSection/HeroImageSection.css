@@ -10,7 +10,9 @@
 }
 
 .hero-image-section img {
-    width: 100%; /*TODO:change later on when you change the above container */
+    /* width: 100%; TODO:change later on when you change the above container */
     height: auto;
     display: block;
   }
+
+  
