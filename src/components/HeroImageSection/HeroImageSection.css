@@ -1,18 +1,23 @@
 /* -------------------- Hero Image Section -------------------- */
+.hero-image-section {
+  min-width: 0;
+  box-sizing: border-box;
+  transition: flex-basis 300ms ease;
+}
+
 @media (min-width: 768px) {
   .hero-image-section {
     background: yellow;
-    width: 66.6667%;
+    flex: 0 0 66.6667%; /* flex-basis to match sidebar */
     height: 100%;
     flex-shrink: 0;
     overflow-y: hidden; /* prevent vertical scroll on the hero */
   }
 }
 
-.hero-image-section img {
-    /* width: 100%; TODO:change later on when you change the above container */
-    height: auto;
-    display: block;
-  }
-
-  
+/* image sizing */
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}

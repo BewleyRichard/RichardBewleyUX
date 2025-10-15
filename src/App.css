@@ -7,6 +7,8 @@ body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
+  /* keep layout width stable if scrollbars appear */
+  scrollbar-gutter: stable;
 }
 
 /* Root container for the app */
@@ -16,9 +18,30 @@ body {
   flex-wrap: nowrap;
   align-items: stretch;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* fallback */
+  height: 100dvh; /* avoids iOS/Safari snap on resize/address bar */
   overflow: hidden; /* no scrollbars on desktop */
-  transition: all 0.3s ease;
+  transition: none; /* don't animate the container layout */
+}
+
+/* Animate the properties that actually change size */
+.App > *:first-child {
+  /* no layout change here, just declare what can animate */
+  transition: flex-basis 300ms ease, width 300ms ease;
+}
+
+/* Allow flex children to size/shrink correctly */
+.App > * {
+  min-width: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+/* smooth size changes on both columns */
+.left-sidebar,
+.hero-image-section,
+.right-column {
+  transition: flex-basis 300ms ease;
 }
 
 /* -------------------- Desktop Layout -------------------- */
@@ -36,7 +59,7 @@ body {
   .App > .side-gallery {
     flex: 1 1 auto;
     height: 100%;
-    transition: width 0.3s ease, flex 0.3s ease;
+    transition: flex-basis 300ms ease, width 300ms ease;
   }
 
   /* Home: hero image takes 2/3 */
@@ -60,16 +83,20 @@ body {
     flex-direction: row;
     width: 100%;
     height: 100vh;
+    height: 100dvh; /* avoid iOS/Safari snap */
     overflow: hidden; /* hide page-level scroll */
   }
 
   /* LEFT SIDEBAR — left 50%, scrolls independently */
   .App > *:first-child {
-    width: 50%;
+    /* ...existing code... */
+    /* width: 50%; */
+    flex: 0 0 50%; /* use flex-basis instead of width to avoid collapse */
     height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
     flex-shrink: 0;
-    position: relative; /* so it scrolls inside its own box */
+    position: relative;
     background: inherit;
     box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
@@ -77,8 +104,11 @@ body {
 
   /* RIGHT COLUMN — right 50%, scrolls independently */
   .right-column {
-    width: 50%;
+    /* ...existing code... */
+    /* width: 50%; */
+    flex: 0 0 50%;
     height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
     flex-shrink: 0;
     display: flex;
@@ -89,32 +119,27 @@ body {
 
   .right-column > * {
     width: 100%;
-    flex: 0 0 auto; /* stack naturally */
+    flex: 0 0 auto;
   }
 
   /* HERO IMAGE for home view */
   .hero-image-section {
-    width: 50%;
+    /* width: 50%; */
+    flex: 0 0 50%;  /* explicit basis prevents snap/collapse */
     height: 100vh;
-    overflow-y: auto;
+    height: 100dvh;
+    overflow-y: auto; /* scroll content if needed */
     flex-shrink: 0;
     -webkit-overflow-scrolling: touch;
   }
 
   /* VIEW CONTROL — hide/show sections appropriately */
-  .App.view-home .right-column {
-    display: none;
-  }
+  .App.view-home .right-column { display: none; }
 
   .App.view-about .hero-image-section,
-  .App.view-selected-works .hero-image-section {
-    display: none;
-  }
+  .App.view-selected-works .hero-image-section { display: none; }
 
-  /* Ensure SideGallery is always below the main content */
-  .right-column .side-gallery {
-    order: 2;
-  }
+  .right-column .side-gallery { order: 2; }
 }
 
 
