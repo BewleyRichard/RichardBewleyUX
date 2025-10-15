@@ -9,6 +9,10 @@
   }
 }
 
+.left-sidebar > header h1:first-child {
+  margin-top: 0;
+}
+
 /* allow shrinking without layout snap on narrow widths */
 .left-sidebar {
   min-width: 0;

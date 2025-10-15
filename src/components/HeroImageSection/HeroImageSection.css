@@ -18,6 +18,12 @@
   }
 }
 
+/* Remove top margin from first heading */
+.hero-image-section > h1:first-child,
+.hero-image-section > .scroll-tracking-header:first-child h1 {
+  margin-top: 0;
+}
+
 /* image sizing */
 .hero-image {
   width: 100%;
