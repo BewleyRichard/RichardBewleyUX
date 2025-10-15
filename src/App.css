@@ -139,6 +139,7 @@ body {
     display: flex;
     flex-direction: column;
     -webkit-overflow-scrolling: touch;
+    position: relative; /* Create positioning context for sticky */
   }
 
   .right-column > * {
