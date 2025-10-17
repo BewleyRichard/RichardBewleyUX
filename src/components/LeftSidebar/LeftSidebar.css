@@ -28,6 +28,10 @@ a.hyperlink-large {
   color: inherit;
   text-decoration: none;
 }
+
+a.hyperlink-large.selected {
+  text-decoration: underline;
+}
     
 /* Contact details container */
 /* .contact-details {} */

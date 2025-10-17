@@ -31,6 +31,7 @@ function App() {
 
   const handleAboutClick = () => {
     setViewState("about");
+    setSelectedProjectId(null);
   };
 
   return (
@@ -40,6 +41,7 @@ function App() {
         onAboutClick={handleAboutClick}
         onSelectProject={handleProjectSelect}
         selectedProjectId={selectedProjectId}
+        viewState={viewState}
       />
 
       {viewState === "home" && <HeroImageSection />}

@@ -2,15 +2,20 @@ import React from "react";
 import "./LeftSidebar.css";
 import projects from "../../data/projects";
 
-function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAboutClick }) {
+function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAboutClick, viewState }) {
   return (
     <div className="left-sidebar">
-      <header onClick={onHeaderClick} style={{ cursor: "pointer" }}>
-        <h1>Richard Bewley U</h1>
-        <h1>Design</h1>
+      <header>
+        <h1 onClick={onHeaderClick} style={{ cursor: "pointer" }}>
+          Richard Bewley
+        </h1>
       </header>
 
-      <a className="hyperlink-large" href="#!" onClick={onAboutClick}>
+      <a 
+        className={`hyperlink-large ${viewState === 'about' ? 'selected' : ''}`}
+        href="#!" 
+        onClick={onAboutClick}
+      >
         About me
       </a>
 
