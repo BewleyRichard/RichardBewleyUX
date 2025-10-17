@@ -1,4 +1,10 @@
 /* -------------------- Single Project Section -------------------- */
+.single-project {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  box-sizing: border-box;
+}
+
 @media (min-width: 768px) {
   .single-project {
     background: pink;

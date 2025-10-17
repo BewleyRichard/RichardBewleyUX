@@ -1,4 +1,10 @@
 /* -------------------- Main Details Section -------------------- */
+.main-details {
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+  box-sizing: border-box;
+}
+
 @media (min-width: 768px) {
   .main-details {
     background: orange;
