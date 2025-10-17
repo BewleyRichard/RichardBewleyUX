@@ -7,8 +7,9 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
     <div className="left-sidebar">
       <header>
         <h1 onClick={onHeaderClick} style={{ cursor: "pointer" }}>
-          Richard Bewley
+          Richard Bewley U
         </h1>
+        <h1 onClick={onHeaderClick} style={{ cursor: "pointer" }}>Design</h1>
       </header>
 
       <a 
