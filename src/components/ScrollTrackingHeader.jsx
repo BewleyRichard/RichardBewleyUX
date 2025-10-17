@@ -30,9 +30,18 @@ const ScrollTrackingHeader = ({
         const scrollHeight = container.scrollHeight - container.clientHeight;
         const scrollPercent = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
 
+        // Get padding from the header's parent element (the component container)
+        const parentElement = headerRef.current?.parentElement;
+        const computedStyle = parentElement ? getComputedStyle(parentElement) : getComputedStyle(container);
+        const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
+        const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
+        
         const containerWidth = container.clientWidth;
         const innerWidth = innerRef.current.offsetWidth;
-        const maxTravel = Math.max(containerWidth - innerWidth, 0);
+        
+        // Available width accounting for padding
+        const availableWidth = containerWidth - paddingLeft - paddingRight;
+        const maxTravel = Math.max(availableWidth - innerWidth, 0);
 
         setTranslateX(scrollPercent * maxTravel);
       };
