@@ -24,6 +24,10 @@
   top: 0;
   background: white; /* Match sidebar background so content scrolls under */
   z-index: 10;
+  margin-left: calc(var(--space-sm) * -1);
+  margin-right: calc(var(--space-sm) * -1);
+  padding-left: var(--space-sm);
+  padding-right: 0;
 }
 
 /* Remove top margin from first heading */
