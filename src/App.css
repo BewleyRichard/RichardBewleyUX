@@ -1,3 +1,7 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/nimbus-sans-d-ot');
+
 /* -------------------- Global Styles -------------------- */
 body {
   color: black;
@@ -174,11 +178,19 @@ body {
   --space-2xl: clamp(1.777rem, 4vw, 2.369rem);   /* ~28px → 38px */
   --space-3xl: clamp(2.369rem, 5vw, 3.157rem);   /* ~38px → 51px */
   
-  --font-caption-size: clamp(0.75rem, 1vw, 0.875rem);  /* ~12px → 14px */
-  --font-body-size: clamp(1rem, 2vw, 1rem);            /* ~16px fixed base */
-  --font-h3-size: clamp(1.333rem, 2.5vw, 1.75rem);     /* ~21px → 28px */
-  --font-h2-size: clamp(1.777rem, 3vw, 2.369rem);      /* ~28px → 38px */
-  --font-h1-size: clamp(2.369rem, 4vw, 3.157rem);      /* ~38px → 50px */
+  --font-caption-size: clamp(0.75rem, 1vw, 0.8125rem);  /* ~12px → 13px */
+  --font-body-size: clamp(1rem, 1.5vw, 1.125rem);       /* ~16px → 18px */
+  --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
+  --font-h2-size: clamp(1.777rem, 4vw, 3rem);           /* ~28px → 48px */
+  --font-h1-size: clamp(2.369rem, 4vw, 3.157rem);       /* ~38px → 50px */
+  
+/* -------------------- Line Heights -------------------- */
+
+  --lh-caption: 1.4;
+  --lh-body: 1.55;
+  --lh-h3: 1.35;
+  --lh-h2: 0.875;
+  --lh-h1: 1.15;
 }
 
 @media (min-width: 1200px) {
@@ -194,46 +206,56 @@ body {
 /* Main title  */
 h1 { 
   font-size: var(--font-h1-size); 
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Nimbus Sans D OT', Helvetica, Arial, sans-serif;
   font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: var(--lh-h1);
 }
 /* Header and large links(inherit) */
 h2 { 
   font-size: var(--font-h2-size); 
-  font-weight: inherit;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 500;
+  font-family: Yrsa, serif;
+  line-height: var(--lh-h2);
 }
 /* Subheaders */
 h3 { 
   font-size: var(--font-h3-size); 
-  font-weight: inherit;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
+  font-family: Yrsa, serif;
+  line-height: var(--lh-h3);
 }
 /* Body text */
 p { 
   font-size: var(--font-body-size);
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Yrsa, serif;
   font-weight: 300;
+  line-height: var(--lh-body);
 }
 /* Image figures and captions */
 .caption { 
   font-size: var(--font-caption-size);
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Yrsa, serif;
   font-weight: 200;
+  line-height: var(--lh-caption);
 }
-.indent-header { text-indent: 1ch; }
+
+/* Selected Works H2 in the LeftSideBar */
+h2.indent-header { 
+  text-indent: 1ch;
+  font-style: italic;
+}
 
 /* Links */
 a.hyperlink-large,
 .contact-details a,
 .selected-works a {
   font-size: var(--font-h2-size);
-  font-weight: 800;
+  font-weight: 500;
   color: inherit;
   text-decoration: none;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Yrsa, serif;
+  /* line-height: var(--lh-h2); */
 }
 
 a:hover, a:focus {
@@ -242,7 +264,7 @@ a:hover, a:focus {
 
 .selected-works a.selected { text-decoration: underline; }
 
-/* Small text lists (e.g., skills, software, experience) */
+/* Small text lists (e.g., Deliverables, Tools & experience) */
 .small-list li { 
   display: inline;
   font-weight: 300;
@@ -253,6 +275,7 @@ a:hover, a:focus {
 .selected-works li:last-child a::after { content: "."; }
 .small-list li, .experience-list { 
   font-size: var(--font-body-size);
+  font-family: Yrsa, serif;
   font-weight: 300;
 }
 .selected-works, .small-list, .experience-list {

@@ -14,10 +14,9 @@ function SingleProject({ selectedProjectId }) {
       <ScrollTrackingHeader containerRef={containerRef}>
         <h1>X</h1>
       </ScrollTrackingHeader>
-      <h1>{project.title}</h1>
+      <p>{project.client} | {project.year}</p>
+      <h2>{project.title}</h2>
       <p>{project.summary}</p>
-      <h3>{project.year}</h3>
-      <h3>{project.client}</h3>
       <h3>Deliverables</h3>
       <ul className="small-list">
         {project.deliverables.map((d, i) => (
