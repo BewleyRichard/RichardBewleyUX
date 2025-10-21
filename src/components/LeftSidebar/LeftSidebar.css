@@ -45,6 +45,10 @@ a.hyperlink-large.selected {
   text-decoration: underline;
 }
     
-/* Contact details container */
-/* .contact-details {} */
+/* Contact details container, stacks vertically*/
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
   /* Email / CV download links styling lives here */
