@@ -178,7 +178,7 @@ body {
   --space-2xl: clamp(1.777rem, 4vw, 2.369rem);   /* ~28px → 38px */
   --space-3xl: clamp(2.369rem, 5vw, 3.157rem);   /* ~38px → 51px */
   
-  --font-caption-size: clamp(0.75rem, 1vw, 0.8125rem);  /* ~12px → 13px */
+  --font-caption-size: clamp(0.875rem, 1vw, 0.9375rem); /* ~14px → 15px */
   --font-body-size: clamp(1rem, 1.5vw, 1.125rem);       /* ~16px → 18px */
   --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
   --font-h2-size: clamp(1.777rem, 4vw, 3rem);           /* ~28px → 48px */

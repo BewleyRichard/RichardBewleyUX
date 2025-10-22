@@ -13,13 +13,15 @@ function SideGallery({ selectedProjectId }) {
   return (
     <>
       <div className="side-gallery">
-        {project.images.map((src, index) => (
-          <img
-            key={`${project.id}-${index}`}
-            src={src}
-            alt={`${project.title} - Image ${index + 1}`}
-            onClick={() => setPreviewSrc(src)}
-          />
+        {project.images.map((image, index) => (
+          <figure key={`${project.id}-${index}`}>
+            <img
+              src={image.src}
+              alt={image.caption || `${project.title} - Image ${index + 1}`}
+              onClick={() => setPreviewSrc(image.src)}
+            />
+            {image.caption && <figcaption className="caption">{image.caption}</figcaption>}
+          </figure>
         ))}
       </div>
 

@@ -17,6 +17,15 @@
   cursor: pointer;
 }
 
+.side-gallery figure {
+  margin: 0;
+  padding: 0;
+}
+
+.side-gallery figcaption {
+  margin-top: var(--space-xs);
+}
+
 @media (min-width: 768px) {
   .side-gallery {
     background: blue;
