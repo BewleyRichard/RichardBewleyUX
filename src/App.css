@@ -179,7 +179,7 @@ body {
   --space-3xl: clamp(2.369rem, 5vw, 3.157rem);   /* ~38px → 51px */
   
   --font-caption-size: clamp(0.875rem, 1vw, 0.9375rem); /* ~14px → 15px */
-  --font-body-size: clamp(1rem, 1.5vw, 1.125rem);       /* ~16px → 18px */
+  --font-body-size: clamp(1rem, 2vw, 1.25rem);          /* ~16px → 20px */
   --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
   --font-h2-size: clamp(1.777rem, 4vw, 3rem);           /* ~28px → 48px */
   --font-h1-size: clamp(2.369rem, 4vw, 3.157rem);       /* ~38px → 50px */
@@ -187,7 +187,7 @@ body {
 /* -------------------- Line Heights -------------------- */
 
   --lh-caption: 1.4;
-  --lh-body: 1.55;
+  --lh-body: 1.5;
   --lh-h3: 1.35;
   --lh-h2: 0.875;
   --lh-h1: 1.15;
