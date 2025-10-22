@@ -255,7 +255,7 @@ a.hyperlink-large,
   color: inherit;
   text-decoration: none;
   font-family: Yrsa, serif;
-  /* line-height: var(--lh-h2); */
+  line-height: var(--lh-h1);
 }
 
 a:hover, a:focus {
