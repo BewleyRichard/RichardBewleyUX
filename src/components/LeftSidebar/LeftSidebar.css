@@ -5,7 +5,17 @@
   box-sizing: border-box;
   transition: flex-basis 300ms ease;
   padding: var(--space-sm);
-  box-sizing: border-box;
+  position: relative;
+}
+/* pseudo-stroke-right */
+.left-sidebar::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: calc(var(--space-sm) + var(--font-h1-size)); /* After header bottom */
+  bottom: 0;
+  width: 1px;
+  background-color: black;
 }
 
 @media (min-width: 768px) {
@@ -48,6 +58,7 @@ a.hyperlink-large.selected {
 .contact-details {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  margin-block-start: var(--space-xl);
+  gap: var(--space-xl);
 }
   /* Email / CV download links styling lives here */

@@ -14,7 +14,7 @@
 
 @media (min-width: 768px) {
   .main-details {
-    background: orange;
+    /* background: orange; */
     width: 33.33%;
     overflow-y: auto;
     height: 100%;

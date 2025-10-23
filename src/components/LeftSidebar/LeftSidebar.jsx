@@ -7,7 +7,7 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
     <div className="left-sidebar">
       <header>
         <h1 onClick={onHeaderClick} style={{ cursor: "pointer" }}>
-          Richard Bewley U Design
+          Richard Bewley U
         </h1>
         {/* <h1 onClick={onHeaderClick} style={{ cursor: "pointer" }}>Design</h1> */}
       </header>
@@ -38,7 +38,7 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
       <div className="contact-details">
         <a href="mailto:your-email@example.com">Email</a>
         <a href="/cv/your-cv.pdf" download>
-          Download CV
+          CV
         </a>
       </div>
 

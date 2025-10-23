@@ -14,7 +14,7 @@
 
 @media (min-width: 768px) {
   .single-project {
-    background: pink;
+    /* background: pink; */
     width: 33.33%;
     overflow-y: auto;
     height: 100%;

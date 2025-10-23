@@ -4,7 +4,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-xl); /* Space between figures */
 }
 
 .side-gallery img {
@@ -19,13 +19,14 @@
   padding: 0;
 }
 
+/* Caption spacing handled by global .caption in App.css */
 .side-gallery figcaption {
-  margin-top: var(--space-xs);
+  margin-block-start: var(--space-xs);
 }
 
 @media (min-width: 768px) {
   .side-gallery {
-    background: blue;
+    /* background: blue; */
     width: 33.33%;
     overflow-y: auto;
     height: 100%;
