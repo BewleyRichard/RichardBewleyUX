@@ -14,7 +14,7 @@
   right: 0;
   top: calc(var(--space-sm) + var(--font-h1-size)); /* After header bottom */
   bottom: 0;
-  width: 1px;
+  width: 1.5px;
   background-color: black;
 }
 

@@ -9,8 +9,21 @@ import SideGallery from "./components/SideGallery/SideGallery.jsx";
 import ScrollTrackingHeader from "./components/ScrollTrackingHeader.jsx";
 
 function App() {
-  const [viewState, setViewState] = useState("home");
-  const [selectedProjectId, setSelectedProjectId] = useState(null);
+  const [viewState, setViewState] = useState(() => {
+    try {
+      return sessionStorage.getItem("viewState") || "home";
+    } catch {
+      return "home";
+    }
+  });
+  const [selectedProjectId, setSelectedProjectId] = useState(() => {
+    try {
+      const v = sessionStorage.getItem("selectedProjectId");
+      return v ? JSON.parse(v) : null;
+    } catch {
+      return null;
+    }
+  });
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const rightColumnRef = useRef(null);
 
@@ -20,6 +33,21 @@ function App() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem("viewState", viewState);
+    } catch {}
+  }, [viewState]);
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(
+        "selectedProjectId",
+        JSON.stringify(selectedProjectId)
+      );
+    } catch {}
+  }, [selectedProjectId]);
 
   const handleProjectSelect = (id) => {
     setSelectedProjectId(id);
