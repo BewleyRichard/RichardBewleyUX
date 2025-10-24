@@ -16,10 +16,10 @@ const ScrollTrackingHeader = ({
     const setupScrollTracking = () => {
       const isMobile = window.matchMedia("(max-width: 767px)").matches;
 
-      // Choose the scroll container
-      const container = isMobile
-        ? document.querySelector(".right-column")
-        : containerRef?.current;
+      // Prefer the provided containerRef, fallback to .right-column on mobile
+      const container =
+        containerRef?.current ??
+        (isMobile ? document.querySelector(".right-column") : null);
 
       if (!container || !innerRef.current) return;
 
@@ -33,25 +33,21 @@ const ScrollTrackingHeader = ({
         const scrollHeight = container.scrollHeight - container.clientHeight;
         const scrollPercent = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
 
-        // Use parent element's width (single-project or main-details)
         const containerWidth = parentElement.clientWidth;
         const innerWidth = innerRef.current.offsetWidth;
-        
-        // Get padding from the parent element
+
         const computedStyle = getComputedStyle(parentElement);
         const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
         const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
-        
-        // Available width accounting for padding
+
         const availableWidth = containerWidth - paddingLeft - paddingRight;
         const maxTravel = Math.max(availableWidth - innerWidth, 0);
 
         setTranslateX(scrollPercent * maxTravel);
       };
 
-      handleScroll(); // run once on mount
+      handleScroll();
       container.addEventListener("scroll", handleScroll, { passive: true });
-
       return () => container.removeEventListener("scroll", handleScroll);
     };
 

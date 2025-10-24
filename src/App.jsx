@@ -1,16 +1,18 @@
 // src/App.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import LeftSidebar from "./components/LeftSidebar/LeftSidebar.jsx";
 import MainDetails from "./components/MainDetails/MainDetails.jsx";
 import HeroImageSection from "./components/HeroImageSection/HeroImageSection.jsx";
 import SingleProject from "./components/SingleProject/SingleProject.jsx";
 import SideGallery from "./components/SideGallery/SideGallery.jsx";
+import ScrollTrackingHeader from "./components/ScrollTrackingHeader.jsx";
 
 function App() {
   const [viewState, setViewState] = useState("home");
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const rightColumnRef = useRef(null);
 
   // Update on resize
   useEffect(() => {
@@ -48,7 +50,10 @@ function App() {
 
       {viewState === "about" &&
         (isMobile ? (
-          <div className="right-column">
+          <div className="right-column" ref={rightColumnRef}>
+            <ScrollTrackingHeader containerRef={rightColumnRef}>
+              <h1>X</h1>
+            </ScrollTrackingHeader>
             <MainDetails />
             <SideGallery selectedProjectId={null} />
           </div>
@@ -61,7 +66,10 @@ function App() {
 
       {viewState === "selected-works" && selectedProjectId &&
         (isMobile ? (
-          <div className="right-column">
+          <div className="right-column" ref={rightColumnRef}>
+            <ScrollTrackingHeader containerRef={rightColumnRef}>
+              <h1>X</h1>
+            </ScrollTrackingHeader>
             <SingleProject selectedProjectId={selectedProjectId} />
             <SideGallery selectedProjectId={selectedProjectId} />
           </div>
@@ -76,3 +84,4 @@ function App() {
 }
 
 export default App;
+

@@ -23,3 +23,7 @@
     /* position: relative; needed for absolute header */
   }
 }
+
+@media (max-width: 767px) {
+  .single-project .scroll-tracking-header { display: none; }
+}

@@ -21,3 +21,7 @@
     flex-shrink: 0;
   }
 }
+
+@media (max-width: 767px) {
+  .main-details .scroll-tracking-header { display: none; }
+}
