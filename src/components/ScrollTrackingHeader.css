@@ -39,8 +39,9 @@
     padding-left: var(--space-sm);
     padding-right: var(--space-sm);
 
-    /* remove any extra vertical padding so it matches desktop */
-    padding-top: 0;
+    /* Top space */
+    padding-top: var(--space-sm);
     padding-bottom: 0;
+
   }
 }
