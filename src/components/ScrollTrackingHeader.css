@@ -8,6 +8,7 @@
   width: 100%;
   overflow: hidden; /* hide moving text overflow */
   pointer-events: none;
+  box-sizing: border-box; /* ensure width includes padding like desktop */
 }
 
 .scroll-tracking-header__inner {
@@ -26,4 +27,20 @@
 .scroll-tracking-header h5,
 .scroll-tracking-header h6 {
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .right-column > .scroll-tracking-header {
+    /* EXACTLY mirror .main-details/.single-project header bleed */
+    margin-left: calc(var(--space-sm) * -1);
+    margin-right: calc(var(--space-sm) * -1);
+
+    /* mirror the parent section’s horizontal/vertical padding context */
+    padding-left: var(--space-sm);
+    padding-right: var(--space-sm);
+
+    /* remove any extra vertical padding so it matches desktop */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
