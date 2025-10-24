@@ -6,10 +6,23 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
   return (
     <div className="left-sidebar">
       <header>
-        <h1 onClick={onHeaderClick} style={{ cursor: "pointer" }}>
+        <h1
+          onClick={onHeaderClick}
+          style={{
+            cursor: "pointer",
+            textAlign: "right",
+            display: "block",
+            width: "100%",
+            whiteSpace: "nowrap",
+            overflow: "visible" // no clipping, no ellipsis
+          }}
+        >
           Richard Bewley U
         </h1>
-        {/* <h1 onClick={onHeaderClick} style={{ cursor: "pointer" }}>Design</h1> */}
+        <h1 onClick={onHeaderClick} style={{ 
+          cursor: "pointer",
+          textAlign: "right",
+        }}>Design</h1>
       </header>
 
       <a 

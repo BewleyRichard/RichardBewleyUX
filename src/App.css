@@ -191,7 +191,7 @@ body {
   --font-body-size: clamp(1rem, 2vw, 1.25rem);          /* ~16px → 20px */
   --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
   --font-h2-size: clamp(1.777rem, 4vw, 3rem);           /* ~28px → 48px */
-  --font-h1-size: clamp(2.369rem, 4vw, 3.157rem);       /* ~38px → 50px */
+  --font-h1-size: clamp(1.875rem, 4vw, 3.157rem);       /* ~38px → 50px */
   
 /* -------------------- Line Heights -------------------- */
 
