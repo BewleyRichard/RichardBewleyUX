@@ -26,18 +26,21 @@ const ScrollTrackingHeader = ({
       scrollContainerRef.current = container;
 
       const handleScroll = () => {
+        const parentElement = headerRef.current?.parentElement;
+        if (!parentElement) return;
+
         const scrollTop = container.scrollTop;
         const scrollHeight = container.scrollHeight - container.clientHeight;
         const scrollPercent = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
 
-        // Get padding from the header's parent element (the component container)
-        const parentElement = headerRef.current?.parentElement;
-        const computedStyle = parentElement ? getComputedStyle(parentElement) : getComputedStyle(container);
+        // Use parent element's width (single-project or main-details)
+        const containerWidth = parentElement.clientWidth;
+        const innerWidth = innerRef.current.offsetWidth;
+        
+        // Get padding from the parent element
+        const computedStyle = getComputedStyle(parentElement);
         const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
         const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
-        
-        const containerWidth = container.clientWidth;
-        const innerWidth = innerRef.current.offsetWidth;
         
         // Available width accounting for padding
         const availableWidth = containerWidth - paddingLeft - paddingRight;
