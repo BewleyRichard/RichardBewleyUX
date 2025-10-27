@@ -14,8 +14,10 @@
   right: 0;
   top: calc(var(--space-xl) + var(--font-h1-size)); /* After header bottom */
   bottom: calc(var(--space-md) * -1); /* extend past bottom padding to full column */
-  width: 1px;
-  background-color: black;
+  width: var(--stroke-width);
+  background-color: var(--stroke-color);
+  transform: translateX(var(--stroke-nudge-right));
+  will-change: transform;
 }
 
 /* Mobile: hide the stroke on small screens */
@@ -55,10 +57,22 @@
 a.hyperlink-large {
   color: inherit;
   text-decoration: none;
+  /* optional offset for nicer look */
+  text-underline-offset: 2px;
+}
+
+/* 1px underline on hover/focus */
+a.hyperlink-large:hover,
+a.hyperlink-large:focus-visible {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-color: currentColor;
 }
 
 a.hyperlink-large.selected {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
 }
     
 /* Contact details container, stacks vertically*/

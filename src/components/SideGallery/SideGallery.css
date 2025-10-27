@@ -43,10 +43,12 @@
     content: '';
     position: absolute;
     left: 0;
-    top: calc(var(--space-md)); /* After header bottom */
+    top: var(--space-md); /* After header bottom */
     bottom: 0;
-    width: 1px;
-    background-color: black;
+    width: var(--stroke-width);
+    background-color: var(--stroke-color);
+    transform: translateX(var(--stroke-nudge-left));
+    will-change: transform;
   }
 }
 
