@@ -14,8 +14,15 @@
   right: 0;
   top: calc(var(--space-sm) + var(--font-h1-size)); /* After header bottom */
   bottom: 0;
-  width: 1.5px;
+  width: 1px;
   background-color: black;
+}
+
+/* Mobile: hide the stroke on small screens */
+@media (max-width: 767px) {
+  .left-sidebar .pseudo-stroke-right { display: none !important; }
+  .left-sidebar::after { content: none !important; }
+  .left-sidebar { border-right: none !important; } /* if stroke was a border */
 }
 
 @media (min-width: 768px) {

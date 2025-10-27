@@ -19,10 +19,6 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
         >
           Richard Bewley U
         </h1>
-        <h1 onClick={onHeaderClick} style={{ 
-          cursor: "pointer",
-          textAlign: "right",
-        }}>Design</h1>
       </header>
 
       <a 
