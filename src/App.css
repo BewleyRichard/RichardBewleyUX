@@ -114,6 +114,16 @@ body {
   .App.view-selected-works > .side-gallery {
     flex: 0 0 33.33%;
   }
+
+  /* Align desktop top start with LeftSidebar's "About me" gap */
+  .main-details .scroll-tracking-header + *,
+  .single-project .scroll-tracking-header + * {
+    margin-top: var(--space-xl);
+  }
+
+  .side-gallery > :first-child {
+    margin-top: var(--space-xs);
+  }
 }
 
 /* -------------------- Mobile Layout (Two Independent Scroll Columns) -------------------- */

@@ -1,6 +1,6 @@
 /* -------------------- Single Project Section -------------------- */
 .single-project {
-  padding: var(--space-sm);
+  padding: var(--space-md);
   box-sizing: border-box;
 }
 

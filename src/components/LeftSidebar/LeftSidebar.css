@@ -4,7 +4,7 @@
   min-width: 0;
   box-sizing: border-box;
   transition: flex-basis 300ms ease;
-  padding: var(--space-sm);
+  padding: var(--space-md);
   position: relative;
 }
 /* pseudo-stroke-right */
@@ -12,8 +12,8 @@
   content: '';
   position: absolute;
   right: 0;
-  top: calc(var(--space-sm) + var(--font-h1-size)); /* After header bottom */
-  bottom: 0;
+  top: calc(var(--space-xl) + var(--font-h1-size)); /* After header bottom */
+  bottom: calc(var(--space-md) * -1); /* extend past bottom padding to full column */
   width: 1px;
   background-color: black;
 }
@@ -40,9 +40,9 @@
   top: 0;
   background: white; /* Match sidebar background so content scrolls under */
   z-index: 10;
-  margin-left: calc(var(--space-sm) * -1);
-  margin-right: calc(var(--space-sm) * -1);
-  padding-left: var(--space-sm);
+  margin-left: calc(var(--space-md) * -1);
+  margin-right: calc(var(--space-md) * -1);
+  padding-left: var(--space-md);
   padding-right: 0;
 }
 
@@ -66,6 +66,6 @@ a.hyperlink-large.selected {
   display: flex;
   flex-direction: column;
   margin-block-start: var(--space-xl);
-  gap: var(--space-xl);
+  gap: var(--space-md);
 }
   /* Email / CV download links styling lives here */

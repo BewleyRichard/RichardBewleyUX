@@ -1,6 +1,6 @@
 /* -------------------- Main Details Section -------------------- */
 .main-details {
-  padding: var(--space-sm);
+  padding: var(--space-md);
   box-sizing: border-box;
 }
 
