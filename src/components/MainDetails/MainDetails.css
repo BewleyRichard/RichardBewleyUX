@@ -7,6 +7,7 @@
 /* Make ScrollTrackingHeader span full width */
 .main-details .scroll-tracking-header {
   margin-left: calc(var(--space-md) * -1);  /* bleed left to column edge */
+  padding-left: var(--font-h1-spacing);    /* align text with content */
   width: auto;                              /* keep true content width for accurate tracking */
   box-sizing: border-box;                   /* keep padding inside width */
 }

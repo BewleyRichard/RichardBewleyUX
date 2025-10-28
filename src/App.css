@@ -207,7 +207,8 @@ body {
   --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
   --font-h2-size: clamp(1.777rem, 4vw, 3rem);           /* ~28px → 48px */
   --font-h1-size: clamp(1.875rem, 4vw, 3.157rem);       /* ~38px → 50px */
-  
+  --font-h1-spacing: clamp(0px, 0.1vw, 1px);
+
 /* -------------------- Line Heights -------------------- */
 
   --lh-caption: 1.4;

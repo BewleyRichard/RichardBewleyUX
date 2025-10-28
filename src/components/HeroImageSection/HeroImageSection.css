@@ -26,6 +26,13 @@
   margin-top: 0;
 }
 
+.hero-image-section > h1 {
+  display: block;
+  margin-left: calc(var(--space-md) * -1); /* bleed to column edge */
+  padding-left: var(--font-h1-spacing);
+  box-sizing: border-box;
+}
+
 /* image sizing */
 .hero-image {
   width: 100%;
