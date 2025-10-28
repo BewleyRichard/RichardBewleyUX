@@ -1,6 +1,7 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/nimbus-sans-d-ot');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap');
 
 /* -------------------- Global Styles -------------------- */
 
@@ -254,7 +255,7 @@ h3 {
 /* Body text */
 p { 
   font-size: var(--font-body-size);
-  font-family: Yrsa, serif;
+  font-family: 'Nimbus Sans D OT', Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: var(--lh-body);
   margin-block-start: var(--space-sm);
@@ -263,7 +264,7 @@ p {
 /* Image figures and captions */
 .caption { 
   font-size: var(--font-caption-size);
-  font-family: Yrsa, serif;
+  font-family: 'Inconsolata', monospace;
   font-weight: 500;
   line-height: var(--lh-caption);
 }
@@ -346,8 +347,9 @@ a.hyperlink-large.selected {
 .selected-works li:last-child a::after { content: "."; }
 .small-list li, .experience-list { 
   font-size: var(--font-body-size);
-  font-family: Yrsa, serif;
+  font-family: 'Nimbus Sans D OT', Helvetica, Arial, sans-serif;
   font-weight: 300;
+  line-height: var(--lh-body);
 }
 .selected-works, .small-list, .experience-list {
   list-style: none;

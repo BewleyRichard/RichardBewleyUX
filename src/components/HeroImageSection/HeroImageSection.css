@@ -18,6 +18,7 @@
     flex-shrink: 0;
     overflow: hidden; /* prevent both vertical and horizontal scroll */
   }
+
 }
 
 /* Remove top margin from first heading ADD NEW MARGIN LATER*/
@@ -38,6 +39,11 @@
   position: relative;
   width: 100%;
   aspect-ratio: var(--hero-aspect, 16/9); /* set desired ratio here */
+}
+
+/* Apply on all viewports (mobile + desktop) */
+.hero-image-section .hero-image-frame {
+  margin-block-start: var(--space-xl);
 }
 
 /* Fill the frame; swap contain->cover if you want crop */
