@@ -28,15 +28,15 @@
 .scroll-tracking-header h6 {
   margin: 0;
 }
-
+/* Controls the spacing of X on mobile */
 @media (max-width: 767px) {
   .right-column > .scroll-tracking-header {
     /* EXACTLY mirror .main-details/.single-project header bleed */
-    margin-left: calc(var(--space-md) * -1);
-    margin-right: calc(var(--space-md) * -1);
+    /* margin-left: calc(var(--space-md) * -1); */
+    /* margin-right: calc(var(--space-md) * -1); */
 
     /* mirror the parent section’s horizontal/vertical padding context */
-    padding-left: var(--space-md);
+    /* padding-left: var(--space-md); */
     padding-right: var(--space-md);
 
     /* Top space */

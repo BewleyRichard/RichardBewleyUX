@@ -6,10 +6,9 @@
 
 /* Make ScrollTrackingHeader span full width */
 .main-details .scroll-tracking-header {
-  margin-left: calc(var(--space-sm) * -1);
-  margin-right: calc(var(--space-sm) * +1);
-  /* padding-left: var(--space-sm); */
-  /* padding-right: 0; */
+  margin-left: calc(var(--space-md) * -1);  /* bleed left to column edge */
+  width: auto;                              /* keep true content width for accurate tracking */
+  box-sizing: border-box;                   /* keep padding inside width */
 }
 
 @media (min-width: 768px) {

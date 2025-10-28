@@ -3,7 +3,7 @@
   min-width: 0;
   box-sizing: border-box;
   transition: flex-basis 300ms ease;
-  padding: var(--space-sm);
+  padding: var(--space-md);
   box-sizing: border-box;
 }
 
