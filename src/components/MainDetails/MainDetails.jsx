@@ -2,13 +2,22 @@ import React, { useRef } from "react";
 import "./MainDetails.css";
 import ScrollTrackingHeader from "../ScrollTrackingHeader.jsx";
 
-function MainDetails() {
+function MainDetails({ onHeaderClick }) {
   const containerRef = useRef(null);
 
   return (
     <div className="main-details" ref={containerRef}>
       <ScrollTrackingHeader containerRef={containerRef}>
-        <h1>X</h1>
+        <h1
+          role="button"
+          tabIndex={0}
+          onClick={onHeaderClick}
+          onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && onHeaderClick?.()}
+          style={{ cursor: "pointer" }}
+          aria-label="Go home"
+        >
+          X
+        </h1>
       </ScrollTrackingHeader>
 
       <p>

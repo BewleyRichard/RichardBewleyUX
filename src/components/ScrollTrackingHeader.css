@@ -7,7 +7,7 @@
   background: white;
   width: 100%;
   overflow: hidden; /* hide moving text overflow */
-  pointer-events: none;
+  /* pointer-events: none;  // remove to allow clicks on inner OR keep and enable inner */
   box-sizing: border-box; /* ensure width includes padding like desktop */
 }
 
@@ -17,7 +17,11 @@
   white-space: nowrap;
   font: inherit;
   color: inherit;
+  pointer-events: auto; /* ensure X is clickable even if parent is non-interactive */
 }
+
+/* Make the button-y h1 show pointer cursor when clickable */
+.scroll-tracking-header__inner [role="button"] { cursor: pointer; }
 
 /* Remove default heading margins inside */
 .scroll-tracking-header h1,

@@ -80,14 +80,23 @@ function App() {
         (isMobile ? (
           <div className="right-column" ref={rightColumnRef}>
             <ScrollTrackingHeader containerRef={rightColumnRef}>
-              <h1>X</h1>
+              <h1
+                role="button"
+                tabIndex={0}
+                onClick={handleHeaderClick}
+                onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && handleHeaderClick()}
+                style={{ cursor: "pointer" }}
+                aria-label="Go home"
+              >
+                X
+              </h1>
             </ScrollTrackingHeader>
-            <MainDetails />
+            <MainDetails onHeaderClick={handleHeaderClick} />
             <SideGallery selectedProjectId={null} />
           </div>
         ) : (
           <>
-            <MainDetails />
+            <MainDetails onHeaderClick={handleHeaderClick} />
             <SideGallery selectedProjectId={null} />
           </>
         ))}
@@ -96,14 +105,23 @@ function App() {
         (isMobile ? (
           <div className="right-column" ref={rightColumnRef}>
             <ScrollTrackingHeader containerRef={rightColumnRef}>
-              <h1>X</h1>
+              <h1
+                role="button"
+                tabIndex={0}
+                onClick={handleHeaderClick}
+                onKeyDown={(e) => (e.key === "Enter" || e.key === " ") && handleHeaderClick()}
+                style={{ cursor: "pointer" }}
+                aria-label="Go home"
+              >
+                X
+              </h1>
             </ScrollTrackingHeader>
-            <SingleProject selectedProjectId={selectedProjectId} />
+            <SingleProject selectedProjectId={selectedProjectId} onHeaderClick={handleHeaderClick} />
             <SideGallery selectedProjectId={selectedProjectId} />
           </div>
         ) : (
           <>
-            <SingleProject selectedProjectId={selectedProjectId} />
+            <SingleProject selectedProjectId={selectedProjectId} onHeaderClick={handleHeaderClick} />
             <SideGallery selectedProjectId={selectedProjectId} />
           </>
         ))}
