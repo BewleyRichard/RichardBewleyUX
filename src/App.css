@@ -203,6 +203,7 @@ body {
 
 /* -------------------- Font Size Variables -------------------- */
   
+  --font-link-large-size: clamp(1.75rem, 3.5vw, 2.75rem); /* ~28px → 44px */
   --font-caption-size: clamp(0.875rem, 1vw, 0.9375rem); /* ~14px → 15px */
   --font-body-size: clamp(1rem, 2vw, 1.25rem);          /* ~16px → 20px */
   --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
@@ -215,6 +216,7 @@ body {
   --lh-caption: 1.4;
   --lh-body: 1.5;
   --lh-h3: 1.35;
+  --lh-link-large: 1.05;
   --lh-h2: 0.875;
   --lh-h1: 1.15;
 }
@@ -287,6 +289,15 @@ a.hyperlink-large,
   text-decoration: none;
   font-family: Yrsa, serif;
   line-height: var(--lh-h1);
+}
+
+/* New size for Selected Works links */
+.selected-works a {
+  font-size: var(--font-link-large-size);
+  font-weight: 500;
+  line-height: var(--lh-link-large);
+  color: inherit;
+  font-family: Yrsa, serif;
 }
 
 a.hyperlink-large {
