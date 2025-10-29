@@ -2,13 +2,22 @@
   position: sticky;
   top: 0;
   z-index: 10;
-
-  /* Static white bar background */
   background: white;
   width: 100%;
-  overflow: hidden; /* hide moving text overflow */
-  /* pointer-events: none;  // remove to allow clicks on inner OR keep and enable inner */
-  box-sizing: border-box; /* ensure width includes padding like desktop */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+/* overlay to occlude content behind the sticky bar */
+.scroll-tracking-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;           /* default (no bleed) */
+  right: 0;
+  background: white; /* cover content beneath */
+  z-index: 0;
+  pointer-events: none;
 }
 
 .scroll-tracking-header__inner {
@@ -17,7 +26,9 @@
   white-space: nowrap;
   font: inherit;
   color: inherit;
-  pointer-events: auto; /* ensure X is clickable even if parent is non-interactive */
+  pointer-events: auto;
+  position: relative; /* render above overlay */
+  z-index: 1;
 }
 
 /* Make the button-y h1 show pointer cursor when clickable */
@@ -32,8 +43,33 @@
 .scroll-tracking-header h6 {
   margin: 0;
 }
-/* Controls the spacing of X on mobile */
+
+/* Extend overlay into the left bleed AND above the header by section padding */
+.main-details .scroll-tracking-header::before,
+.single-project .scroll-tracking-header::before {
+  left: calc(var(--space-md) * -1);
+  top: calc(var(--space-md) * -1); /* cover the top part above the header */
+}
+
+/* Match LeftSidebar overlay behavior inside MainDetails/SingleProject */
+.main-details .scroll-tracking-header,
+.single-project .scroll-tracking-header {
+  overflow: visible; /* let ::before extend into the bleed and above */
+}
+
+.main-details .scroll-tracking-header::before,
+.single-project .scroll-tracking-header::before {
+  left: calc(var(--space-md) * -1);
+  right: calc(var(--space-md) * -1);
+  top: calc(var(--space-md) * -1); /* cover area above header, like LeftSidebar */
+}
+
+/* Mobile header inside right-column (no extra bleed needed) */
 @media (max-width: 767px) {
+  .right-column > .scroll-tracking-header::before {
+    left: 0;
+    right: 0;
+  }
   .right-column > .scroll-tracking-header {
     /* EXACTLY mirror .main-details/.single-project header bleed */
     /* margin-left: calc(var(--space-md) * -1); */

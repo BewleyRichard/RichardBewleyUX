@@ -40,12 +40,31 @@
 .left-sidebar > header {
   position: sticky;
   top: 0;
-  background: white; /* Match sidebar background so content scrolls under */
-  z-index: 10;
+  z-index: 10; /* ensure above content/stroke */
+  background: transparent; /* overlay provides the white */
   margin-left: calc(var(--space-md) * -1);
   margin-right: calc(var(--space-md) * -1);
   padding-left: var(--space-md);
   padding-right: 0;
+}
+
+.left-sidebar > header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* extend overlay into the header’s negative margins to cover the full bleed */
+  left: calc(var(--space-md) * -1);
+  right: calc(var(--space-md) * -1);
+  top: calc(var(--space-md) * -1);
+  background: white;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.left-sidebar > header h1 {
+  position: relative;
+  z-index: 1; /* render above the overlay */
 }
 
 /* Remove top margin from first heading */
