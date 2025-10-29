@@ -7,6 +7,7 @@
   gap: var(--space-md); /* Space between figures */
   /* ensure no stroke on mobile */
   border-left: none;
+  transition: flex-basis 300ms ease;
 }
 
 .side-gallery img {

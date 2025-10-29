@@ -185,6 +185,16 @@ body {
   .App.view-selected-works .hero-image-section { display: none; }
   .right-column .side-gallery { order: 2; }
 }
+
+/* Reduce motion: disable column width animations */
+@media (prefers-reduced-motion: reduce) {
+  .left-sidebar,
+  .hero-image-section,
+  .main-details,
+  .side-gallery {
+    transition: none !important;
+  }
+}
  
 /* -------------------- Spacing Variables -------------------- */
 :root {
@@ -208,7 +218,7 @@ body {
   --font-body-size: clamp(1rem, 2vw, 1.25rem);          /* ~16px → 20px */
   --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
   --font-h2-size: clamp(1.777rem, 4vw, 3rem);           /* ~28px → 48px */
-  --font-h1-size: clamp(1.875rem, 4vw, 3.157rem);       /* ~38px → 50px */
+  --font-h1-size: clamp(2.125rem, 4vw, 3.157rem); /* ~34px → 50px */
   --font-h1-spacing: clamp(0px, 0.1vw, 1px);
 
 /* -------------------- Line Heights -------------------- */
