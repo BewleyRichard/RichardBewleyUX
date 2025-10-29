@@ -2,6 +2,7 @@
 .single-project {
   padding: var(--space-md);
   box-sizing: border-box;
+  transition: flex-basis 300ms ease;
 }
 
 .single-project > h2 {

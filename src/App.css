@@ -277,7 +277,7 @@ p {
 .caption { 
   font-size: var(--font-caption-size);
   font-family: 'Inconsolata', monospace;
-  font-weight: 500;
+  font-weight: 600;
   line-height: var(--lh-caption);
 }
 
@@ -376,3 +376,34 @@ a.hyperlink-large.selected {
   list-style: none;
   padding-left: 0;
 }
+
+/* Hide scrollbars (keep scrolling) across app columns */
+.left-sidebar,
+.hero-image-section,
+.main-details,
+.single-project,
+.side-gallery,
+.right-column {
+  /* cross-browser scrollbar hide */
+  -ms-overflow-style: none;   /* IE/Edge legacy */
+  scrollbar-width: none;      /* Firefox */
+  scrollbar-gutter: auto;     /* don't reserve gutter when hidden */
+}
+.left-sidebar::-webkit-scrollbar,
+.hero-image-section::-webkit-scrollbar,
+.main-details::-webkit-scrollbar,
+.single-project::-webkit-scrollbar,
+.side-gallery::-webkit-scrollbar,
+.right-column::-webkit-scrollbar {
+  display: none;              /* Chrome/Safari */
+}
+
+/* Optional: utility class if you prefer opt-in instead of global */
+/*
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+}
+.no-scrollbar::-webkit-scrollbar { display: none; }
+*/
