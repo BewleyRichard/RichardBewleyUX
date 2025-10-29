@@ -34,26 +34,28 @@
     overflow-y: auto;
     height: 100%;
     flex-shrink: 0;
-    position: relative; /* for pseudo-stroke */
+    position: relative; /* anchor pseudo-stroke */
     /* replace direct border with pseudo element */
     border-left: none;
+
+    /* fixed left stroke (does not scroll with content) */
+    background-image: linear-gradient(
+      to right,
+      var(--stroke-color) 0,
+      var(--stroke-color) var(--stroke-width, 1px),
+      transparent var(--stroke-width, 1px)
+    );
+    background-repeat: no-repeat;
+    background-position: calc(0px + var(--stroke-nudge-left, 0px)) var(--space-md);
+    background-size: var(--stroke-width, 1px) calc(100% - (var(--space-md) * 2));
   }
 
-  /* pseudo-stroke-left (mirror LeftSidebar's ::after styling) */
-  .side-gallery::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: var(--space-md); /* After header bottom */
-    bottom: 0;
-    width: var(--stroke-width);
-    background-color: var(--stroke-color);
-    transform: translateX(var(--stroke-nudge-left));
-    will-change: transform;
-  }
+  /* disable old pseudo stroke */
+  .side-gallery::before { content: none !important; }
 }
 
 @media (max-width: 767px) {
+  .side-gallery { background-image: none !important; }
   .side-gallery::before { content: none !important; }
 }
 

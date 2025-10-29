@@ -7,24 +7,15 @@
   padding: var(--space-md);
   position: relative;
 }
-/* pseudo-stroke-right */
-.left-sidebar::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: calc(var(--space-xl) + var(--font-h1-size)); /* After header bottom */
-  bottom: calc(var(--space-md) * -1); /* extend past bottom padding to full column */
-  width: var(--stroke-width);
-  background-color: var(--stroke-color);
-  transform: translateX(var(--stroke-nudge-right));
-  will-change: transform;
-}
+/* REMOVE old pseudo-stroke */
+/* .left-sidebar::after { ... } */
 
 /* Mobile: hide the stroke on small screens */
 @media (max-width: 767px) {
   .left-sidebar .pseudo-stroke-right { display: none !important; }
   .left-sidebar::after { content: none !important; }
   .left-sidebar { border-right: none !important; } /* if stroke was a border */
+  .left-sidebar { background-image: none !important; }
 }
 
 @media (min-width: 768px) {
@@ -33,6 +24,19 @@
     height: 100%;
     flex-shrink: 0;
     overflow-y: auto;
+
+    /* fixed right stroke (does not scroll with content) */
+    --sidebar-stroke-top: calc(var(--space-xl) + var(--font-h1-size)); /* start under header */
+    border-right: none;
+    background-image: linear-gradient(
+      to left,
+      var(--stroke-color) 0,
+      var(--stroke-color) var(--stroke-width, 1px),
+      transparent var(--stroke-width, 1px)
+    );
+    background-repeat: no-repeat;
+    background-position: calc(100% + var(--stroke-nudge-right, 0px)) var(--sidebar-stroke-top);
+    background-size: var(--stroke-width, 1px) calc(100% - (var(--sidebar-stroke-top) + var(--space-md)));
   }
 }
 
