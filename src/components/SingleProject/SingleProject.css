@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.single-project > h2 {
+  font-size: var(--font-h1-size);
+}
+
 /* Make ScrollTrackingHeader span full width */
 .single-project .scroll-tracking-header {
   margin-left: calc(var(--space-md) * -1);  /* bleed left to column edge */

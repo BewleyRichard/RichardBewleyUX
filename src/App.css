@@ -262,7 +262,7 @@ h3 {
   font-weight: 500;
   font-family: Yrsa, serif;
   line-height: var(--lh-h3);
-  margin-block-start: var(--space-xl);
+  margin-block-start: var(--space-lg);
 }
 /* Body text */
 p { 
