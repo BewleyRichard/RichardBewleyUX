@@ -31,7 +31,7 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
       {Array.isArray(project.details)
         ? project.details.map((t, i) => <p key={i}>{t}</p>)
         : <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.details}</ReactMarkdown>}
-      <h3>Deliverables</h3>
+      <h3>UX Methods</h3>
       <ul className="small-list">
         {project.deliverables.map((d, i) => (
           <li key={i}>{d}</li>
