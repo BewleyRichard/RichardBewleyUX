@@ -2,6 +2,8 @@ import { useRef } from "react";
 import projects from "../../data/projects";
 import "./SingleProject.css";
 import ScrollTrackingHeader from "../ScrollTrackingHeader.jsx";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 function SingleProject({ selectedProjectId, onHeaderClick }) {
   const project = projects.find((p) => p.id === selectedProjectId);
@@ -26,6 +28,9 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
       <p>{project.client} | {project.year}</p>
       <h2>{project.title}</h2>
       <p>{project.summary}</p>
+      {Array.isArray(project.details)
+        ? project.details.map((t, i) => <p key={i}>{t}</p>)
+        : <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.details}</ReactMarkdown>}
       <h3>Deliverables</h3>
       <ul className="small-list">
         {project.deliverables.map((d, i) => (
