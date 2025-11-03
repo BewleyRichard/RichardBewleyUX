@@ -1,7 +1,11 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.cdnfonts.com/css/nimbus-sans-d-ot');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/nimbus-sans-l');  /* replaced helvetica-lt-narrow */
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
 
 /* -------------------- Global Styles -------------------- */
 
@@ -211,17 +215,17 @@ body {
   --stroke-nudge-left: 0.5px;   /* for left edge strokes */
   --stroke-nudge-right: -0.5px; /* for right edge strokes */
 
-/* -------------------- Font Size Variables -------------------- */
+  /* -------------------- Font Size Variables -------------------- */
   
-  --font-link-large-size: clamp(1.75rem, 3.5vw, 2.75rem); /* ~28px → 44px */
-  --font-caption-size: clamp(0.875rem, 1vw, 0.9375rem); /* ~14px → 15px */
-  --font-body-size: clamp(1rem, 2vw, 1.25rem);          /* ~16px → 20px */
-  --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);     /* ~21px → 30px */
-  --font-h2-size: clamp(1.777rem, 4vw, 3rem);           /* ~28px → 48px */
-  --font-h1-size: clamp(2.125rem, 4vw, 3.157rem); /* ~34px → 50px */
-  --font-h1-spacing: clamp(0px, 0.1vw, 1px);
+  --font-link-large-size: clamp(1.75rem, 3.5vw, 2.75rem); /* ~28px→44px — Used by large links (.selected-works a, .hyperlink-large) */
+  --font-caption-size: clamp(0.875rem, calc(0.8rem + 0.4vw), 0.9375rem);   /* scales earlier on desktop */
+  --font-body-size: clamp(1rem, 2vw, 1.25rem);            /* ~16px→20px — Used by body text (p) and small lists */
+  --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);       /* ~21px→30px — Used by subheaders (h3) */
+  --font-h2-size: clamp(1.777rem, 3.2vw, 2.5rem);             /* ~28px→48px — Used by headers (h2) and large link sizing */
+  --font-h1-size: clamp(2rem, 3vw, 3rem);               /* ~24px→48px — smaller on mobile, gentler growth */
+  --font-h1-spacing: clamp(0px, 0.1vw, 1px);              /* Letter-spacing — Used to align h1 text in scroll-tracking headers */
 
-/* -------------------- Line Heights -------------------- */
+  /* -------------------- Line Heights -------------------- */
 
   --lh-caption: 1.4;
   --lh-body: 1.5;
@@ -235,7 +239,7 @@ body {
   :root {
     /* --space-lg: clamp(3rem, 2vw, 6rem);
     --space-xl: clamp(6rem, 4vw, 10rem); */
-    --space-lg: clamp(1rem, 2.2vw, 1.333rem);
+    --space-lg: clamp(1rem, 2.2vw, 1.333rem); /* keep original scaling */
     --space-xl: clamp(1.333rem, 3vw, 1.777rem);
   }
 }
@@ -244,40 +248,38 @@ body {
 /* Main title  */
 h1 { 
   font-size: var(--font-h1-size); 
-  font-family: 'Nimbus Sans D OT', Helvetica, Arial, sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-family: 'Nimbus Sans L', sans-serif; 
+  font-weight: 700;
   line-height: var(--lh-h1);
 }
+
 /* Header and large links(inherit) */
 h2 { 
   font-size: var(--font-h2-size); 
-  font-weight: 500;
-  font-family: Yrsa, serif;
-  line-height: var(--lh-h2);
+  font-weight: 700;
+  font-family: 'Nimbus Sans L', sans-serif; 
 }
 /* Subheaders */
 h3 { 
-  font-size: var(--font-h3-size); 
-  font-weight: 500;
-  font-family: Yrsa, serif;
-  line-height: var(--lh-h3);
+  font-size: var(--font-body-size);   /* match body */
+  font-weight: 400;
+  font-family: 'Castoro', serif;      /* match body */
+  line-height: var(--lh-body);        /* match body */
   margin-block-start: var(--space-lg);
 }
 /* Body text */
 p { 
   font-size: var(--font-body-size);
-  font-family: 'Nimbus Sans D OT', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: 'Castoro', serif;
+  font-weight: 400;
   line-height: var(--lh-body);
-  margin-block-start: var(--space-sm);
-
+  margin-block-end: var(--space-sm);
 }
 /* Image figures and captions */
 .caption { 
   font-size: var(--font-caption-size);
-  font-family: 'Inconsolata', monospace;
-  font-weight: 600;
+  font-family: 'Castoro', serif;  
+  font-weight: 400;
   line-height: var(--lh-caption);
 }
 
@@ -285,29 +287,26 @@ p {
 h2.indent-header { 
   text-indent: 1ch;
   font-style: italic;
-  margin-block-start: var(--space-xl);
-  margin-block-end: var(--space-sm);
+  font-size: var(--font-h2-size);
+  font-weight: 400;
+  font-family: 'Castoro', serif;  
 }
 
 /* Links */
+
 a.hyperlink-large,
 .contact-details a,
 .selected-works a {
   font-size: var(--font-h2-size);
-  font-weight: 500;
+  font-weight: 400;
   color: inherit;
   text-decoration: none;
-  font-family: Yrsa, serif;
-  line-height: var(--lh-h1);
+  font-family: 'Castoro', serif;  
 }
 
-/* New size for Selected Works links */
+/* Use if you want to change the size of the links */
 .selected-works a {
-  font-size: var(--font-link-large-size);
-  font-weight: 500;
-  line-height: var(--lh-link-large);
-  color: inherit;
-  font-family: Yrsa, serif;
+  font-size: var(--font-h2-size);
 }
 
 a.hyperlink-large {
@@ -360,7 +359,7 @@ a.hyperlink-large.selected {
 /* Small text lists (e.g., Deliverables, Tools & experience) */
 .small-list li { 
   display: inline;
-  font-weight: 300;
+  font-weight: 400;
 }
 .small-list li::after,
 .selected-works li a::after { content: ", "; }
@@ -368,9 +367,9 @@ a.hyperlink-large.selected {
 .selected-works li:last-child a::after { content: "."; }
 .small-list li, .experience-list { 
   font-size: var(--font-body-size);
-  font-family: 'Nimbus Sans D OT', Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  line-height: var(--lh-body);
+  font-family: 'Castoro', serif;
+  font-weight: 400;
+  /* line-height: var(--lh-body); */
 }
 .selected-works, .small-list, .experience-list {
   list-style: none;

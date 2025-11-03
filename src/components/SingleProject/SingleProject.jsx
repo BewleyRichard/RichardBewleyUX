@@ -25,7 +25,7 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
           X
         </h1>
       </ScrollTrackingHeader>
-      <p>{project.client} | {project.year}</p>
+      <p>{project.client}, {project.year}</p>
       <h2>{project.title}</h2>
       <p>{project.summary}</p>
       {Array.isArray(project.details)

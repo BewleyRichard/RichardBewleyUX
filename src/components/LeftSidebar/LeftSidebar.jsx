@@ -52,7 +52,7 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
       </div>
 
       <aside>
-        <p>Last updated: September, 2025</p>
+        <p>Last updated: November, 2025</p>
       </aside>
     </div>
   );

@@ -6,6 +6,8 @@
   transition: flex-basis 300ms ease;
   padding: var(--space-md);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 /* REMOVE old pseudo-stroke */
 /* .left-sidebar::after { ... } */
@@ -106,3 +108,47 @@ a.hyperlink-large.selected {
   gap: var(--space-md);
 }
   /* Email / CV download links styling lives here */
+
+/* Uniform gap between sections */
+.left-sidebar > * + * {
+  margin-block-start: var(--space-xl); /* uniform gap between sections */
+}
+
+/* Keep About me’s original top spacing */
+.left-sidebar > .hyperlink-large {
+  margin-block-start: var(--space-xl);
+}
+
+/* Make space above Email equal to the gap between Email and CV */
+.left-sidebar > .contact-details {
+  margin-block-start: var(--space-md); /* overrides the uniform XL gap */
+}
+
+/* Remove previous zero override if present */
+/* .left-sidebar .contact-details { margin-block-start: 0; } */
+
+.left-sidebar h2,
+.left-sidebar ul,
+.left-sidebar p { margin: 0; padding: 0; }
+
+/* Tighten Selected Works list line-height */
+.left-sidebar .selected-works li {
+  line-height: var(--lh-link-large); /* 1.05 */
+}
+.left-sidebar .selected-works li > a {
+  line-height: var(--lh-link-large);
+  display: block; /* ensure consistent click area */
+}
+
+/* Footer sits at the bottom of the column */
+.left-sidebar > aside {
+  margin-top: auto;            /* pushes footer to the bottom */
+  padding-top: var(--space-sm);
+  background: white;           /* optional: occlude content behind */
+}
+
+/* Optional: keep footer visible at the bottom while scrolling */
+/* .left-sidebar > aside {
+  position: sticky;
+  bottom: 0;
+} */

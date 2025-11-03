@@ -6,7 +6,7 @@
 }
 
 .single-project > h2 {
-  font-size: var(--font-h1-size);
+  line-height: var(--lh-link-large); /* set your specific value */
 }
 
 /* Make ScrollTrackingHeader span full width */
