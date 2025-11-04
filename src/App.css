@@ -6,7 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/nimbus-sans-l');  /* replaced helvetica-lt-narrow */
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 /* -------------------- Global Styles -------------------- */
 
 * {
@@ -221,7 +222,7 @@ body {
   --font-caption-size: clamp(0.875rem, calc(0.8rem + 0.4vw), 0.9375rem);   /* scales earlier on desktop */
   --font-body-size: clamp(1rem, 2vw, 1.25rem);            /* ~16px→20px — Used by body text (p) and small lists */
   --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);       /* ~21px→30px — Used by subheaders (h3) */
-  --font-h2-size: clamp(1.777rem, 3.2vw, 2.5rem);             /* ~28px→48px — Used by headers (h2) and large link sizing */
+  --font-h2-size: clamp(1.777rem, 3.2vw, 2.4rem); /* ~28px→38px — Used by headers (h2) and large link sizing */
   --font-h1-size: clamp(2rem, 3vw, 3rem);               /* ~24px→48px — smaller on mobile, gentler growth */
   --font-h1-spacing: clamp(0px, 0.1vw, 1px);              /* Letter-spacing — Used to align h1 text in scroll-tracking headers */
 
@@ -231,8 +232,12 @@ body {
   --lh-body: 1.5;
   --lh-h3: 1.35;
   --lh-link-large: 1.05;
-  --lh-h2: 0.875;
+  --lh-h2: 1.15; /* was 0.875; 1.1–1.2 is safer for multi-line serif H2s */
   --lh-h1: 1.15;
+
+  /* Letter Spacing */
+
+  --ls-serif: 0.03rem;
 }
 
 @media (min-width: 1200px) {
@@ -248,22 +253,25 @@ body {
 /* Main title  */
 h1 { 
   font-size: var(--font-h1-size); 
-  font-family: 'Nimbus Sans L', sans-serif; 
   font-weight: 700;
+  font-family: "nimbus-sans-l", sans-serif;
   line-height: var(--lh-h1);
 }
 
 /* Header and large links(inherit) */
 h2 { 
   font-size: var(--font-h2-size); 
-  font-weight: 700;
-  font-family: 'Nimbus Sans L', sans-serif; 
+  font-weight: 400;
+  font-family: 'Castoro', serif;
+  letter-spacing: var(--ls-serif);
+  line-height: var(--lh-h2);
 }
+
 /* Subheaders */
 h3 { 
   font-size: var(--font-body-size);   /* match body */
   font-weight: 400;
-  font-family: 'Castoro', serif;      /* match body */
+  font-family: 'Castoro', serif;
   line-height: var(--lh-body);        /* match body */
   margin-block-start: var(--space-lg);
 }
@@ -274,12 +282,13 @@ p {
   font-weight: 400;
   line-height: var(--lh-body);
   margin-block-end: var(--space-sm);
+  letter-spacing: var(--ls-serif);
 }
 /* Image figures and captions */
 .caption { 
   font-size: var(--font-caption-size);
-  font-family: 'Castoro', serif;  
-  font-weight: 400;
+  font-family: 'inconsolata', monospace;  
+  font-weight: 500;
   line-height: var(--lh-caption);
 }
 
@@ -289,7 +298,8 @@ h2.indent-header {
   font-style: italic;
   font-size: var(--font-h2-size);
   font-weight: 400;
-  font-family: 'Castoro', serif;  
+  font-family: 'Castoro', serif;
+  letter-spacing: var(--ls-serif);
 }
 
 /* Links */
@@ -301,7 +311,8 @@ a.hyperlink-large,
   font-weight: 400;
   color: inherit;
   text-decoration: none;
-  font-family: 'Castoro', serif;  
+  font-family: 'Castoro', serif;
+  letter-spacing: var(--ls-serif);
 }
 
 /* Use if you want to change the size of the links */
@@ -369,7 +380,8 @@ a.hyperlink-large.selected {
   font-size: var(--font-body-size);
   font-family: 'Castoro', serif;
   font-weight: 400;
-  /* line-height: var(--lh-body); */
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-serif);
 }
 .selected-works, .small-list, .experience-list {
   list-style: none;

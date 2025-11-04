@@ -6,7 +6,7 @@
 }
 
 .single-project > h2 {
-  line-height: var(--lh-link-large); /* set your specific value */
+  line-height: var(--lh-h2); /* set your specific values for the h2 in single project */
 }
 
 /* Make ScrollTrackingHeader span full width */

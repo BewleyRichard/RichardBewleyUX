@@ -109,35 +109,37 @@ a.hyperlink-large.selected {
 }
   /* Email / CV download links styling lives here */
 
-/* Uniform gap between sections */
+/* Uniform gap between top-level sections */
 .left-sidebar > * + * {
-  margin-block-start: var(--space-xl); /* uniform gap between sections */
-}
-
-/* Keep About me’s original top spacing */
-.left-sidebar > .hyperlink-large {
   margin-block-start: var(--space-xl);
 }
 
-/* Make space above Email equal to the gap between Email and CV */
-.left-sidebar > .contact-details {
-  margin-block-start: var(--space-md); /* overrides the uniform XL gap */
+/* Keep About me’s larger top spacing (above it) */
+.left-sidebar > .hyperlink-large {
+  margin-block-start: var(--space-3xl);
 }
 
-/* Remove previous zero override if present */
-/* .left-sidebar .contact-details { margin-block-start: 0; } */
+/* Make space above Email equal to section gap */
+.left-sidebar > .contact-details {
+  margin-block-start: var(--space-xl);
+}
 
-.left-sidebar h2,
-.left-sidebar ul,
-.left-sidebar p { margin: 0; padding: 0; }
+/* Prevent extra gap between the "Selected Works" heading and its list */
+.left-sidebar h2.indent-header {
+  margin-block-start: var(--space-xl); /* match left-sidebar section gap */
+  margin-block-end: 0;                 /* no extra space before the list */
+}
+.left-sidebar h2.indent-header + .selected-works {
+  margin-block-start: 0;               /* keep heading+list tight */
+}
 
 /* Tighten Selected Works list line-height */
 .left-sidebar .selected-works li {
-  line-height: var(--lh-link-large); /* 1.05 */
+  line-height: var(--lh-link-large);
 }
 .left-sidebar .selected-works li > a {
   line-height: var(--lh-link-large);
-  display: block; /* ensure consistent click area */
+  display: block;
 }
 
 /* Footer sits at the bottom of the column */
@@ -152,3 +154,14 @@ a.hyperlink-large.selected {
   position: sticky;
   bottom: 0;
 } */
+
+/* Normalize typography for large items */
+.left-sidebar .hyperlink-large,
+.left-sidebar h2.indent-header,
+.left-sidebar .selected-works a {
+  font-size: var(--font-h2-size);
+  font-family: 'Castoro', serif;
+  font-weight: 400;
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-serif);
+}
