@@ -231,7 +231,7 @@ body {
   --lh-caption: 1.4;
   --lh-body: 1.5;
   --lh-h3: 1.35;
-  --lh-link-large: 1.05;
+  --lh-link-large: 1.15;
   --lh-h2: 1.15; /* was 0.875; 1.1–1.2 is safer for multi-line serif H2s */
   --lh-h1: 1.15;
 
@@ -273,15 +273,14 @@ h3 {
   font-weight: 400;
   font-family: 'Castoro', serif;
   line-height: var(--lh-body);        /* match body */
-  margin-block-start: var(--space-lg);
 }
+
 /* Body text */
 p { 
   font-size: var(--font-body-size);
   font-family: 'Castoro', serif;
   font-weight: 400;
   line-height: var(--lh-body);
-  margin-block-end: var(--space-sm);
   letter-spacing: var(--ls-serif);
 }
 /* Image figures and captions */

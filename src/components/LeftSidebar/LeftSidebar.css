@@ -79,7 +79,7 @@
 
 /* About me link uses a larger top gap (intentional override) */
 .left-sidebar > .hyperlink-large {
-  margin-block-start: var(--space-2xl);
+  margin-block-start: var(--space-lg);
 }
 
 /* Contact details top gap equals the default section gap */
