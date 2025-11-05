@@ -121,14 +121,14 @@ body {
     flex: 0 0 33.33%;
   }
 
-  /* Align desktop top start with LeftSidebar's "About me" gap */
+  /* Align desktop top start with LeftSidebar's "About me" gap Column top*/
   .main-details .scroll-tracking-header + *,
   .single-project .scroll-tracking-header + * {
-    margin-top: var(--space-xl);
+    margin-top: var(--space-0);
   }
 
   .side-gallery > :first-child {
-    margin-top: var(--space-xs);
+    margin-top: var(--space-0);
   }
 }
 
@@ -320,7 +320,7 @@ a.hyperlink-large,
 }
 
 a.hyperlink-large {
-  margin-block-start: var(--space-xl);
+  /* margin-block-start: var(--space-xl); */
   display: block;
 }
 

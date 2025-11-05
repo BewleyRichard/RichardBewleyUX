@@ -3,7 +3,27 @@
   padding: var(--space-md);
   box-sizing: border-box;
   transition: flex-basis 300ms ease;
+
+  /* SingleProject spacing controls (override per need) */
+  /* --sp-section-gap: var(--space-xl); */
+  /* --sp-h1-top: var(--space-sm);
+  --sp-h1-bottom: var(--space-sm); */
+  --sp-h2-top: var(--space-xs);
+  --sp-h2-bottom: var(--space-md);
+  --sp-h3-top: var(--space-lg);
+  --sp-h3-bottom: var(--space-0);
+  /* --sp-figure-gap: var(--space-sm); */
+  /* --sp-main-figure-gap: var(--space-sm); */
+  /* --sp-img-gap: var(--space-sm); */
+  --sp-p-gap: var(--space-md);
+  --sp-ul-top: var(--space-xs);
+  --sp-li-gap: var(--space-sm);
 }
+
+/* Default inter-section gap */
+/* .single-project > * + * {
+  margin-block-start: var(--sp-section-gap);
+} */
 
 /* Make ScrollTrackingHeader span full width */
 .single-project .scroll-tracking-header {
@@ -13,20 +33,61 @@
   box-sizing: border-box; 
 }
 
+/* Title */
+.single-project > h2 {
+  margin-block-start: var(--sp-h2-top);
+  margin-block-end: var(--sp-h2-bottom);
+  line-height: 1.1; /* specific line height for SingleProject titles */
+}
+
+/* Subheaders */
+.single-project h3 {
+  margin-block-start: var(--sp-h3-top);
+  margin-block-end: var(--sp-h3-bottom);
+}
+
 .single-project figure {
   margin: 0;
   padding: 0;
 }
+/* Gap after any figure */
+/* .single-project > figure + * {
+  margin-block-start: var(--sp-figure-gap);
+} */
+/* Larger gap after the first/main figure */
+/* .single-project > figure:first-of-type + * {
+  margin-block-start: var(--sp-main-figure-gap);
+} */
 
 .single-project img {
   width: 100%;
   height: auto;
   object-fit: cover;
   cursor: pointer;
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}
+/* Direct child images (if ever used) */
+/* .single-project > img + * {
+  margin-block-start: var(--sp-img-gap);
+} */
+
+.single-project p + p {
+  margin-block-start: var(--sp-p-gap);
+}
+
+.single-project ul {
+  margin-block-start: var(--sp-ul-top);
+  padding-inline-start: 0ch;
+}
+
+.single-project ul li + li {
+  margin-block-start: var(--sp-li-gap);
 }
 
 .single-project .caption {
-  margin-block-start: var(--space-xs);
+  margin-block-start: var(--space-sm);
+  margin-block-end: var(--space-md);
 }
 
 /* Fullscreen Image Preview (match SideGallery) */

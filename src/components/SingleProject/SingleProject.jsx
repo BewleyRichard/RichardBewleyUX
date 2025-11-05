@@ -41,7 +41,7 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
         </figure>
       )}
 
-      <p>{project.client}, {project.year}</p>
+      <h3>{project.client}, {project.year}</h3>
       <h2>{project.title}</h2>
       <p>{project.summary}</p>
       {Array.isArray(project.details)

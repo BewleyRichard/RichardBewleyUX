@@ -74,12 +74,12 @@
 /* -------------------- Section Spacing (top-level children) -------------------- */
 /* default gap between any two top-level sections inside the sidebar */
 .left-sidebar > * + * {
-  margin-block-start: var(--space-xl);
+  margin-block-start: 0;
 }
 
-/* About me link uses a larger top gap (intentional override) */
+/* About me link uses a larger top gap (intentional override) Column top*/
 .left-sidebar > .hyperlink-large {
-  margin-block-start: var(--space-lg);
+  margin-block-start: var(--space-0);
 }
 
 /* Contact details top gap equals the default section gap */

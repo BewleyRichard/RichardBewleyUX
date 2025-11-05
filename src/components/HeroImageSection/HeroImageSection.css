@@ -43,7 +43,7 @@
 
 /* Apply on all viewports (mobile + desktop) */
 .hero-image-section .hero-image-frame {
-  margin-block-start: var(--space-xl);
+  margin-block-start: 0;
 }
 
 /* Fill the frame; swap contain->cover if you want crop */
