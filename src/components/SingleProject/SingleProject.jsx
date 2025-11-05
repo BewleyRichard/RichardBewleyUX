@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import projects from "../../data/projects";
 import "./SingleProject.css";
 import ScrollTrackingHeader from "../ScrollTrackingHeader.jsx";
@@ -8,6 +8,7 @@ import remarkGfm from "remark-gfm";
 function SingleProject({ selectedProjectId, onHeaderClick }) {
   const project = projects.find((p) => p.id === selectedProjectId);
   const containerRef = useRef(null);
+  const [previewSrc, setPreviewSrc] = useState(null);
 
   if (!project) return null;
 
@@ -25,12 +26,28 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
           X
         </h1>
       </ScrollTrackingHeader>
+
+      {/* Main image (click-to-preview), sits just under the header */}
+      {project.mainImage && (
+        <figure>
+          <img
+            src={project.mainImage.src}
+            alt={project.mainImage.caption || `${project.title} – main image`}
+            onClick={() => setPreviewSrc(project.mainImage.src)}
+          />
+          {project.mainImage.caption && (
+            <figcaption className="caption">{project.mainImage.caption}</figcaption>
+          )}
+        </figure>
+      )}
+
       <p>{project.client}, {project.year}</p>
       <h2>{project.title}</h2>
       <p>{project.summary}</p>
       {Array.isArray(project.details)
         ? project.details.map((t, i) => <p key={i}>{t}</p>)
         : <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.details}</ReactMarkdown>}
+
       <h3>UX Methods</h3>
       <ul className="small-list">
         {project.deliverables.map((d, i) => (
@@ -43,6 +60,13 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
           <li key={i}>{t}</li>
         ))}
       </ul>
+
+      {/* Fullscreen preview overlay (same behavior as SideGallery) */}
+      {previewSrc && (
+        <div className="image-preview" onClick={() => setPreviewSrc(null)}>
+          <img src={previewSrc} alt="Preview" />
+        </div>
+      )}
     </div>
   );
 }

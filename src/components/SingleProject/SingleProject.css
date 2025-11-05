@@ -17,6 +17,42 @@
   box-sizing: border-box; 
 }
 
+.single-project figure {
+  margin: 0;
+  padding: 0;
+}
+
+.single-project img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.single-project .caption {
+  margin-block-start: var(--space-xs);
+}
+
+/* Fullscreen Image Preview (match SideGallery) */
+.image-preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.image-preview img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
 @media (min-width: 768px) {
   .single-project {
     /* background: pink; */

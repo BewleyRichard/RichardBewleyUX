@@ -10,6 +10,7 @@ const projects = [
     ],
     deliverables: ["User Interviews", "Competitive Analysis", "Heuristic Evaluation", "Cognitive Walkthrough", "Task Analysis", "Journey Mapping", "Content Mapping", "Sitemap", "User Flows", "Wireframes", "Prototypes", "Usability Testing", "A/B Testing", "Developer Handoff"],
     tools: ["Figma", "FigJam", "Miro"],
+    mainImage: { src: "/images/amhu-1.png", caption: "ATS dashboard hero" },
     images: [
       { src: "/images/amhu-1.png", caption: "Dashboard overview showing real-time material flow" },
       { src: "/images/amhu-2.png", caption: "Task management interface with priority queue" },
@@ -46,6 +47,7 @@ const projects = [
       "Accessibility Review",
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
+    mainImage: { src: "/images/amhu-1.png", caption: "Reference tracker hero" },
     images: [
       { src: "/images/amhu-1.png", caption: "Alert subscription settings panel" },
       { src: "/images/amhu-2.png", caption: "Notification frequency controls" },
@@ -80,6 +82,7 @@ const projects = [
       "Iterative Design",
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
+    mainImage: { src: "/images/amhu-1.png", caption: "Reference tracker hero" },
     images: [
       "/images/amhu-1.png",
       "/images/amhu-2.png",
