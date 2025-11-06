@@ -13,6 +13,7 @@ function SideGallery({ selectedProjectId }) {
   return (
     <>
       <div className="side-gallery">
+        {/* <h1 className="side-gallery__title">Hello</h1> */}
         {project.images.map((image, index) => (
           <figure key={`${project.id}-${index}`}>
             <img

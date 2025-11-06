@@ -1,8 +1,8 @@
 /* -------------------- SideGallery Styles -------------------- */
 .side-gallery {
   padding-left: var(--space-md);
-  padding-top: var(--space-md);
-  padding-top: var(--space-md);
+  padding-right: var(--space-md);
+  /* padding-top: calc(var(--font-h1-size) + var(--space-md)); */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -33,6 +33,10 @@
 
 @media (min-width: 768px) {
   .side-gallery {
+    /* align with content that appears below the sticky header elsewhere */
+    padding-top: calc((var(--font-h1-size) * var(--lh-h1)) + var(--space-md));
+    margin-block-start: 0; /* ensure margin doesn’t double-count */
+
     /* background: blue; */
     width: 33.33%;
     overflow-y: auto;
@@ -50,8 +54,16 @@
       transparent var(--stroke-width, 1px)
     );
     background-repeat: no-repeat;
-    background-position: calc(0px + var(--stroke-nudge-left, 0px)) var(--space-md);
-    background-size: var(--stroke-width, 1px) calc(100% - (var(--space-md) * 2));
+
+    /* Stroke position controls:
+       - X offset: edit --stroke-nudge-left (moves stroke left/right)
+       - Y offset: edit --sg-stroke-top (moves stroke up/down)
+       - Height: background-size second value uses --sg-stroke-top to keep stroke within content area */
+    --sg-stroke-top: calc(var(--space-md) + (var(--font-h1-size) * var(--lh-h1))); /* Y start — raise/lower here */
+
+    background-position: calc(0px + var(--stroke-nudge-left, 0px)) var(--sg-stroke-top); /* X, Y */
+    background-size: var(--stroke-width, 1px)
+                     clamp(0px, calc(100% - (var(--sg-stroke-top) + var(--space-md))), 100%); /* stroke height */
   }
 
   /* disable old pseudo stroke */
