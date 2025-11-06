@@ -12,6 +12,13 @@
   position: relative;
 }
 
+.left-sidebar > header h1 {
+  background: red; /* for testing */
+  display: inline-block;                 /* let background hug the text */
+  -webkit-box-decoration-break: clone;   /* cover multi-line */
+  box-decoration-break: clone;
+}
+
 /* -------------------- Mobile Overrides -------------------- */
 @media (max-width: 767px) {
   .left-sidebar .pseudo-stroke-right { display: none !important; }

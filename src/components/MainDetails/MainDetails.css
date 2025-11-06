@@ -3,6 +3,13 @@
   padding: var(--space-md);
   box-sizing: border-box;
   transition: flex-basis 300ms ease;
+
+  /* MainDetails spacing controls (component-scoped) */
+  --mdet-h3-top: var(--space-md);
+  --mdet-h3-bottom: var(--space-0);
+  --mdet-p-gap: var(--space-md);
+  --mdet-ul-top: var(--space-xs);
+  --mdet-li-gap: var(--space-sm);
 }
 
 /* Make ScrollTrackingHeader span full width */
@@ -11,6 +18,24 @@
   padding-left: var(--font-h1-spacing);    /* align text with content */
   width: auto;                              /* keep true content width for accurate tracking */
   box-sizing: border-box;                   /* keep padding inside width */
+}
+
+.main-details p + p {
+  margin-block-start: var(--mdet-p-gap);
+}
+
+.main-details h3 {
+  margin-block-start: var(--mdet-h3-top);
+  margin-block-end: var(--mdet-h3-bottom);
+}
+
+.main-details ul {
+  margin-block-start: var(--mdet-ul-top);
+  padding-inline-start: 0ch;
+}
+
+.main-details ul li + li {
+  margin-block-start: var(--mdet-li-gap);
 }
 
 @media (min-width: 768px) {
