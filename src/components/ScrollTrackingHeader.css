@@ -6,6 +6,7 @@
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
+  padding-bottom: var(--space-md);
 }
 /* overlay to occlude content behind the sticky bar */
 .scroll-tracking-header::before {

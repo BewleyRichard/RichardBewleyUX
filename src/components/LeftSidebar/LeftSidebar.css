@@ -12,12 +12,7 @@
   position: relative;
 }
 
-.left-sidebar > header h1 {
-  background: red; /* for testing */
-  display: inline-block;                 /* let background hug the text */
-  -webkit-box-decoration-break: clone;   /* cover multi-line */
-  box-decoration-break: clone;
-}
+
 
 /* -------------------- Mobile Overrides -------------------- */
 @media (max-width: 767px) {
@@ -36,7 +31,7 @@
     overflow-y: auto;
 
     /* start stroke below padded H1 */
-    --sidebar-stroke-top: calc(var(--space-md) + (var(--font-h1-size) * var(--lh-h1)));
+    --sidebar-stroke-top: calc(var(--space-md) + var(--space-md) + (var(--font-h1-size) * var(--lh-h1)));
     border-right: none;
     background-image: linear-gradient(
       to left,
@@ -86,7 +81,7 @@
 
 /* About me link uses a larger top gap (intentional override) Column top*/
 .left-sidebar > .hyperlink-large {
-  margin-block-start: var(--space-0);
+  margin-block-start: var(--space-lg);
 }
 
 /* Contact details top gap equals the default section gap */
