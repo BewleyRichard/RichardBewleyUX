@@ -234,7 +234,7 @@ body {
   --lh-h3: 1.35;
   --lh-link-large: 1.15;
   --lh-h2: 1.15; /* was 0.875; 1.1–1.2 is safer for multi-line serif H2s */
-  --lh-h1: 1.15;
+  --lh-h1: 1.1; /* unified (was 1.15) */
 
   /* Letter Spacing */
 
@@ -260,7 +260,7 @@ h1 {
   font-size: var(--font-h1-size); 
   font-weight: 600;
   font-family: "nimbus-sans-l", sans-serif;
-  line-height: var(--lh-h1);
+  line-height: var(--lh-h1); /* now 1.1 everywhere */
 }
 
 /* Header and large links(inherit) */
