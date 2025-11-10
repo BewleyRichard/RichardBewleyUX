@@ -11,7 +11,7 @@
   --sp-h2-top: var(--space-md);
   --sp-h2-bottom: var(--space-md);
   --sp-h3-top: var(--space-md);
-  --sp-h3-bottom: var(--space-0);
+  --sp-h3-bottom: var(--space-md);
   /* --sp-figure-gap: var(--space-sm); */
   /* --sp-main-figure-gap: var(--space-sm); */
   /* --sp-img-gap: var(--space-sm); */
@@ -108,6 +108,12 @@
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
+}
+
+a.hyperlink-large {
+  /* margin-block-start: var(--space-xl); */
+  display: block;
+  line-height: var(--lh-link-large); /* match h2/large links (1.15) */
 }
 
 @media (min-width: 768px) {

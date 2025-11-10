@@ -12,8 +12,6 @@
   position: relative;
 }
 
-
-
 /* -------------------- Mobile Overrides -------------------- */
 @media (max-width: 767px) {
   .left-sidebar .pseudo-stroke-right { display: none !important; }
@@ -31,7 +29,7 @@
     overflow-y: auto;
 
     /* start stroke below padded H1 */
-    --sidebar-stroke-top: calc(var(--space-md) + var(--space-md) + (var(--font-h1-size) * var(--lh-h1)));
+    --sidebar-stroke-top: calc(var(--space-md) + var(--space-md) + (var(--font-h1-size) * var(--lh-h1))); /* y axis */
     border-right: none;
     background-image: linear-gradient(
       to left,
@@ -76,17 +74,17 @@
 /* -------------------- Section Spacing (top-level children) -------------------- */
 /* default gap between any two top-level sections inside the sidebar */
 .left-sidebar > * + * {
-  margin-block-start: 0;
+  margin-block-start: calc(var(--lh-link-large) * 1rem);
 }
 
 /* About me link uses a larger top gap (intentional override) Column top*/
 .left-sidebar > .hyperlink-large {
-  margin-block-start: var(--space-lg);
+  margin-block-start: calc(var(--lh-link-large) * 1rem);
 }
 
 /* Contact details top gap equals the default section gap */
 .left-sidebar > .contact-details {
-  margin-block-start: var(--space-xl);
+  margin-block-start: calc(var(--lh-link-large) * 1rem);
 }
 
 /* -------------------- Selected Works: Heading + List -------------------- */

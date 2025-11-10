@@ -221,9 +221,9 @@ body {
   --font-link-large-size: clamp(1.75rem, 3.5vw, 2.75rem); /* ~28px→44px — Used by large links (.selected-works a, .hyperlink-large) */
   --font-caption-size: clamp(0.875rem, calc(0.8rem + 0.4vw), 0.9375rem);   /* scales earlier on desktop */
   --font-body-size: clamp(1rem, 2vw, 1.25rem);            /* ~16px→20px — Used by body text (p) and small lists */
-  --font-h3-size: clamp(1.333rem, 2.5vw, 1.875rem);       /* ~21px→30px — Used by subheaders (h3) */
-  --font-h2-size: clamp(1.777rem, 3.2vw, 2.4rem); /* ~28px→38px — Used by headers (h2) and large link sizing */
-  --font-h1-size: clamp(2rem, 3vw, 3rem);               /* ~24px→48px — smaller on mobile, gentler growth */
+  --font-h3-size: clamp(1.333rem, 2.2vw, 1.875rem);
+  --font-h2-size: clamp(1.777rem, 2.4vw + 0.5rem, 2.05rem);
+  --font-h1-size: clamp(2.25rem, 4vw + 1rem, 3rem);
   --font-h1-spacing: clamp(0px, 0.1vw, 1px);              /* Letter-spacing — Used to align h1 text in scroll-tracking headers */
 
   /* -------------------- Line Heights -------------------- */
@@ -253,7 +253,7 @@ body {
 /* Main title  */
 h1 { 
   font-size: var(--font-h1-size); 
-  font-weight: 700;
+  font-weight: 600;
   font-family: "nimbus-sans-l", sans-serif;
   line-height: var(--lh-h1);
 }
