@@ -3,6 +3,7 @@
   padding: var(--space-md);
   box-sizing: border-box;
   transition: flex-basis 300ms ease;
+  container-type: inline-size; /* enable cqw for H1 scaling */
 
   /* SingleProject spacing controls (override per need) */
   /* --sp-section-gap: var(--space-xl); */
@@ -38,6 +39,12 @@
   margin-block-start: var(--sp-h2-top);
   margin-block-end: var(--sp-h2-bottom);
   line-height: 1.1; /* specific line height for SingleProject titles */
+}
+
+/* Match LeftSidebar H1 scaling inside SingleProject */
+.single-project h1 {
+  font-size: clamp(1.875rem, 10cqw, 3rem);
+  line-height: 1.1;
 }
 
 /* Subheaders */

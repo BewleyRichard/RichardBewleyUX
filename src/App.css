@@ -69,6 +69,7 @@ body {
   box-sizing: border-box;
   transition: flex-basis 300ms ease, max-width 300ms ease, opacity 200ms ease;
   flex: 0 0 auto;
+  container-type: inline-size; /* make the mobile column a container */
 }
 
 /* Home view: collapse without removing from layout (no snap) */
@@ -223,7 +224,7 @@ body {
   --font-body-size: clamp(1rem, 2vw, 1.25rem);            /* ~16px→20px — Used by body text (p) and small lists */
   --font-h3-size: clamp(1.333rem, 2.2vw, 1.875rem);
   --font-h2-size: clamp(1.777rem, 2.4vw + 0.5rem, 2.05rem);
-  --font-h1-size: clamp(2.25rem, 4vw + 1rem, 3rem);
+  --font-h1-size: clamp(1.875rem, 10cqw, 3rem);
   --font-h1-spacing: clamp(0px, 0.1vw, 1px);              /* Letter-spacing — Used to align h1 text in scroll-tracking headers */
 
   /* -------------------- Line Heights -------------------- */
@@ -238,6 +239,10 @@ body {
   /* Letter Spacing */
 
   --ls-serif: 0.03rem;
+}
+
+@supports not (width: 1cqw) {
+  :root { --font-h1-size: clamp(1.875rem, 5vw, 3rem); }
 }
 
 @media (min-width: 1200px) {

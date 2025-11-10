@@ -10,6 +10,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
+  container-type: inline-size;
+  max-width: 480px;
 }
 
 /* -------------------- Mobile Overrides -------------------- */
@@ -74,17 +77,17 @@
 /* -------------------- Section Spacing (top-level children) -------------------- */
 /* default gap between any two top-level sections inside the sidebar */
 .left-sidebar > * + * {
-  margin-block-start: calc(var(--lh-link-large) * 1rem);
+  margin-block-start: 0;
 }
 
 /* About me link uses a larger top gap (intentional override) Column top*/
 .left-sidebar > .hyperlink-large {
-  margin-block-start: calc(var(--lh-link-large) * 1rem);
+  margin-block-start: var(--space-lg);
 }
 
 /* Contact details top gap equals the default section gap */
 .left-sidebar > .contact-details {
-  margin-block-start: calc(var(--lh-link-large) * 1rem);
+  margin-block-start: var(--space-xl);
 }
 
 /* -------------------- Selected Works: Heading + List -------------------- */
@@ -144,4 +147,10 @@
 .left-sidebar .selected-works a:focus-visible,
 .left-sidebar .selected-works a.selected {
   text-decoration: underline;
+}
+
+.left-sidebar h1 {
+  font-size: clamp(1.875rem, 10cqw, 3rem);
+  line-height: 1.1;
+  text-wrap: nowrap;
 }
