@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import './ImagePreview.css';
 
-const ImagePreview = ({ src, alt = 'Preview', isOpen, onClose }) => {
+const ImagePreview = ({ src, alt = 'Preview', caption, isOpen, onClose }) => {
   // Effect to handle Escape key and prevent body scrolling
   useEffect(() => {
     if (!isOpen) return;
@@ -14,12 +14,16 @@ const ImagePreview = ({ src, alt = 'Preview', isOpen, onClose }) => {
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    document.body.style.overflow = 'hidden'; // Prevent background scroll
+    const originalBodyOverflow = document.body.style.overflow;
+    const originalHtmlOverflow = document.documentElement.style.overflow;
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
 
     // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = ''; // Restore scroll
+      document.body.style.overflow = originalBodyOverflow;
+      document.documentElement.style.overflow = originalHtmlOverflow;
     };
   }, [isOpen, onClose]);
 
@@ -28,10 +32,12 @@ const ImagePreview = ({ src, alt = 'Preview', isOpen, onClose }) => {
   }
 
   // Use a portal to render the modal at the end of `document.body`.
-  // This escapes the stacking context of the parent component.
   return createPortal(
     <div className="image-preview" onClick={onClose} role="dialog" aria-modal="true">
-      <img src={src} alt={alt} onClick={(e) => e.stopPropagation()} />
+      <figure className="image-preview__figure" onClick={(e) => e.stopPropagation()}>
+        <img src={src} alt={alt} />
+        {caption && <figcaption className="image-preview__caption">{caption}</figcaption>}
+      </figure>
     </div>,
     document.body
   );

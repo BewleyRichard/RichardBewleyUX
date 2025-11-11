@@ -4,7 +4,7 @@ import "./SideGallery.css";
 import ImagePreview from "../ImagePreview/ImagePreview.jsx";
 
 function SideGallery({ selectedProjectId }) {
-  const [previewSrc, setPreviewSrc] = useState(null);
+  const [previewImage, setPreviewImage] = useState(null);
   const project = projects.find((p) => p.id === selectedProjectId);
 
   if (!project || !project.images) {
@@ -20,7 +20,7 @@ function SideGallery({ selectedProjectId }) {
             <img
               src={image.src}
               alt={image.caption || `${project.title} - Image ${index + 1}`}
-              onClick={() => setPreviewSrc(image.src)}
+              onClick={() => setPreviewImage(image)}
             />
             {image.caption && <figcaption className="caption">{image.caption}</figcaption>}
           </figure>
@@ -28,9 +28,10 @@ function SideGallery({ selectedProjectId }) {
       </div>
 
       <ImagePreview
-        isOpen={!!previewSrc}
-        src={previewSrc}
-        onClose={() => setPreviewSrc(null)}
+        isOpen={!!previewImage}
+        src={previewImage?.src}
+        caption={previewImage?.caption}
+        onClose={() => setPreviewImage(null)}
         alt="Gallery image preview"
       />
     </>

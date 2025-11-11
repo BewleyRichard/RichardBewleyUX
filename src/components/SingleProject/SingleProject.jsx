@@ -9,7 +9,7 @@ import ImagePreview from "../ImagePreview/ImagePreview.jsx"; // 1. Import the co
 function SingleProject({ selectedProjectId, onHeaderClick }) {
   const project = projects.find((p) => p.id === selectedProjectId);
   const containerRef = useRef(null);
-  const [previewSrc, setPreviewSrc] = useState(null);
+  const [previewImage, setPreviewImage] = useState(null);
 
   if (!project) return null;
 
@@ -34,7 +34,7 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
           <img
             src={project.mainImage.src}
             alt={project.mainImage.caption || `${project.title} – main image`}
-            onClick={() => setPreviewSrc(project.mainImage.src)}
+            onClick={() => setPreviewImage(project.mainImage)}
           />
           {project.mainImage.caption && (
             <figcaption className="caption">{project.mainImage.caption}</figcaption>
@@ -64,9 +64,10 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
 
       {/* 2. Replace the old div with the ImagePreview component */}
       <ImagePreview
-        isOpen={!!previewSrc}
-        src={previewSrc}
-        onClose={() => setPreviewSrc(null)}
+        isOpen={!!previewImage}
+        src={previewImage?.src}
+        caption={previewImage?.caption}
+        onClose={() => setPreviewImage(null)}
         alt="Project image preview"
       />
     </div>

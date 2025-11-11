@@ -9,11 +9,31 @@
   justify-content: center;
   z-index: 1000; /* High z-index to be on top of everything */
   cursor: pointer;
+  padding: var(--space-md);
+}
+
+.image-preview__figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: 0;
+  cursor: default;
 }
 
 .image-preview img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  cursor: default;
+  flex-shrink: 1; /* Allow image to shrink to make space for caption */
+}
+
+.image-preview__caption {
+  color: white;
+  font-family: 'inconsolata', monospace;
+  font-size: var(--font-caption-size);
+  line-height: var(--lh-caption);
+  text-align: center;
+  flex-shrink: 0; /* Don't allow caption to shrink */
 }
