@@ -47,7 +47,7 @@ const projects = [
       "Accessibility Review",
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
-    mainImage: { src: "/images/amhu-1.png", caption: "Reference tracker hero" },
+    mainImage: { src: "/images/amhu-1.png", caption: "Granular Alert hero" },
     images: [
       { src: "/images/amhu-1.png", caption: "Alert subscription settings panel" },
       { src: "/images/amhu-2.png", caption: "Notification frequency controls" },
