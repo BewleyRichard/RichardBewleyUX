@@ -5,6 +5,7 @@
   transition: flex-basis 300ms ease;
   padding: var(--space-md);
   box-sizing: border-box;
+  container-type: inline-size; /* Add this line */
 }
 
 @media (min-width: 768px) {
@@ -23,7 +24,9 @@
 
 /* Remove top margin from first heading ADD NEW MARGIN LATER*/
 .hero-image-section > h1:first-child,
-.hero-image-section > .scroll-tracking-header:first-child h1 {
+.hero-image-section > h2:first-child,
+.hero-image-section > h3:first-child,
+.hero-image-section > h4:first-child {
   margin-top: 0;
 }
 
@@ -32,6 +35,7 @@
   margin-left: calc(var(--space-md) * -1); /* bleed to column edge */
   padding-left: var(--font-h1-spacing);
   box-sizing: border-box;
+  font-size: clamp(1.875rem, 5cqw, 3rem);
 }
 
 /* Aspect-ratio frame for the hero image */
