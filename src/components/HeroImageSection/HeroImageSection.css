@@ -8,6 +8,8 @@
   container-type: inline-size; /* Add this line */
 }
 
+/* -------------------- Desktop Layout -------------------- */
+
 @media (min-width: 768px) {
   .hero-image-section {
     /* background: yellow; */
@@ -47,7 +49,7 @@
 
 /* Apply on all viewports (mobile + desktop) */
 .hero-image-section .hero-image-frame {
-  margin-block-start: 0;
+  margin-block-start: var(--space-md);
 }
 
 /* Fill the frame; swap contain->cover if you want crop */
