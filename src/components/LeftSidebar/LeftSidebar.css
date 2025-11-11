@@ -117,11 +117,45 @@
 /* -------------------- Large Links (About me) -------------------- */
 /* .hyperlink-large typography lives in App.css; spacing overridden above */
 
+/* Match Selected Works underline behavior */
+.left-sidebar a.hyperlink-large {
+  text-decoration: none;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px; /* was 1px */
+  text-underline-offset: clamp(6px, 0.25em, 8px);
+  text-decoration-skip-ink: none;
+}
+.left-sidebar a.hyperlink-large:hover,
+.left-sidebar a.hyperlink-large:focus-visible,
+.left-sidebar a.hyperlink-large.selected {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px; /* was 1px */
+  text-underline-offset: clamp(6px, 0.25em, 8px);
+  text-decoration-skip-ink: none;
+}
+
 /* -------------------- Contact Details (Email / CV) -------------------- */
 .left-sidebar .contact-details {
   display: flex;
   flex-direction: column;
   gap: var(--space-md); /* also equals top-gap via override above */
+}
+
+.contact-details a {
+  text-decoration: none;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px; /* was 1px */
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
+}
+.contact-details a:hover,
+.contact-details a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px; /* was 1px */
+  text-underline-offset: clamp(6px, 0.25em, 8px);
+  text-decoration-skip-ink: none;
 }
 
 /* -------------------- Footer (Last updated) -------------------- */
@@ -139,8 +173,8 @@
 /* ensure underline sits below descenders in Selected Works */
 .left-sidebar .selected-works a {
   text-decoration-color: currentColor;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px;
+  text-underline-offset: clamp(6px, 0.25em, 8px);
   text-decoration-skip-ink: none;
 }
 .left-sidebar .selected-works a:hover,

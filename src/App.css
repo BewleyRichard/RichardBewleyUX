@@ -359,16 +359,19 @@ a.hyperlink-large.selected {
 
 /* 1px underline for Email / CV links */
 .contact-details a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none;
   text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
 }
 .contact-details a:hover,
 .contact-details a:focus-visible {
   text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
   text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-skip-ink: none;
 }
 
 /* Small text lists (e.g., Deliverables, Tools & experience) */
