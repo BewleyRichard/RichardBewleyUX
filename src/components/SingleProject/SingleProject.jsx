@@ -4,6 +4,7 @@ import "./SingleProject.css";
 import ScrollTrackingHeader from "../ScrollTrackingHeader.jsx";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import ImagePreview from "../ImagePreview/ImagePreview.jsx"; // 1. Import the component
 
 function SingleProject({ selectedProjectId, onHeaderClick }) {
   const project = projects.find((p) => p.id === selectedProjectId);
@@ -61,12 +62,13 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
         ))}
       </ul>
 
-      {/* Fullscreen preview overlay (same behavior as SideGallery) */}
-      {previewSrc && (
-        <div className="image-preview" onClick={() => setPreviewSrc(null)}>
-          <img src={previewSrc} alt="Preview" />
-        </div>
-      )}
+      {/* 2. Replace the old div with the ImagePreview component */}
+      <ImagePreview
+        isOpen={!!previewSrc}
+        src={previewSrc}
+        onClose={() => setPreviewSrc(null)}
+        alt="Project image preview"
+      />
     </div>
   );
 }

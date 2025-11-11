@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import projects from "../../data/projects";
 import "./SideGallery.css";
+import ImagePreview from "../ImagePreview/ImagePreview.jsx";
 
 function SideGallery({ selectedProjectId }) {
   const [previewSrc, setPreviewSrc] = useState(null);
@@ -26,11 +27,12 @@ function SideGallery({ selectedProjectId }) {
         ))}
       </div>
 
-      {previewSrc && (
-        <div className="image-preview" onClick={() => setPreviewSrc(null)}>
-          <img src={previewSrc} alt="Preview" />
-        </div>
-      )}
+      <ImagePreview
+        isOpen={!!previewSrc}
+        src={previewSrc}
+        onClose={() => setPreviewSrc(null)}
+        alt="Gallery image preview"
+      />
     </>
   );
 }
