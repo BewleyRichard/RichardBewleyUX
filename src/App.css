@@ -30,7 +30,7 @@ body {
 
 /* Root container for the app */
 .App {
-  outline: 3px solid purple;
+  /* outline: 3px solid purple; */
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
@@ -232,7 +232,7 @@ body {
   --lh-caption: 1.4;
   --lh-body: 1.5;
   --lh-h3: 1.35;
-  --lh-link-large: 1.15;
+  --lh-link-large: 1.2;
   --lh-h2: 1.15; /* was 0.875; 1.1–1.2 is safer for multi-line serif H2s */
   --lh-h1: 1.1; /* unified (was 1.15) */
 
@@ -333,44 +333,20 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
-/* Ensure 1px underline for sidebar links and Selected Works (override generic a:hover) */
-a.hyperlink-large:hover,
-a.hyperlink-large:focus-visible,
-a.hyperlink-large.selected {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: currentColor;
-}
-
-.selected-works a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: currentColor;
-}
-.selected-works a:hover,
-.selected-works a:focus-visible,
-.selected-works a.selected {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  text-decoration-color: currentColor;
-}
-
-/* 1px underline for Email / CV links */
+/* 2px underline for Email / CV links */
 .contact-details a {
   text-decoration: none;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px; /* was 1px */
+  text-underline-offset: clamp(6px, 0.25em, 8px); /* was 0.2em */
   text-decoration-skip-ink: none;
 }
 .contact-details a:hover,
 .contact-details a:focus-visible {
   text-decoration: underline;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
+  text-decoration-thickness: 2px; /* was 1px */
+  text-underline-offset: clamp(6px, 0.25em, 8px); /* was 0.2em */
   text-decoration-skip-ink: none;
 }
 

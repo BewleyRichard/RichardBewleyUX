@@ -46,19 +46,25 @@
   }
 }
 
+/* -------------------- H1 Styling -------------------- */
+.left-sidebar h1 {
+  font-size: var(--font-h1-size);
+  line-height: var(--lh-h1);
+  text-wrap: nowrap;
+  margin-bottom: var(--space-lg); /* spacing below H1 */
+}
+
 /* -------------------- Sticky Header (H1 area) -------------------- */
 .left-sidebar > header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: white; /* was transparent */
+  background: white; /* occlude scrolled content */
   /* bleed header to full column width while keeping inner padding */
   margin-left: calc(var(--space-md) * -1);
   margin-right: calc(var(--space-md) * -1);
   padding-left: var(--space-md);
   padding-right: 0;
-  /* optional: also works, simpler than ::before */
-  /* border-top: var(--space-md) solid white; */
 }
 
 /* occlude the top gutter so content doesn’t peek above the header */
@@ -80,37 +86,40 @@
   margin-block-start: 0;
 }
 
-/* About me link uses a larger top gap (intentional override) Column top*/
+/* About me link uses a larger top gap (intentional override) Column top */
 .left-sidebar > .hyperlink-large {
-  margin-block-start: var(--space-lg);
+  margin-block-start: 0;
 }
 
 /* Contact details top gap equals the default section gap */
 .left-sidebar > .contact-details {
-  margin-block-start: var(--space-xl);
+  margin-block-start: var(--space-lg);
 }
 
 /* -------------------- Selected Works: Heading + List -------------------- */
 /* Heading appearance and spacing */
 .left-sidebar h2.indent-header {
   /* match section gap above, remove gap below so list sits tight */
-  margin-block-start: var(--space-xl);
-  margin-block-end: 0;
+  margin-block-start: var(--space-lg);
 
   /* typography inherited from App.css (Castoro, italic, letter-spacing) */
 }
 
-/* keep heading and list visually tight */
+/* Indent header and list spacing between */
 .left-sidebar h2.indent-header + .selected-works {
-  margin-block-start: 0;
+  margin-block-start: var(--space-md);
 }
 
 /* tighten line-height in the list */
 .left-sidebar .selected-works li {
-  line-height: var(--lh-link-large); /* 1.05 */
+  line-height: var(--lh-link-large); 
+  margin-bottom: var(--space-xs); /* add spacing between list items */
+}
+.left-sidebar .selected-works li:last-child {
+  margin-bottom: 0; /* remove margin from last item */
 }
 .left-sidebar .selected-works li > a {
-  line-height: var(--lh-link-large);
+  line-height: var(--lh-link-large); 
   display: block; /* stable click area */
 }
 
@@ -121,7 +130,7 @@
 .left-sidebar a.hyperlink-large {
   text-decoration: none;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 2px; /* was 1px */
+  text-decoration-thickness: 2px; 
   text-underline-offset: clamp(6px, 0.25em, 8px);
   text-decoration-skip-ink: none;
 }
@@ -130,7 +139,7 @@
 .left-sidebar a.hyperlink-large.selected {
   text-decoration: underline;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 2px; /* was 1px */
+  text-decoration-thickness: 2px; 
   text-underline-offset: clamp(6px, 0.25em, 8px);
   text-decoration-skip-ink: none;
 }
@@ -139,13 +148,14 @@
 .left-sidebar .contact-details {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md); /* also equals top-gap via override above */
+  gap: var(--space-lg); /* space between Email / CV */
+  line-height: var(--lh-link-large); 
 }
 
 .contact-details a {
   text-decoration: none;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 2px; /* was 1px */
+  text-decoration-thickness: 2px; 
   text-underline-offset: 0.2em;
   text-decoration-skip-ink: none;
 }
@@ -153,7 +163,7 @@
 .contact-details a:focus-visible {
   text-decoration: underline;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 2px; /* was 1px */
+  text-decoration-thickness: 2px; 
   text-underline-offset: clamp(6px, 0.25em, 8px);
   text-decoration-skip-ink: none;
 }
@@ -161,13 +171,9 @@
 /* -------------------- Footer (Last updated) -------------------- */
 .left-sidebar > aside {
   margin-top: auto;                /* push to bottom of column */
-  padding-top: var(--space-sm);    /* small separation from content */
+  padding-top: var(--space-md);    /* small separation from content */
   background: white;               /* occlude content when scrolled */
-  /* Optional: keep visible at bottom while scrolling
-  position: sticky;
-  bottom: 0;
-  */
-}
+  }
 
 /* -------------------- Link Underlines (optional tuning) -------------------- */
 /* ensure underline sits below descenders in Selected Works */
@@ -183,8 +189,3 @@
   text-decoration: underline;
 }
 
-.left-sidebar h1 {
-  font-size: clamp(1.875rem, 10cqw, 3rem);
-  line-height: var(--lh-h1);
-  text-wrap: nowrap;
-}
