@@ -6,7 +6,7 @@
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  /* padding-bottom: var(--space-md); */
+  margin-bottom: var(--space-lg); /* spacing below H1 */
   container-type: inline-size; /* ensure cqw resolves to the header/column */
 }
 /* overlay to occlude content behind the sticky bar */

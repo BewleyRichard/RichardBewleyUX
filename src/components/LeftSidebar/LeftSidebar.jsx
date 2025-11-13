@@ -31,17 +31,20 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
 
       <h2 className="indent-header">Selected Works:</h2>
       <ul className="selected-works">
-        {projects.map((project) => (
-          <li key={project.id}>
-            <a
-              href="#!"
-              onClick={() => onSelectProject(project.id)}
-              className={selectedProjectId === project.id ? "selected" : ""}
-            >
-              {project.title}
-            </a>
-          </li>
-        ))}
+        {projects
+          .slice() // create a copy to avoid mutating original
+          .sort((a, b) => a.title.length - b.title.length) // sort by title length ascending
+          .map((project) => (
+            <li key={project.id}>
+              <a
+                href="#!"
+                onClick={() => onSelectProject(project.id)}
+                className={selectedProjectId === project.id ? "selected" : ""}
+              >
+                {project.title}
+              </a>
+            </li>
+          ))}
       </ul>
 
       <div className="contact-details">
