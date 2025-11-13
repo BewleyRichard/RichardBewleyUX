@@ -108,3 +108,49 @@
 
   }
 }
+
+/* Desktop: Match LeftSidebar overlay behavior inside MainDetails/SingleProject */
+@media (min-width: 768px) {
+  .main-details .scroll-tracking-header,
+  .single-project .scroll-tracking-header {
+    overflow: visible; /* let ::before extend into the bleed and above */
+  }
+
+  .main-details .scroll-tracking-header::before,
+  .single-project .scroll-tracking-header::before {
+    left: calc(var(--space-md) * -1);
+    right: calc(var(--space-md) * -1);
+    top: calc(var(--space-md) * -1); /* cover area above header, like LeftSidebar */
+  }
+
+  /* Ensure LeftSidebar header occlude height matches ScrollTrackingHeader */
+  .left-sidebar > header::before {
+    height: calc(var(--space-md) + (var(--font-h1-size) * var(--lh-h1)) + var(--space-lg));
+  }
+}
+
+/* Mobile: ScrollTrackingHeader inside right-column */
+@media (max-width: 767px) {
+  .right-column > .scroll-tracking-header {
+    /* No bleed needed — right-column already has padding */
+    margin-left: 0;
+    margin-right: 0;
+    /* padding-left: var(--space-md); */ /* REMOVE this line if MainDetails/SingleProject already set it */
+    padding-right: var(--space-md);
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-lg);
+  }
+
+  .right-column > .scroll-tracking-header::before {
+    /* Occlude only within the header's own bounds */
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  /* LeftSidebar mobile occlude: just cover top gutter */
+  .left-sidebar > header::before {
+    height: var(--space-md);
+  }
+}
