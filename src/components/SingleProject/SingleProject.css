@@ -116,5 +116,8 @@ a.hyperlink-large {
 }
 
 @media (max-width: 767px) {
+  .single-project {
+    padding-top: 0; /* Remove top padding on mobile */
+  }
   .single-project .scroll-tracking-header { display: none; }
 }

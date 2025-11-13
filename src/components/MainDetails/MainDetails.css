@@ -49,5 +49,8 @@
 }
 
 @media (max-width: 767px) {
+  .main-details {
+    padding-top: 0; /* Remove top padding on mobile */
+  }
   .main-details .scroll-tracking-header { display: none; }
 }
