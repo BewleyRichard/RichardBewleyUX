@@ -6,14 +6,16 @@
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  margin-bottom: var(--space-lg); /* spacing below H1 */
+  /* Match LeftSidebar's H1 block height + top padding */
+  padding-bottom: var(--space-lg); /* same as LeftSidebar h1 margin-bottom */
   container-type: inline-size; /* ensure cqw resolves to the header/column */
 }
-/* overlay to occlude content behind the sticky bar */
+/* Occlude overlay matches LeftSidebar's header height */
 .scroll-tracking-header::before {
   content: '';
   position: absolute;
   top: 0;
+  /* Height = top padding + H1 block + bottom spacing */
   bottom: 0;
   left: 0;           /* default (no bleed) */
   right: 0;
@@ -69,6 +71,20 @@
   left: calc(var(--space-md) * -1);
   right: calc(var(--space-md) * -1);
   top: calc(var(--space-md) * -1); /* cover area above header, like LeftSidebar */
+}
+
+/* Ensure LeftSidebar header occlude height matches ScrollTrackingHeader */
+.left-sidebar > header::before {
+  content: '';
+  position: absolute;
+  left: calc(var(--space-md) * -1);
+  right: calc(var(--space-md) * -1);
+  top: calc(var(--space-md) * -1);
+  /* Height = top padding + H1 block + margin-bottom */
+  height: calc(var(--space-md) + (var(--font-h1-size) * var(--lh-h1)) + var(--space-lg));
+  background: white;
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Mobile header inside right-column (no extra bleed needed) */
