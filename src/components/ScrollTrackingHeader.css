@@ -6,7 +6,7 @@
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
-  padding-bottom: var(--space-md);
+  /* padding-bottom: var(--space-md); */
   container-type: inline-size; /* ensure cqw resolves to the header/column */
 }
 /* overlay to occlude content behind the sticky bar */
@@ -47,7 +47,7 @@
 }
 
 .scroll-tracking-header h1 {
-  font-size: clamp(1.875rem, 10cqw, 3rem); /* scale with container width */
+  font-size: clamp(1.875rem, 10cqw, 3rem); 
   line-height: var(--lh-h1);
 }
 
