@@ -337,7 +337,7 @@ a:hover, a:focus {
 .contact-details a {
   text-decoration: none;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 2px; /* was 1px */
+  text-decoration-thickness: 2px; 
   text-underline-offset: clamp(6px, 0.25em, 8px); /* was 0.2em */
   text-decoration-skip-ink: none;
 }
@@ -345,7 +345,7 @@ a:hover, a:focus {
 .contact-details a:focus-visible {
   text-decoration: underline;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 2px; /* was 1px */
+  text-decoration-thickness: 2px; 
   text-underline-offset: clamp(6px, 0.25em, 8px); /* was 0.2em */
   text-decoration-skip-ink: none;
 }
