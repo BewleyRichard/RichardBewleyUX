@@ -135,7 +135,7 @@
     /* No bleed needed — right-column already has padding */
     margin-left: 0;
     margin-right: 0;
-    /* padding-left: var(--space-md); */ /* REMOVE this line if MainDetails/SingleProject already set it */
+    /* padding-left: var(--space-md); */
     padding-right: var(--space-md);
     padding-top: var(--space-md);
     padding-bottom: var(--space-lg);
