@@ -23,7 +23,7 @@
   .left-sidebar { background-image: none !important; }
 }
 
-/* -------------------- Desktop Stroke (fixed right “border”) -------------------- */
+/* -------------------- Desktop Stroke (fixed right stroke) -------------------- */
 @media (min-width: 768px) {
   .left-sidebar {
     flex: 0 0 33.33%;
@@ -32,7 +32,7 @@
     overflow-y: auto;
 
     /* start stroke below padded H1 */
-    --sidebar-stroke-top: calc(var(--space-md) + var(--space-md) + (var(--font-h1-size) * var(--lh-h1))); /* y axis */
+    --sidebar-stroke-top: clamp(60px, 10vh, 120px); /* Scale with viewport height */
     border-right: none;
     background-image: linear-gradient(
       to left,
