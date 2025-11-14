@@ -13,6 +13,11 @@
 
   container-type: inline-size;
   max-width: 480px;
+  background: white;
+  color: var(--stroke-color, black);
+  overflow-y: auto;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* -------------------- Mobile Overrides -------------------- */
