@@ -82,11 +82,14 @@ const projects = [
       "Iterative Design",
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
-    mainImage: { src: "/images/amhu-1.png", caption: "Reference tracker hero" },
+    mainImage: { 
+      src: "/images/amhu-1.png", 
+      caption: "Reference tracker interface showing citation management in the AI assistant" 
+    },
     images: [
-      "/images/amhu-1.png",
-      "/images/amhu-2.png",
-      "/images/amhu-3.png"
+      { src: "/images/amhu-1.png", caption: "Main reference tracker view with collapsible citation panel" },
+      { src: "/images/amhu-2.png", caption: "Expanded reference details showing source attribution and context" },
+      { src: "/images/amhu-3.png", caption: "User flow diagram illustrating the streamlined reference retrieval process" }
     ]
   }
 ];
