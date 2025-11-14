@@ -4,9 +4,11 @@
   box-sizing: border-box;
   transition: flex-basis 300ms ease;
 
-  /* MainDetails spacing controls (component-scoped) */
-  --mdet-h3-top: var(--space-md);
-  --mdet-h3-bottom: var(--space-0);
+  /* Match SingleProject spacing */
+  --mdet-h2-top: var(--space-md);
+  --mdet-h2-bottom: var(--space-md);
+  --mdet-h3-top: var(--space-lg);
+  --mdet-h3-bottom: var(--space-xs);
   --mdet-p-gap: var(--space-md);
   --mdet-ul-top: var(--space-xs);
   --mdet-li-gap: var(--space-sm);
@@ -29,6 +31,12 @@
   margin-block-end: var(--mdet-h3-bottom);
 }
 
+.main-details h2 {
+  margin-block-start: var(--mdet-h2-top);
+  margin-block-end: var(--mdet-h2-bottom);
+  line-height: 1.1;
+}
+
 .main-details ul {
   margin-block-start: var(--mdet-ul-top);
   padding-inline-start: 0ch;
@@ -36,6 +44,25 @@
 
 .main-details ul li + li {
   margin-block-start: var(--mdet-li-gap);
+}
+
+.main-details figure {
+  margin: 0;
+  padding: 0;
+}
+
+.main-details img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+}
+
+.main-details .caption {
+  margin-block-start: var(--space-sm);
+  margin-block-end: var(--space-md);
 }
 
 @media (min-width: 768px) {

@@ -11,8 +11,8 @@
   --sp-h1-bottom: var(--space-sm); */
   --sp-h2-top: var(--space-md);
   --sp-h2-bottom: var(--space-md);
-  --sp-h3-top: var(--space-md);
-  --sp-h3-bottom: var(--space-md);
+  --sp-h3-top: var(--space-lg);
+  --sp-h3-bottom: var(--space-xs);
   /* --sp-figure-gap: var(--space-sm); */
   /* --sp-main-figure-gap: var(--space-sm); */
   /* --sp-img-gap: var(--space-sm); */
