@@ -56,7 +56,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Creating a referencing system",
+    title: "Creating a Referencing System",
     year: 2025,
     client: "Ada Mode",
     summary: "Creating a referencing system for an LLM Doc managment system",
