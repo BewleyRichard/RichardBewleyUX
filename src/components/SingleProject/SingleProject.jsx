@@ -43,7 +43,6 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
       )}
 
       <h1>{project.title}</h1>
-      <h3>{project.client}, {project.year}</h3>
       <p>{project.summary}</p>
       {Array.isArray(project.details)
         ? project.details.map((t, i) => <p key={i}>{t}</p>)

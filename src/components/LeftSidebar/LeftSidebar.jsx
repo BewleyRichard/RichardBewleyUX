@@ -43,8 +43,8 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
       <h2 className="indent-header">Selected Works:</h2>
       <ul className="selected-works">
         {projects
-          .slice() // create a copy to avoid mutating original
-          .sort((a, b) => a.title.length - b.title.length) // sort by title length ascending
+          .slice()
+          .sort((a, b) => a.title.length - b.title.length)
           .map((project) => (
             <li key={project.id}>
               <a
@@ -52,7 +52,7 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
                 onClick={() => onSelectProject(project.id)}
                 className={selectedProjectId === project.id ? "selected" : ""}
               >
-                {project.title}
+                {project.title}, {project.client}, {project.year}
               </a>
             </li>
           ))}

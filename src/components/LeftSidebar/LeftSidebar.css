@@ -135,6 +135,8 @@
   line-height: var(--lh-link-large); 
   display: block; /* stable click area */
 }
+.selected-works li a::after { content: "; "; }
+.selected-works li:last-child a::after { content: "."; }
 
 /* -------------------- Large Links (About me) -------------------- */
 /* Target only the first .hyperlink-large after the header */
