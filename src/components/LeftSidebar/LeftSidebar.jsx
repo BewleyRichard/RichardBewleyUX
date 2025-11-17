@@ -24,7 +24,7 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
         <h1 
           style={{ 
             marginTop: 0, 
-            marginBottom: "var(--space-lg)",
+            marginBottom: 0,
             // textAlign: "center"
           }}
         >

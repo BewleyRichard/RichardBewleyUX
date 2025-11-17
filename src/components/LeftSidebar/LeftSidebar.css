@@ -36,8 +36,12 @@
     flex-shrink: 0;
     overflow-y: auto;
 
-    /* start stroke below padded H1 */
-    --sidebar-stroke-top: clamp(60px, 10vh, 120px); /* Scale with viewport height */
+    /* start stroke below both H1 rows (no margin-bottom on "Design") */
+    --sidebar-stroke-top: calc(
+      var(--space-md) + 
+      (var(--font-h1-size) * var(--lh-h1)) + 
+      (var(--font-h1-size) * var(--lh-h1))
+    );
     border-right: none;
     background-image: linear-gradient(
       to left,
@@ -129,14 +133,19 @@
 }
 
 /* -------------------- Large Links (About me) -------------------- */
+/* Target only the first .hyperlink-large after the header */
+.left-sidebar > header + .hyperlink-large {
+  margin-block-start: var(--space-lg);
+}
+
 /* .hyperlink-large typography lives in App.css; spacing overridden above */
 
 /* Match Selected Works underline behavior */
 .left-sidebar a.hyperlink-large {
   text-decoration: none;
   text-decoration-color: currentColor;
-  text-decoration-thickness: 2px; 
-  text-underline-offset: clamp(6px, 0.25em, 8px);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2.5px;
   text-decoration-skip-ink: none;
 }
 .left-sidebar a.hyperlink-large:hover,
