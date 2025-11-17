@@ -6,19 +6,21 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
   return (
     <div className="left-sidebar">
       <header>
-        <h1
+        <div
           onClick={onHeaderClick}
           style={{
             cursor: "pointer",
-            textAlign: "right",
-            display: "block",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "baseline",
             width: "100%",
-            whiteSpace: "nowrap",
-            overflow: "visible" // no clipping, no ellipsis
+            whiteSpace: "nowrap"
           }}
         >
-          Richard Bewley U
-        </h1>
+          <h1>Richard</h1>
+          <h1>Bewley</h1>
+          <h1>U</h1>
+        </div>
       </header>
 
       <a 

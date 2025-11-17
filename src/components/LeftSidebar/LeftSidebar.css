@@ -55,7 +55,7 @@
 .left-sidebar h1 {
   font-size: var(--font-h1-size);
   line-height: var(--lh-h1);
-  text-wrap: nowrap;
+  margin: 0; /* Remove default margins to avoid spacing issues */
   margin-bottom: var(--space-lg); /* spacing below H1 */
 }
 
