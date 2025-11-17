@@ -17,10 +17,19 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
             whiteSpace: "nowrap"
           }}
         >
-          <h1>Richard</h1>
-          <h1>Bewley</h1>
-          <h1>U</h1>
+          <h1 style={{ marginBottom: 0 }}>Richard</h1>
+          <h1 style={{ marginBottom: 0 }}>Bewley</h1>
+          <h1 style={{ marginBottom: 0 }}>U</h1>
         </div>
+        <h1 
+          style={{ 
+            marginTop: 0, 
+            marginBottom: "var(--space-lg)",
+            // textAlign: "center"
+          }}
+        >
+          Design
+        </h1>
       </header>
 
       <a 
