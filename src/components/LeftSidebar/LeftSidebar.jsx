@@ -22,10 +22,12 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
           <h1 style={{ marginBottom: 0 }}>U</h1>
         </div>
         <h1 
+          onClick={onHeaderClick}
           style={{ 
             marginTop: 0, 
             marginBottom: 0,
-            // textAlign: "center"
+            cursor: "pointer",
+            textAlign: "left"
           }}
         >
           Design

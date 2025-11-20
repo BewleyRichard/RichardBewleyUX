@@ -120,13 +120,14 @@
 
 /* Indent header and list spacing between */
 .left-sidebar h2.indent-header + .selected-works {
-  margin-block-start: var(--space-md);
+  margin-block-start: var(--space-sm);
 }
 
-/* tighten line-height in the list */
+/* tighten line-height in the list and make italic*/
 .left-sidebar .selected-works li {
   line-height: var(--lh-link-large); 
   margin-bottom: var(--space-xs); /* add spacing between list items */
+  font-style: italic;
 }
 .left-sidebar .selected-works li:last-child {
   margin-bottom: 0; /* remove margin from last item */
@@ -141,7 +142,7 @@
 /* -------------------- Large Links (About me) -------------------- */
 /* Target only the first .hyperlink-large after the header */
 .left-sidebar > header + .hyperlink-large {
-  margin-block-start: var(--space-lg);
+  margin-block-start: var(--space-xl);
 }
 
 /* .hyperlink-large typography lives in App.css; spacing overridden above */
