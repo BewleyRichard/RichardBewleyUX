@@ -34,6 +34,13 @@
   box-sizing: border-box; 
 }
 
+/* H1 in ScrollTrackingHeader */
+.single-project .scroll-tracking-header h1 {
+  font-size: var(--font-h1-size);
+  line-height: var(--lh-h1);
+  text-align: left;
+}
+
 /* Title */
 .single-project > h2 {
   margin-block-start: var(--sp-h2-top);
@@ -45,7 +52,18 @@
 .single-project h1 {
   font-size: var(--font-h1-size);
   line-height: var(--lh-h1);
-  text-align: center;
+  text-align: left;
+}
+
+/* Project title H1 (not in header) */
+.single-project > h1 {
+  font-size: var(--font-h1-size);
+  line-height: var(--lh-h1);
+  text-align: justify;
+  text-align-last: justify;
+  margin-bottom: var(--space-xl);
+  /* padding-left: var(--space-xs);
+  padding-right: var(--space-xs); */
 }
 
 /* Subheaders */
