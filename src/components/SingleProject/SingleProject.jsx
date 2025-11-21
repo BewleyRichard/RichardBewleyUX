@@ -43,6 +43,7 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
       )}
 
       <h1>{project.title}</h1>
+      <h1>{project.client}, {project.year}</h1>
       <p>{project.summary}</p>
       {Array.isArray(project.details)
         ? project.details.map((t, i) => <p key={i}>{t}</p>)
