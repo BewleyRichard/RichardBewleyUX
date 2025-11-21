@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background: white;
+  background: var(--background-color); /* Changed from white */
   width: 100%;
   overflow: hidden;
   box-sizing: border-box;
@@ -19,7 +19,7 @@
   bottom: 0;
   left: 0;           /* default (no bleed) */
   right: 0;
-  background: white; /* cover content beneath */
+  background: var(--background-color); /* Changed from white */
   z-index: 0;
   pointer-events: none;
 }
@@ -82,7 +82,7 @@
   top: calc(var(--space-md) * -1);
   /* Height = top padding + H1 block + margin-bottom */
   height: calc(var(--space-md) + (var(--font-h1-size) * var(--lh-h1)) + var(--space-lg));
-  background: white;
+  background: var(--background-color); /* Changed from white */
   pointer-events: none;
   z-index: -1;
 }

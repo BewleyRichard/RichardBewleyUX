@@ -13,7 +13,7 @@
 
   container-type: inline-size;
   max-width: 480px;
-  background: white;
+  background: var(--background-color); /* Changed from white */
   color: var(--stroke-color, black);
   overflow-y: auto;
   overflow-x: hidden; /* Prevent horizontal scroll */
@@ -72,7 +72,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background: white; /* occlude scrolled content */
+  background: var(--background-color); /* Changed from white */
   /* bleed header to full column width while keeping inner padding */
   margin-left: calc(var(--space-md) * -1);
   margin-right: calc(var(--space-md) * -1);
@@ -88,7 +88,7 @@
   right: calc(var(--space-md) * -1);
   top: calc(var(--space-md) * -1);
   height: var(--space-md);
-  background: white;
+  background: var(--background-color); /* Changed from white */
   pointer-events: none;
   z-index: -1; /* behind header content, still above scrolled content */
 }
@@ -150,16 +150,15 @@
 /* Match Selected Works underline behavior */
 .left-sidebar a.hyperlink-large {
   text-decoration: none;
-  text-decoration-color: currentColor;
   text-decoration-thickness: 2px;
   text-underline-offset: 2.5px;
   text-decoration-skip-ink: none;
+  /* REMOVED: text-decoration-color: currentColor; */
 }
 .left-sidebar a.hyperlink-large:hover,
 .left-sidebar a.hyperlink-large:focus-visible,
 .left-sidebar a.hyperlink-large.selected {
   text-decoration: underline;
-  text-decoration-color: currentColor;
   text-decoration-thickness: 2px; 
   text-underline-offset: clamp(6px, 0.25em, 8px);
   text-decoration-skip-ink: none;
@@ -175,34 +174,34 @@
 
 .contact-details a {
   text-decoration: none;
-  text-decoration-color: currentColor;
   text-decoration-thickness: 2px; 
   text-underline-offset: 0.2em;
   text-decoration-skip-ink: none;
+  /* REMOVED: text-decoration-color: currentColor; */
 }
 .contact-details a:hover,
 .contact-details a:focus-visible {
   text-decoration: underline;
-  text-decoration-color: currentColor;
   text-decoration-thickness: 2px; 
   text-underline-offset: clamp(6px, 0.25em, 8px);
   text-decoration-skip-ink: none;
+  text-decoration-color: var(--underline-color); 
 }
 
 /* -------------------- Footer (Last updated) -------------------- */
 .left-sidebar > aside {
   margin-top: auto;                /* push to bottom of column */
   padding-top: var(--space-md);    /* small separation from content */
-  background: white;               /* occlude content when scrolled */
+  background: var(--background-color); /* Changed from white */
   }
 
 /* -------------------- Link Underlines (optional tuning) -------------------- */
 /* ensure underline sits below descenders in Selected Works */
 .left-sidebar .selected-works a {
-  text-decoration-color: currentColor;
   text-decoration-thickness: 2px;
   text-underline-offset: clamp(6px, 0.25em, 8px);
   text-decoration-skip-ink: none;
+  /* REMOVED: text-decoration-color: currentColor; */
 }
 .left-sidebar .selected-works a:hover,
 .left-sidebar .selected-works a:focus-visible,
