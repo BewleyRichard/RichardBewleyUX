@@ -13,8 +13,8 @@
 
   container-type: inline-size;
   max-width: 480px;
-  background: var(--background-color); /* Changed from white */
-  color: var(--stroke-color, black);
+  background: var(--background-color);
+  color: var(--text-color); /* Changed from var(--stroke-color, black) */
   overflow-y: auto;
   overflow-x: hidden; /* Prevent horizontal scroll */
   -webkit-overflow-scrolling: touch;

@@ -17,7 +17,7 @@
 }
 
 body {
-  color: black;
+  color: var(--text-color); /* Use global text color variable */
   background: var(--background-color);
   font-weight: 400;
   width: 100%;
@@ -202,8 +202,8 @@ body {
     transition: none !important;
   }
 }
- 
-/* -------------------- Spacing Variables, stroke, underline colours-------------------- */
+
+/* -------------------- Spacing Variables, stroke size-------------------- */
 :root {
   --space-xs: clamp(0.25rem, 0.4vw, 0.375rem);   /* ~4px → 6px  */
   --space-sm: clamp(0.5rem, 0.8vw, 0.75rem);     /* ~8px → 12px */
@@ -213,16 +213,16 @@ body {
   --space-2xl: clamp(1.777rem, 4vw, 2.369rem);   /* ~28px → 38px */
   --space-3xl: clamp(2.369rem, 5vw, 3.157rem);   /* ~38px → 51px */
 
+/* -------------------- Colour and stroke Variables-------------------- */
+
   --stroke-width: 1px;
-  --stroke-color: #000;
+  --stroke-color: #444;
   --stroke-nudge-left: 0.5px;   /* for left edge strokes */
   --stroke-nudge-right: -0.5px; /* for right edge strokes */
 
-  
-  --underline-color: #2454BF; /* global link underline colour */
-  --background-color: #EEEE; /* Change to your desired background color */
-
-
+  --text-color: #000; /* global text color */
+  --underline-color: #929292; /* global link underline colour */
+  --background-color: #eee; /* global background color */
 
   /* -------------------- Font Size Variables -------------------- */
   
