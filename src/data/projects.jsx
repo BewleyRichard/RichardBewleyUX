@@ -10,12 +10,12 @@ const projects = [
     ],
     deliverables: ["User Interviews", "Competitive Analysis", "Heuristic Evaluation", "Cognitive Walkthrough", "Task Analysis", "Journey Mapping", "Content Mapping", "Sitemap", "User Flows", "Wireframes", "Prototypes", "Usability Testing", "A/B Testing", "Developer Handoff"],
     tools: ["Figma", "FigJam", "Miro"],
-    mainImage: { src: "/images/amhu-1.png", caption: "ATS dashboard hero" },
+    mainImage: { src: "Images/Hero/Industrial.jpg", caption: "ATS dashboard hero" },
     images: [
       { src: "/images/amhu-1.png", caption: "Dashboard overview showing real-time material flow" },
       { src: "/images/amhu-2.png", caption: "Task management interface with priority queue" },
       { src: "/images/amhu-3.png", caption: "Alert system and notification preferences" }
-    ]
+    ] 
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const projects = [
       "Accessibility Review",
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
-    mainImage: { src: "/images/amhu-1.png", caption: "Granular Alert hero" },
+    mainImage: { src: "Images/Hero/WindFarm.jpg", caption: "Granular Alert hero" },
     images: [
       { src: "/images/amhu-1.png", caption: "Alert subscription settings panel" },
       { src: "/images/amhu-2.png", caption: "Notification frequency controls" },
@@ -83,7 +83,7 @@ const projects = [
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
     mainImage: { 
-      src: "/images/amhu-1.png", 
+      src: "Images/Hero/Referencing.jpg", 
       caption: "Reference tracker interface showing citation management in the AI assistant" 
     },
     images: [
