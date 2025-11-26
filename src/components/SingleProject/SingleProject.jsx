@@ -52,13 +52,13 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
         ? project.details.map((t, i) => <p key={i}>{t}</p>)
         : <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.details}</ReactMarkdown>}
 
-      <h3>UX Methods:</h3>
+      <h3>UX Methods</h3>
       <ul className="small-list">
         {project.deliverables.map((d, i) => (
           <li key={i}>{d}</li>
         ))}
       </ul>
-      <h3>Tools:</h3>
+      <h3>Tools</h3>
       <ul className="small-list">
         {project.tools.map((t, i) => (
           <li key={i}>{t}</li>

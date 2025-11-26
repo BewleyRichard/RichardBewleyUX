@@ -44,14 +44,14 @@ function MainDetails({ onHeaderClick }) {
         in order to create new ones.
       </p>
 
-      <h3>Experience:</h3>
+      <h3>Experience</h3>
       <ul className="experience-list">
         <li>2025 Ada Mode</li>
         <li>2025 Windscope</li>
         <li>2024 Ada Mode</li>
       </ul>
 
-      <h3>Tools:</h3>
+      <h3>Tools</h3>
       <ul className="small-list">
         <li>Figma</li>
         <li>FigJam</li>

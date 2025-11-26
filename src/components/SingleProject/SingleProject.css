@@ -70,6 +70,11 @@
 .single-project h3 {
   margin-block-start: var(--sp-h3-top);
   margin-block-end: var(--sp-h3-bottom);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: clamp(6px, 0.25em, 8px);
+  text-decoration-skip-ink: none;
+  text-decoration-color: var(--underline-color);
 }
 
 .single-project figure {

@@ -12,12 +12,32 @@ const projects = [
     tools: ["Figma", "FigJam", "Miro"],
     mainImage: { src: "Images/Hero/Industrial.jpg", caption: "ATS dashboard hero" },
     images: [
-      { src: "/Images/Projects/ATS/ATSJourneysOverview.png", caption: "Dashboard overview showing real-time material flow" },
-      { src: "/Images/Projects/ATS/ATSJourneyTracker.png", caption: "Task management interface with priority queue" },
-      { src: "/Images/Projects/ATS/ATSRobotsOverview.png", caption: "Alert system and notification preferences" },
-      { src: "/Images/Projects/ATS/ATSRoutesPage.png", caption: "Task management interface with priority queue" },
-      { src: "/Images/Projects/ATS/ATSDataVis.png", caption: "Task management interface with priority queue" }
-    ] 
+      { 
+        src: "/Images/Projects/ATS/ATSJourneysOverview.png", 
+        caption: "Dashboard overview showing real-time material flow",
+        alt: "Dashboard interface displaying active material journeys with status indicators and real-time tracking"
+      },
+      { 
+        src: "/Images/Projects/ATS/ATSJourneyTracker.png", 
+        caption: "Task management interface with priority queue",
+        alt: "Journey tracking view showing individual material transfer tasks with priority levels and completion status"
+      },
+      { 
+        src: "/Images/Projects/ATS/ATSRobotsOverview.png", 
+        caption: "Alert system and notification preferences",
+        alt: "Robot fleet overview displaying operational status, battery levels, and current assignments for each autonomous unit"
+      },
+      { 
+        src: "/Images/Projects/ATS/ATSRoutesPage.png", 
+        caption: "Task management interface with priority queue",
+        alt: "Routes configuration page showing predefined paths and waypoints for robot navigation through the facility"
+      },
+      { 
+        src: "/Images/Projects/ATS/ATSDataVis.png", 
+        caption: "Task management interface with priority queue",
+        alt: "Data visualization dashboard with charts and metrics showing system performance and throughput statistics"
+      }
+    ]  
   },
   {
     id: 2,
@@ -51,10 +71,26 @@ const projects = [
     tools: ["Figma", "Miro"],
     mainImage: { src: "Images/Hero/WindFarm.jpg", caption: "Granular Alert hero" },
     images: [
-      { src: "/Images/Projects/Windscope/WSSubAll.png", caption: "Notification frequency controls" },
-      { src: "/Images/Projects/Windscope/WSCustomSub.png", caption: "Alert subscription settings panel" },
-      { src: "/Images/Projects/Windscope/WSUnsub.png", caption: "Notification frequency controls" },
-      { src: "/Images/Projects/Windscope/WSDropdownComponents.png", caption: "Channel-specific preferences" }
+      { 
+        src: "/Images/Projects/Windscope/WSSubAll.png", 
+        caption: "Notification frequency controls",
+        alt: "Subscription interface showing options to subscribe to all alerts with frequency settings"
+      },
+      { 
+        src: "/Images/Projects/Windscope/WSCustomSub.png", 
+        caption: "Alert subscription settings panel",
+        alt: "Custom subscription panel allowing users to select specific alert types and channels for notifications"
+      },
+      { 
+        src: "/Images/Projects/Windscope/WSUnsub.png", 
+        caption: "Notification frequency controls",
+        alt: "Unsubscribe interface showing how users can opt out of specific alert categories"
+      },
+      { 
+        src: "/Images/Projects/Windscope/WSDropdownComponents.png", 
+        caption: "Channel-specific preferences",
+        alt: "Dropdown component design showing selectable notification channels including email, SMS, and in-app alerts"
+      }
     ],
   },
   {
@@ -90,7 +126,11 @@ const projects = [
       caption: "Reference tracker interface showing citation management in the AI assistant" 
     },
     images: [
-      { src: "/Images/Projects/AtlasLLM/ARMain.png", caption: "Main reference tracker view with collapsible citation panel" },
+      { 
+        src: "/Images/Projects/AtlasLLM/ARMain.png", 
+        caption: "Main reference tracker view with collapsible citation panel",
+        alt: "Interface showing the main reference tracker with a collapsible side panel displaying citation information"
+      },
       { 
         src: "/Images/Projects/AtlasLLM/AROriginal.png", 
         caption: "Expanded reference details showing source attribution and context",
@@ -99,9 +139,14 @@ const projects = [
       { 
         src: "/Images/Projects/AtlasLLM/ARStepsFirst.png", 
         caption: "Expanded reference details showing source attribution and context",
+        alt: "Design iteration showing the first steps of the reference system workflow",
         background: "#000"
       },
-      { src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", caption: "User flow diagram illustrating the streamlined reference retrieval process" }
+      { 
+        src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", 
+        caption: "User flow diagram illustrating the streamlined reference retrieval process",
+        alt: "Flowchart diagram showing the user journey for retrieving and managing references in the system"
+      }
     ]
   }
 ];
