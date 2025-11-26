@@ -90,8 +90,6 @@
   height: auto;
   object-fit: cover;
   cursor: pointer;
-  padding-left: var(--space-xs);
-  padding-right: var(--space-xs);
 }
 /* Direct child images (if ever used) */
 /* .single-project > img + * {

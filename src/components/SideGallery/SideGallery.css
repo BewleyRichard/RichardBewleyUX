@@ -15,8 +15,6 @@
   height: auto;
   object-fit: cover;
   cursor: pointer;
-  padding-left: var(--space-xs);
-  padding-right: var(--space-xs);
 }
 
 .side-gallery figure {

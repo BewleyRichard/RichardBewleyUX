@@ -21,6 +21,7 @@ function SideGallery({ selectedProjectId }) {
               src={image.src}
               alt={image.alt || image.caption || `${project.title} - Image ${index + 1}`}
               onClick={() => setPreviewImage(image)}
+              style={{ backgroundColor: image.background || 'transparent' }} // Add this line
             />
             {image.caption && <figcaption className="caption">{image.caption}</figcaption>}
           </figure>

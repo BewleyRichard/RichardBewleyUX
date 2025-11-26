@@ -94,10 +94,13 @@ const projects = [
       { 
         src: "/Images/Projects/AtlasLLM/AROriginal.png", 
         caption: "Expanded reference details showing source attribution and context",
-        alt: "Screenshot showing expanded reference panel with source attribution metadata",
-        background: "#FFFFFF" // Use actual color value, not CSS variable
+        alt: "Screenshot showing expanded reference panel with source attribution metadata"
       },
-      { src: "/Images/Projects/AtlasLLM/ARStepsFirst.png", caption: "Expanded reference details showing source attribution and context" },
+      { 
+        src: "/Images/Projects/AtlasLLM/ARStepsFirst.png", 
+        caption: "Expanded reference details showing source attribution and context",
+        background: "#000"
+      },
       { src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", caption: "User flow diagram illustrating the streamlined reference retrieval process" }
     ]
   }
