@@ -91,7 +91,12 @@ const projects = [
     },
     images: [
       { src: "/Images/Projects/AtlasLLM/ARMain.png", caption: "Main reference tracker view with collapsible citation panel" },
-      { src: "/Images/Projects/AtlasLLM/AROriginal.png", caption: "Expanded reference details showing source attribution and context" },
+      { 
+        src: "/Images/Projects/AtlasLLM/AROriginal.png", 
+        caption: "Expanded reference details showing source attribution and context",
+        alt: "Screenshot showing expanded reference panel with source attribution metadata",
+        background: "#FFFFFF" // Use actual color value, not CSS variable
+      },
       { src: "/Images/Projects/AtlasLLM/ARStepsFirst.png", caption: "Expanded reference details showing source attribution and context" },
       { src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", caption: "User flow diagram illustrating the streamlined reference retrieval process" }
     ]

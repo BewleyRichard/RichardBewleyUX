@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import './ImagePreview.css';
 
-const ImagePreview = ({ src, alt = 'Preview', caption, isOpen, onClose }) => {
-  // Effect to handle Escape key and prevent body scrolling
+const ImagePreview = ({ src, alt = 'Preview', caption, image, isOpen, onClose }) => {
   useEffect(() => {
     if (!isOpen) return;
 
@@ -19,7 +18,6 @@ const ImagePreview = ({ src, alt = 'Preview', caption, isOpen, onClose }) => {
     document.body.style.overflow = 'hidden';
     document.documentElement.style.overflow = 'hidden';
 
-    // Cleanup function
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = originalBodyOverflow;
@@ -31,11 +29,14 @@ const ImagePreview = ({ src, alt = 'Preview', caption, isOpen, onClose }) => {
     return null;
   }
 
-  // Use a portal to render the modal at the end of `document.body`.
   return createPortal(
     <div className="image-preview" onClick={onClose} role="dialog" aria-modal="true">
       <figure className="image-preview__figure" onClick={(e) => e.stopPropagation()}>
-        <img src={src} alt={alt} />
+        <img 
+          src={src} 
+          alt={alt || caption || "Preview"} 
+          style={{ backgroundColor: image?.background || 'transparent' }}
+        />
         {caption && <figcaption className="image-preview__caption">{caption}</figcaption>}
       </figure>
     </div>,

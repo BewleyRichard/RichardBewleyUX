@@ -19,7 +19,7 @@ function SideGallery({ selectedProjectId }) {
           <figure key={`${project.id}-${index}`}>
             <img
               src={image.src}
-              alt={image.caption || `${project.title} - Image ${index + 1}`}
+              alt={image.alt || image.caption || `${project.title} - Image ${index + 1}`}
               onClick={() => setPreviewImage(image)}
             />
             {image.caption && <figcaption className="caption">{image.caption}</figcaption>}
@@ -31,6 +31,7 @@ function SideGallery({ selectedProjectId }) {
         isOpen={!!previewImage}
         src={previewImage?.src}
         caption={previewImage?.caption}
+        image={previewImage} // Pass the full image object
         onClose={() => setPreviewImage(null)}
         alt="Gallery image preview"
       />
