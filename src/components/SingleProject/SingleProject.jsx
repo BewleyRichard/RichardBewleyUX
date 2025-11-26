@@ -28,21 +28,22 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
         </h1>
       </ScrollTrackingHeader>
 
-      {/* Main image (non-clickable) */}
       {project.mainImage && (
         <figure>
           <img
             src={project.mainImage.src}
             alt={project.mainImage.alt || project.mainImage.caption || `${project.title} – main image`}
-            style={{ backgroundColor: project.mainImage.background || 'transparent' }}
+            onClick={() => setPreviewImage(project.mainImage)} // Add this back
+            style={{ 
+              backgroundColor: project.mainImage.background || 'transparent',
+              cursor: 'pointer'
+            }}
           />
           {project.mainImage.caption && (
             <figcaption className="caption">{project.mainImage.caption}</figcaption>
           )}
         </figure>
       )}
-
-      {/* Removed the mobile images section - they're shown in SideGallery instead */}
 
       <h1>{project.title}</h1>
       <h1>{project.client}, {project.year}</h1>

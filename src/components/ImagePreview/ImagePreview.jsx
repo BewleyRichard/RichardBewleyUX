@@ -31,7 +31,7 @@ const ImagePreview = ({ src, alt = 'Preview', caption, image, isOpen, onClose })
 
   return createPortal(
     <div className="image-preview" onClick={onClose} role="dialog" aria-modal="true">
-      <figure className="image-preview__figure" onClick={(e) => e.stopPropagation()}>
+      <figure className="image-preview__figure">
         <img 
           src={src} 
           alt={alt || caption || "Preview"} 

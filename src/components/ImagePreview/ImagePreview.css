@@ -19,7 +19,7 @@
   max-width: 90vw;
   max-height: 85vh; /* Slightly smaller container */
   margin: 0;
-  cursor: default;
+  cursor: pointer; /* Changed from cursor: default */
   align-items: center;
 }
 
@@ -28,6 +28,7 @@
   flex: 1; /* Take available space */
   min-height: 0; /* Allow flex item to shrink below content size */
   object-fit: contain;
+  cursor: pointer; /* Add cursor to image */
 }
 
 .image-preview__caption {
@@ -38,4 +39,5 @@
   text-align: center;
   flex-shrink: 0;
   max-width: 100%;
+  cursor: pointer; /* Add cursor to caption */
 }
