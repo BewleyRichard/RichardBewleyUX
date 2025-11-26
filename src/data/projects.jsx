@@ -12,9 +12,11 @@ const projects = [
     tools: ["Figma", "FigJam", "Miro"],
     mainImage: { src: "Images/Hero/Industrial.jpg", caption: "ATS dashboard hero" },
     images: [
-      { src: "/images/amhu-1.png", caption: "Dashboard overview showing real-time material flow" },
-      { src: "/images/amhu-2.png", caption: "Task management interface with priority queue" },
-      { src: "/images/amhu-3.png", caption: "Alert system and notification preferences" }
+      { src: "/Images/Projects/ATS/ATSJourneysOverview.png", caption: "Dashboard overview showing real-time material flow" },
+      { src: "/Images/Projects/ATS/ATSJourneyTracker.png", caption: "Task management interface with priority queue" },
+      { src: "/Images/Projects/ATS/ATSRobotsOverview.png", caption: "Alert system and notification preferences" },
+      { src: "/Images/Projects/ATS/ATSRoutesPage.png", caption: "Task management interface with priority queue" },
+      { src: "/Images/Projects/ATS/ATSDataVis.png", caption: "Task management interface with priority queue" }
     ] 
   },
   {
@@ -49,9 +51,10 @@ const projects = [
     tools: ["Figma", "Miro"],
     mainImage: { src: "Images/Hero/WindFarm.jpg", caption: "Granular Alert hero" },
     images: [
-      { src: "/images/amhu-1.png", caption: "Alert subscription settings panel" },
-      { src: "/images/amhu-2.png", caption: "Notification frequency controls" },
-      { src: "/images/amhu-3.png", caption: "Channel-specific preferences" }
+      { src: "/Images/Projects/Windscope/WSSubAll.png", caption: "Notification frequency controls" },
+      { src: "/Images/Projects/Windscope/WSCustomSub.png", caption: "Alert subscription settings panel" },
+      { src: "/Images/Projects/Windscope/WSUnsub.png", caption: "Notification frequency controls" },
+      { src: "/Images/Projects/Windscope/WSDropdownComponents.png", caption: "Channel-specific preferences" }
     ],
   },
   {
@@ -87,9 +90,10 @@ const projects = [
       caption: "Reference tracker interface showing citation management in the AI assistant" 
     },
     images: [
-      { src: "/images/amhu-1.png", caption: "Main reference tracker view with collapsible citation panel" },
-      { src: "/images/amhu-2.png", caption: "Expanded reference details showing source attribution and context" },
-      { src: "/images/amhu-3.png", caption: "User flow diagram illustrating the streamlined reference retrieval process" }
+      { src: "/Images/Projects/AtlasLLM/ARMain.png", caption: "Main reference tracker view with collapsible citation panel" },
+      { src: "/Images/Projects/AtlasLLM/AROriginal.png", caption: "Expanded reference details showing source attribution and context" },
+      { src: "/Images/Projects/AtlasLLM/ARStepsFirst.png", caption: "Expanded reference details showing source attribution and context" },
+      { src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", caption: "User flow diagram illustrating the streamlined reference retrieval process" }
     ]
   }
 ];
