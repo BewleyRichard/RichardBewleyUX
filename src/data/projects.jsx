@@ -86,8 +86,8 @@ const projects = [
       },
       { 
         src: "/Images/Projects/Windscope/WSDropdownComponents.png", 
-        caption: "Dropdown component design showing selectable notification channels",
-        alt: "Dropdown component design showing selectable notification channels"
+        caption: "Dropdown component design showing selectable notification options",
+        alt: "Dropdown component design showing selectable notification options"
       }
     ],
   },
@@ -121,29 +121,29 @@ const projects = [
     tools: ["Figma", "Miro"],
     mainImage: { 
       src: "Images/Hero/Referencing.jpg", 
-      caption: "Reference tracker interface showing citation management in the AI assistant" 
+      caption: "Reference tracker interface", 
     },
     images: [
       { 
         src: "/Images/Projects/AtlasLLM/ARMain.png", 
-        caption: "Main reference tracker view with collapsible citation panel",
-        alt: "Interface showing the main reference tracker with a collapsible side panel displaying citation information"
+        caption: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information",
+        alt: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information"
       },
       { 
         src: "/Images/Projects/AtlasLLM/AROriginal.png", 
-        caption: "Expanded reference details showing source attribution and context",
-        alt: "Screenshot showing expanded reference panel with source attribution metadata"
+        caption: "The initial product was functionally robust but featured a placeholder front-end and a UI built primarily for functionality, with dedicated user experience considerations not yet integrated into its development",
+        alt: "The initial product was functionally robust but featured a placeholder front-end and a UI built primarily for functionality, with dedicated user experience considerations not yet integrated into its development"
       },
       { 
         src: "/Images/Projects/AtlasLLM/ARStepsFirst.png", 
-        caption: "Expanded reference details showing source attribution and context",
-        alt: "Design iteration showing the first steps of the reference system workflow",
+        caption: "Raw reference text produced by the back-end and initial design iteration showing the first steps of the reference UI",
+        alt: "Raw reference text produced by the back-end and initial design iteration showing the first steps of the reference UI",
         background: "#000"
       },
       { 
         src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", 
-        caption: "User flow diagram illustrating the streamlined reference retrieval process",
-        alt: "Flowchart diagram showing the user journey for retrieving and managing references in the system"
+        caption: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions",
+        alt: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions"
       }
     ]
   }
