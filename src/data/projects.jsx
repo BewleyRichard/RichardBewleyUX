@@ -96,7 +96,7 @@ const projects = [
     title: "Creating a Referencing System",
     year: 2025,
     client: "Ada Mode",
-    summary: "Creating a referencing system for an LLM Doc managment system",
+    summary: "Creating a referencing system for an LLM Document management system",
     details: [
       `New users of the Atlas AI Assistant faced difficulties in efficiently managing, adding, or retrieving reference information. The existing user interface displayed references below the assistant’s responses, which led to confusion, especially with lengthy responses containing numerous citations.`,
       `This also resulted in references occupying significant vertical screen space, which would be better utilised for prompts and responses. This was a critical problem as the application's core value proposition relies on presenting information directly from primary sources, essential for maintaining compliance and accuracy for engineers working on documentation for regulatory approvals.`,
