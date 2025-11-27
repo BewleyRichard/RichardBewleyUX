@@ -8,34 +8,34 @@ const projects = [
     details: [
       'Ada Mode, a UK-based AI solutions company, required a software interface to support their feasibility study for an Autonomous Transfer System (ATS). This system would manage a fleet of robots transporting materials within an industrial facility. The goal was to create a compelling prototype to support Ada Mode’s pitch to move forward in a multi-stage B2B procurement process.'
     ],
-    deliverables: ["User Interviews", "Competitive Analysis", "Heuristic Evaluation", "Cognitive Walkthrough", "Task Analysis", "Journey Mapping", "Content Mapping", "Sitemap", "User Flows", "Wireframes", "Prototypes", "Usability Testing", "A/B Testing", "Developer Handoff"],
+    deliverables: ["User Research", "Competitive Analysis", "Heuristic Evaluation", "Cognitive Walkthrough", "Task Analysis", "Journey Mapping", "Content Mapping", "Sitemap", "User Flows", "Wireframes", "Prototypes", "Usability Testing", "A/B Testing", "Developer Handoff"],
     tools: ["Figma", "FigJam", "Miro"],
     mainImage: { src: "Images/Hero/Industrial.jpg", caption: "ATS dashboard hero" },
     images: [
       { 
         src: "/Images/Projects/ATS/ATSJourneysOverview.png", 
-        caption: "Dashboard overview showing real-time material flow",
-        alt: "Dashboard interface displaying active material journeys with status indicators and real-time tracking"
-      },
-      { 
-        src: "/Images/Projects/ATS/ATSJourneyTracker.png", 
-        caption: "Task management interface with priority queue",
-        alt: "Journey tracking view showing individual material transfer tasks with priority levels and completion status"
+        caption: "Journeys overview displaying active material journeys with status indicators and real-time tracking",
+        alt: "Journeys overview displaying active material journeys with status indicators and real-time tracking"
       },
       { 
         src: "/Images/Projects/ATS/ATSRobotsOverview.png", 
-        caption: "Alert system and notification preferences",
+        caption: "Robot fleet overview displaying operational status, battery levels, and current assignments for each autonomous unit",
         alt: "Robot fleet overview displaying operational status, battery levels, and current assignments for each autonomous unit"
       },
       { 
+        src: "/Images/Projects/ATS/ATSJourneyTracker.png", 
+        caption: "Journey tracking view showing individual material transfer tasks with priority levels and completion status",
+        alt: "Journey tracking view showing individual material transfer tasks with priority levels and completion status"
+      },
+      { 
         src: "/Images/Projects/ATS/ATSRoutesPage.png", 
-        caption: "Task management interface with priority queue",
+        caption: "Routes configuration page showing predefined paths and waypoints for robot navigation through the facility",
         alt: "Routes configuration page showing predefined paths and waypoints for robot navigation through the facility"
       },
       { 
         src: "/Images/Projects/ATS/ATSDataVis.png", 
-        caption: "Task management interface with priority queue",
-        alt: "Data visualization dashboard with charts and metrics showing system performance and throughput statistics"
+        caption: "Data visualisation dashboard with charts and metrics showing system performance and throughput statistics",
+        alt: "Data visualisation dashboard with charts and metrics showing system performance and throughput statistics"
       }
     ]  
   },
@@ -54,9 +54,7 @@ const projects = [
       "User Research",
       "Problem Statement Definition",
       "Goal Definition",
-      "Persona Creation",
       "Competitive Analysis",
-      "SWOT Analysis",
       "Mind Mapping",
       "Content Mapping",
       "Sitemap",
@@ -73,23 +71,23 @@ const projects = [
     images: [
       { 
         src: "/Images/Projects/Windscope/WSSubAll.png", 
-        caption: "Notification frequency controls",
+        caption: "Subscription interface showing options to subscribe to all alerts with frequency settings",
         alt: "Subscription interface showing options to subscribe to all alerts with frequency settings"
       },
       { 
         src: "/Images/Projects/Windscope/WSCustomSub.png", 
-        caption: "Alert subscription settings panel",
-        alt: "Custom subscription panel allowing users to select specific alert types and channels for notifications"
+        caption: "Subscription interface showing options to select specific alert types and channels for notifications",
+        alt: "Subscription interface showing options to select specific alert types and channels for notifications"
       },
       { 
         src: "/Images/Projects/Windscope/WSUnsub.png", 
-        caption: "Notification frequency controls",
-        alt: "Unsubscribe interface showing how users can opt out of specific alert categories"
+        caption: "Subscription interface showing how a user can fully opt out of all alert categories",
+        alt: "Subscription interface showing how a user can fully opt out of all alert categories"
       },
       { 
         src: "/Images/Projects/Windscope/WSDropdownComponents.png", 
-        caption: "Channel-specific preferences",
-        alt: "Dropdown component design showing selectable notification channels including email, SMS, and in-app alerts"
+        caption: "Dropdown component design showing selectable notification channels",
+        alt: "Dropdown component design showing selectable notification channels"
       }
     ],
   },
