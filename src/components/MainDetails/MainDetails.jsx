@@ -46,9 +46,13 @@ function MainDetails({ onHeaderClick }) {
 
       <h3>Experience</h3>
       <ul className="experience-list">
-        <li>2025 Ada Mode</li>
-        <li>2025 Windscope</li>
-        <li>2024 Ada Mode</li>
+        <li>UX Designer, Ada Mode, Bristol, UK, 2025, Atlas LLM, UX Audit and Referencing Feature</li>
+        <li>UX Designer, Windscope, Bristol, UK, 2025, Subscription Feature</li>
+        <li>UX Designer, Ada Mode, Bristol, UK, 2025, ATS, Autonomous Transfer System interface</li>
+        <li>UX Designer, Ada Mode, Bristol, UK, 2025, Farmscore, UX and Visual Design</li>
+        <li>UX Designer, Ada Mode, Bristol, UK, 2024, B2B Weather Hazard Alert Reporting Interface</li>
+        <li>UX Designer, Ada Mode, Bristol, UK, 2024, B2B Chatbot Interface</li>
+        <li>UX Designer, Ada Mode, Bristol, UK, 2024, B2B Dashboard Interface</li>
       </ul>
 
       <h3>Tools</h3>
