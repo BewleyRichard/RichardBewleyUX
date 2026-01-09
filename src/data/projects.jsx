@@ -10,32 +10,32 @@ const projects = [
     ],
     deliverables: ["User Research", "Competitive Analysis", "Heuristic Evaluation", "Cognitive Walkthrough", "Task Analysis", "Journey Mapping", "Content Mapping", "Sitemap", "User Flows", "Wireframes", "Prototypes", "Usability Testing", "A/B Testing", "Developer Handoff"],
     tools: ["Figma", "FigJam", "Miro"],
-    mainImage: { src: "Images/Hero/Industrial.jpg", caption: "ATS dashboard hero" },
+    mainImage: { src: "Images/Hero/Industrial.jpg", caption: "Strong UX design can support supervision and control of automated systems." },
     images: [
       { 
         src: "/Images/Projects/ATS/ATSJourneysOverview.png", 
-        caption: "Journeys overview displaying active material journeys with status indicators and real-time tracking",
-        alt: "Journeys overview displaying active material journeys with status indicators and real-time tracking"
+        caption: "Journeys overview displaying active material journeys with status indicators and real-time tracking.",
+        alt: "Journeys overview displaying active material journeys with status indicators and real-time tracking."
       },
       { 
         src: "/Images/Projects/ATS/ATSRobotsOverview.png", 
-        caption: "Robot fleet overview displaying operational status, battery levels, and current assignments for each autonomous unit",
-        alt: "Robot fleet overview displaying operational status, battery levels, and current assignments for each autonomous unit"
+        caption: "Robot fleet overview displaying operational status, battery levels, and current assignments for each autonomous unit.",
+        alt: "Robot fleet overview displaying operational status, battery levels, and current assignments for each autonomous unit."
       },
       { 
         src: "/Images/Projects/ATS/ATSJourneyTracker.png", 
-        caption: "Journey tracking view showing individual material transfer tasks with priority levels and completion status",
-        alt: "Journey tracking view showing individual material transfer tasks with priority levels and completion status"
+        caption: "Journey tracking view showing individual material transfer tasks with priority levels and completion status.",
+        alt: "Journey tracking view showing individual material transfer tasks with priority levels and completion status."
       },
       { 
         src: "/Images/Projects/ATS/ATSRoutesPage.png", 
-        caption: "Routes configuration page showing predefined paths and waypoints for robot navigation through the facility",
-        alt: "Routes configuration page showing predefined paths and waypoints for robot navigation through the facility"
+        caption: "Routes configuration page showing predefined paths and waypoints for robot navigation through the facility.",
+        alt: "Routes configuration page showing predefined paths and waypoints for robot navigation through the facility."
       },
       { 
         src: "/Images/Projects/ATS/ATSDataVis.png", 
-        caption: "Data visualisation dashboard with charts and metrics showing system performance and throughput statistics",
-        alt: "Data visualisation dashboard with charts and metrics showing system performance and throughput statistics"
+        caption: "Data visualisation dashboard with charts and metrics showing system performance and throughput statistics.",
+        alt: "Data visualisation dashboard with charts and metrics showing system performance and throughput statistics."
       }
     ]  
   },
@@ -67,27 +67,27 @@ const projects = [
       "Accessibility Review",
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
-    mainImage: { src: "Images/Hero/WindFarm.jpg", caption: "Granular Alert hero" },
+    mainImage: { src: "Images/Hero/WindFarm.jpg", caption: "Customisation is essential to ensure alerts remain useful and avoid overwhelming users." },
     images: [
       { 
         src: "/Images/Projects/Windscope/WSSubAll.png", 
-        caption: "Subscription interface showing options to subscribe to all alerts with frequency settings",
-        alt: "Subscription interface showing options to subscribe to all alerts with frequency settings"
+        caption: "Subscription interface showing options to subscribe to all alerts.",
+        alt: "Subscription interface showing options to subscribe to all alerts."
       },
       { 
         src: "/Images/Projects/Windscope/WSCustomSub.png", 
-        caption: "Subscription interface showing options to select specific alert types and channels for notifications",
-        alt: "Subscription interface showing options to select specific alert types and channels for notifications"
+        caption: "Subscription interface showing options to select specific alert types and channels for notifications.",
+        alt: "Subscription interface showing options to select specific alert types and channels for notifications."
       },
       { 
         src: "/Images/Projects/Windscope/WSUnsub.png", 
-        caption: "Subscription interface showing how a user can fully opt out of all alert categories",
-        alt: "Subscription interface showing how a user can fully opt out of all alert categories"
+        caption: "Subscription interface showing how a user can fully opt out of all alert categories.",
+        alt: "Subscription interface showing how a user can fully opt out of all alert categories."
       },
       { 
         src: "/Images/Projects/Windscope/WSDropdownComponents.png", 
-        caption: "Dropdown component design showing selectable notification options",
-        alt: "Dropdown component design showing selectable notification options"
+        caption: "Dropdown component design showing selectable notification options.",
+        alt: "Dropdown component design showing selectable notification options."
       }
     ],
   },
@@ -96,7 +96,7 @@ const projects = [
     title: "Creating a Referencing System",
     year: 2025,
     client: "Ada Mode",
-    summary: "Creating a referencing system for an LLM Document management system",
+    summary: "Creating a referencing system for an agentic AI assistant.",
     details: [
       `New users of the Atlas AI Assistant faced difficulties in efficiently managing, adding, or retrieving reference information. The existing user interface displayed references below the assistant’s responses, which led to confusion, especially with lengthy responses containing numerous citations.`,
       `This also resulted in references occupying significant vertical screen space, which would be better utilised for prompts and responses. This was a critical problem as the application's core value proposition relies on presenting information directly from primary sources, essential for maintaining compliance and accuracy for engineers working on documentation for regulatory approvals.`,
@@ -121,29 +121,29 @@ const projects = [
     tools: ["Figma", "Miro"],
     mainImage: { 
       src: "Images/Hero/Referencing.jpg", 
-      caption: "Reference tracker interface", 
+      caption: "Use of AI within regulated industry presents challenges. This application addresses this by constraining AI agent responses to primary source material.", 
     },
     images: [
       { 
         src: "/Images/Projects/AtlasLLM/ARMain.png", 
-        caption: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information",
-        alt: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information"
+        caption: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information.",
+        alt: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information."
       },
       { 
         src: "/Images/Projects/AtlasLLM/AROriginal.png", 
-        caption: "The initial product was functionally robust but featured a placeholder front-end and a UI built primarily for functionality, with dedicated user experience considerations not yet integrated into its development",
-        alt: "The initial product was functionally robust but featured a placeholder front-end and a UI built primarily for functionality, with dedicated user experience considerations not yet integrated into its development"
+        caption: "The initial product was functionally robust but featured a placeholder front-end and a UI built primarily for functionality, with dedicated user experience considerations not yet integrated into its development.",
+        alt: "The initial product was functionally robust but featured a placeholder front-end and a UI built primarily for functionality, with dedicated user experience considerations not yet integrated into its development."
       },
       { 
         src: "/Images/Projects/AtlasLLM/ARStepsFirst.png", 
-        caption: "Raw reference text produced by the back-end and initial design iteration showing the first steps of the reference UI",
-        alt: "Raw reference text produced by the back-end and initial design iteration showing the first steps of the reference UI",
+        caption: "Raw reference text produced by the back-end and initial design iteration showing the first steps of the reference UI.",
+        alt: "Raw reference text produced by the back-end and initial design iteration showing the first steps of the reference UI.",
         background: "#000"
       },
       { 
         src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", 
-        caption: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions",
-        alt: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions"
+        caption: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions.",
+        alt: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions."
       }
     ]
   }

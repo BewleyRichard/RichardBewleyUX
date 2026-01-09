@@ -59,8 +59,8 @@
 .single-project > h1 {
   font-size: var(--font-h1-size);
   line-height: var(--lh-h1);
-  text-align: justify;
-  text-align-last: justify;
+  /* text-align: justify; */
+  /* text-align-last: justify; */
   margin-bottom: var(--space-xl);
   /* padding-left: var(--space-xs);
   padding-right: var(--space-xs); */
