@@ -24,8 +24,7 @@
 
 /* Caption spacing handled by global .caption in App.css */
 .side-gallery figcaption {
-  margin-block-start: var(--space-sm);
-  margin-block-end: var(--space-md);
+  margin-block-end: var(--space-xl);
 }
 
 @media (min-width: 768px) {

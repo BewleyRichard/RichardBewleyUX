@@ -213,6 +213,15 @@ body {
   --space-2xl: clamp(1.777rem, 4vw, 2.369rem);   /* ~28px → 38px */
   --space-3xl: clamp(2.369rem, 5vw, 3.157rem);   /* ~38px → 51px */
 
+  /* Shared content spacing - used by both SingleProject and MainDetails */
+  --content-h2-top: var(--space-md);
+  --content-h2-bottom: var(--space-md);
+  --content-h3-top: var(--space-xl);
+  --content-h3-bottom: var(--space-xs);
+  --content-p-gap: var(--space-md);
+  --content-ul-top: var(--space-xs);
+  --content-li-gap: var(--space-sm);
+
 /* -------------------- Colour and stroke Variables-------------------- */
 
   --stroke-width: 1px;

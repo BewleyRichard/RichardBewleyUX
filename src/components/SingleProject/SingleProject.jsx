@@ -44,10 +44,10 @@ function SingleProject({ selectedProjectId, onHeaderClick }) {
           )}
         </figure>
       )}
-
-      <h1>{project.title}</h1>
-      <h1>{project.client}, {project.year}</h1>
-      <p>{project.summary}</p>
+      <p style={{ marginBottom: 'var(--space-xs)' }}>{project.client}, {project.year}.</p>
+      <h1 style={{ marginBottom: 'var(--space-lg)' }}>{project.title}</h1>
+      <p style={{ marginBottom: 'var(--space-xl)' }}>{project.summary}</p>
+      
       {Array.isArray(project.details)
         ? project.details.map((t, i) => <p key={i}>{t}</p>)
         : <ReactMarkdown remarkPlugins={[remarkGfm]}>{project.details}</ReactMarkdown>}

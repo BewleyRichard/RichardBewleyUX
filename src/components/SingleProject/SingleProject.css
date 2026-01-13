@@ -43,8 +43,8 @@
 
 /* Title */
 .single-project > h2 {
-  margin-block-start: var(--sp-h2-top);
-  margin-block-end: var(--sp-h2-bottom);
+  margin-block-start: var(--content-h2-top);
+  margin-block-end: var(--content-h2-bottom);
   line-height: 1.1; /* specific line height for SingleProject titles */
 }
 
@@ -68,8 +68,8 @@
 
 /* Subheaders */
 .single-project h3 {
-  margin-block-start: var(--sp-h3-top);
-  margin-block-end: var(--sp-h3-bottom);
+  margin-block-start: var(--content-h3-top);
+  margin-block-end: var(--content-h3-bottom);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: clamp(6px, 0.25em, 8px);
@@ -102,21 +102,20 @@
 } */
 
 .single-project p + p {
-  margin-block-start: var(--sp-p-gap);
+  margin-block-start: var(--content-p-gap);
 }
 
 .single-project ul {
-  margin-block-start: var(--sp-ul-top);
+  margin-block-start: var(--content-ul-top);
   padding-inline-start: 0ch;
 }
 
 .single-project ul li + li {
-  margin-block-start: var(--sp-li-gap);
+  margin-block-start: var(--content-li-gap);
 }
 
 .single-project .caption {
-  margin-block-start: var(--space-sm);
-  margin-block-end: var(--space-md);
+  margin-block-end: var(--space-xl);
 }
 
 a.hyperlink-large {
