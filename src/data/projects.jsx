@@ -147,8 +147,8 @@ const projects = [
       },
       { 
         src: "/Images/Projects/AtlasLLM/ARSnippets.png", 
-        caption: "Clickable citations beside each fact signal sourcing instantly. Hovering shows a tooltip with a short excerpt, title, and date; clicking expands full source details. Badges under each citation display usage counts and jump to the exact location in the chat.",
-        alt: "Clickable citations beside each fact signal sourcing instantly. Hovering shows a tooltip with a short excerpt, title, and date; clicking expands full source details. Badges under each citation display usage counts and jump to the exact location in the chat."
+        caption: "Clickable citations within the response text indicates sources instantly. Hovering shows a tooltip with a short excerpt, title, and date; clicking expands full source details. Badges under each citation display usage counts and jump to the exact location in the chat.",
+        alt: "Clickable citations within the response text indicates sources instantly. Hovering shows a tooltip with a short excerpt, title, and date; clicking expands full source details. Badges under each citation display usage counts and jump to the exact location in the chat."
       }
   
     ]
