@@ -126,8 +126,8 @@ const projects = [
     images: [
       { 
         src: "/Images/Projects/AtlasLLM/ARMain.png", 
-        caption: "The redesigned interface showing the main reference tracker, a collapsible side panel displaying citation information and other useful document actions.",
-        alt: "The redesigned interface showing the main reference tracker, a collapsible side panel displaying citation information and other useful document actions."
+        caption: "The redesigned interface showing the main reference tracker, a collapsible side panel displaying citation information and other useful document actions. This keeps the main user flow clean while providing full context on demand.",
+        alt: "The redesigned interface showing the main reference tracker, a collapsible side panel displaying citation information and other useful document actions. This keeps the main user flow clean while providing full context on demand."
       },
       { 
         src: "/Images/Projects/AtlasLLM/AROriginal.png", 
