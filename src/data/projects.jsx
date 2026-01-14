@@ -93,7 +93,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Creating a Referencing System",
+    title: "Creating a Referencing System for an Agentic AI Assistant",
     year: 2025,
     client: "Ada Mode",
     summary: "Creating a referencing system for an agentic AI assistant.",
@@ -121,13 +121,13 @@ const projects = [
     tools: ["Figma", "Miro"],
     mainImage: { 
       src: "Images/Hero/Referencing.jpg", 
-      caption: "Use of AI within regulated industry presents challenges. This application addresses this by constraining AI agent responses to primary source material.", 
+      caption: "The use of AI within regulated industry presents challenges. This application addresses regulatory pain points by constraining AI agent responses to primary source material.", 
     },
     images: [
       { 
         src: "/Images/Projects/AtlasLLM/ARMain.png", 
-        caption: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information.",
-        alt: "Redesigned interface showing the main reference tracker with a collapsible side panel displaying citation information."
+        caption: "The redesigned interface showing the main reference tracker, a collapsible side panel displaying citation information and other useful document actions.",
+        alt: "The redesigned interface showing the main reference tracker, a collapsible side panel displaying citation information and other useful document actions."
       },
       { 
         src: "/Images/Projects/AtlasLLM/AROriginal.png", 
@@ -144,7 +144,13 @@ const projects = [
         src: "/Images/Projects/AtlasLLM/ARDesignIterations.png", 
         caption: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions.",
         alt: "The design process involved extensive iteration, progressing to more minimal designs, with cognitive walkthroughs at each stage to identify pain points and streamline interactions."
+      },
+      { 
+        src: "/Images/Projects/AtlasLLM/ARSnippets.png", 
+        caption: "Clickable citations beside each fact signal sourcing instantly. Hovering shows a tooltip with a short excerpt, title, and date; clicking expands full source details. Badges under each citation display usage counts and jump to the exact location in the chat.",
+        alt: "Clickable citations beside each fact signal sourcing instantly. Hovering shows a tooltip with a short excerpt, title, and date; clicking expands full source details. Badges under each citation display usage counts and jump to the exact location in the chat."
       }
+  
     ]
   }
 ];
