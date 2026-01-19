@@ -44,7 +44,7 @@ const projects = [
     title: "Implementing Granular Alert Subscriptions",
     year: 2025,
     client: "Windscope",
-    summary: "Designing a system to allow users to customise alert preferences in a granular way.",
+    summary: "Wind turbine monitoring systems generate a high volume of alerts. Without control over what, when, and how those alerts are delivered, users quickly become overwhelmed.",
     details: [
       "Windscope is a SaaS platform that uses machine learning for automated, scalable health and performance monitoring of wind turbines. Its web UI and alert system notify personnel of anomalies, improving maintenance prioritisation, efficiency, and overall fleet power output.",
       `The challenge was to move Windscope's current "all or nothing" alert system to one that allows users to receive only the information most relevant to their specific needs and responsibilities.`,
@@ -67,12 +67,12 @@ const projects = [
       "Accessibility Review",
       "Developer Handoff"],
     tools: ["Figma", "Miro"],
-    mainImage: { src: "Images/Hero/WindFarm.jpg", caption: "Customisation is essential to ensure alerts remain useful and avoid overwhelming users." },
+    mainImage: { src: "Images/Hero/WindFarm.jpg", caption: "SaaS platforms like Windscope turn raw turbine data into actionable intelligence, helping wind farms run more reliably, economically, and sustainably." },
     images: [
       { 
         src: "/Images/Projects/Windscope/WSSubAll.png", 
-        caption: "Subscription interface showing options to subscribe to all alerts.",
-        alt: "Subscription interface showing options to subscribe to all alerts."
+        caption: "Subscription interface with an 'Subscribe to all' option. Reducing full monitoring to just a few clicks allows for rapid onboarding and establishes a baseline that can be refined later.",
+        alt: "Subscription interface with an 'Subscribe to all' option. Reducing full monitoring to just a few clicks allows for rapid onboarding and establishes a baseline that can be refined later."
       },
       { 
         src: "/Images/Projects/Windscope/WSCustomSub.png", 
@@ -81,13 +81,13 @@ const projects = [
       },
       { 
         src: "/Images/Projects/Windscope/WSUnsub.png", 
-        caption: "Subscription interface showing how a user can fully opt out of all alert categories.",
-        alt: "Subscription interface showing how a user can fully opt out of all alert categories."
+        caption: "A single click opt-out gives users immediate control over notification noise.",
+        alt: "A single click opt-out gives users immediate control over notification noise."
       },
       { 
         src: "/Images/Projects/Windscope/WSDropdownComponents.png", 
-        caption: "Dropdown component design showing selectable notification options.",
-        alt: "Dropdown component design showing selectable notification options."
+        caption: "A reusable dropdown component showing the selectable notification options available.",
+        alt: "A reusable dropdown component showing the selectable notification options available."
       }
     ],
   },
@@ -96,7 +96,6 @@ const projects = [
     title: "Creating a Referencing System for an Agentic AI Assistant",
     year: 2025,
     client: "Ada Mode",
-    summary: "Creating a referencing system for an agentic AI assistant.",
     details: [
       `New users of the Atlas AI Assistant faced difficulties in efficiently managing, adding, or retrieving reference information. The existing user interface displayed references below the assistant’s responses, which led to confusion, especially with lengthy responses containing numerous citations.`,
       `This also resulted in references occupying significant vertical screen space, which would be better utilised for prompts and responses. This was a critical problem as the application's core value proposition relies on presenting information directly from primary sources, essential for maintaining compliance and accuracy for engineers working on documentation for regulatory approvals.`,
