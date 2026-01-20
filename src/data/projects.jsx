@@ -4,7 +4,7 @@ const projects = [
     title: "ATS (Autonomous Transfer System)",
     year: 2025,
     client: "Ada Mode",
-    summary: "A system to optimise material handling workflows with a digital interface.",
+    summary: "A system that presents real-time status, offers actionable controls, and explains robot behaviour closes the gap between robot actions and a manager's ability to monitor, understand, and intervene.",
     details: [
       'Ada Mode, a UK-based AI solutions company, required a software interface to support their feasibility study for an Autonomous Transfer System (ATS). This system would manage a fleet of robots transporting materials within an industrial facility. The goal was to create a compelling prototype to support Ada Mode’s pitch to move forward in a multi-stage B2B procurement process.'
     ],
