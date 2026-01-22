@@ -62,6 +62,23 @@
   margin-block-end: var(--space-md);
 }
 
+
+.main-details .experience-list {
+  margin-block-start: var(--content-ul-top);
+  margin-block-end: calc(var(--content-h3-top) / 2);
+  line-height: var(--lh-body); /* Match paragraph line height (1.5) */
+}
+
+.main-details .experience-list li + li {
+  margin-block-start: 0; /* Remove gap between list items */
+}
+
+.main-details .experience-list li:nth-child(2) {
+  font-style: italic;
+}
+
+
+
 @media (min-width: 768px) {
   .main-details {
     /* background: orange; */

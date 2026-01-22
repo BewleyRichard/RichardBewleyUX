@@ -27,15 +27,24 @@ function MainDetails({ onHeaderClick }) {
       </p>
 
       <h3>Experience</h3>
-      <ul className="experience-list">
-        <li>UX Designer, Ada Mode, Bristol, UK, 2025, Atlas LLM, UX Audit and Referencing Feature</li>
-        <li>UX Designer, Windscope, Bristol, UK, 2025, Subscription Feature</li>
-        <li>UX Designer, Ada Mode, Bristol, UK, 2025, ATS, Autonomous Transfer System interface</li>
-        <li>UX Designer, Ada Mode, Bristol, UK, 2025, Farmscore, UX and Visual Design</li>
-        <li>UX Designer, Ada Mode, Bristol, UK, 2024, B2B Weather Hazard Alert Reporting Interface</li>
-        <li>UX Designer, Ada Mode, Bristol, UK, 2024, B2B Chatbot Interface</li>
-        <li>UX Designer, Ada Mode, Bristol, UK, 2024, B2B Dashboard Interface</li>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>Year</h3>
+
+    <ul className="experience-list">
+        <li>UX Designer</li>
+        <li>ATS, Autonomous Transfer System interface</li>
+        <li>Ada Mode, Bristol, UK</li>
+        <li>November 11, 2025</li>
       </ul>
+
+     <ul className="experience-list">
+        <li>Job title</li>
+        <li>Project title</li>
+        <li>Client name, location</li>
+        <li>Month day, year</li>
+      </ul>
+
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>Year</h3>
+
 
       <h3>Tools</h3>
       <ul className="small-list">
