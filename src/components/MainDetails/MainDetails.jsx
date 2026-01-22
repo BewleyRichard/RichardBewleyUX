@@ -24,24 +24,6 @@ function MainDetails({ onHeaderClick }) {
         My name is Richard and I express myself digitally in order to experiment,
         have fun (this is the most important thing), and to understand this world
         in order to create new ones.
-        My name is Richard and I express myself digitally in order to experiment,
-        have fun (this is the most important thing), and to understand this world
-        in order to create new ones.
-        My name is Richard and I express myself digitally in order to experiment,
-        have fun (this is the most important thing), and to understand this world
-        in order to create new ones.
-        My name is Richard and I express myself digitally in order to experiment,
-        have fun (this is the most important thing), and to understand this world
-        in order to create new ones.
-        My name is Richard and I express myself digitally in order to experiment,
-        have fun (this is the most important thing), and to understand this world
-        in order to create new ones.
-        My name is Richard and I express myself digitally in order to experiment,
-        have fun (this is the most important thing), and to understand this world
-        in order to create new ones.
-        My name is Richard and I express myself digitally in order to experiment,
-        have fun (this is the most important thing), and to understand this world
-        in order to create new ones.
       </p>
 
       <h3>Experience</h3>
