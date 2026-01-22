@@ -27,7 +27,7 @@ function MainDetails({ onHeaderClick }) {
       </p>
 
       <h3>Experience</h3>
-      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>Year</h3>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2025</h3>
 
     <ul className="experience-list">
         <li>UX Designer</li>
@@ -43,7 +43,7 @@ function MainDetails({ onHeaderClick }) {
         <li>Month day, year</li>
       </ul>
 
-      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>Year</h3>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2024</h3>
 
 
       <h3>Tools</h3>
