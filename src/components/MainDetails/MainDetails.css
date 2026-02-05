@@ -73,9 +73,10 @@
   margin-block-start: 0; /* Remove gap between list items */
 }
 
-.main-details .experience-list li:nth-child(2) {
+.main-details .experience-list li:nth-child(n+2) {
   font-style: italic;
 }
+
 
 
 
