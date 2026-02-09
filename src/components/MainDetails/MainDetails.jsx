@@ -28,21 +28,21 @@ function MainDetails({ onHeaderClick }) {
 
       <h3>Experience</h3>
       <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2024 - 2025</h3>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)', fontStyle: 'italic'}}>Freelance UX Designer supporting Ada Mode Ltd, Bristol, UK</h3>
+
 
     <ul className="experience-list">
-        <li>Freelance UX Designer supporting Ada Mode Ltd, Bristol, UK</li>
-        <li>Atlas LLM, UX audit and referencing feature</li>
-        <li>ATS, Autonomous Transfer System interface</li>
-        <li>B2B weather hazard alert reporting interface</li>
-        <li>Chat bot interface, early Atlas LLM product</li>
-        <li>Temperature monitoring dashboard</li>
+        <li>Atlas LLM, UX audit and referencing feature,</li>
+        <li>ATS, Autonomous Transfer System interface,</li>
+        <li>B2B weather hazard alert reporting interface,</li>
+        <li>Chat bot interface, early Atlas LLM product,</li>
+        <li>Temperature monitoring dashboard.</li>
       </ul>
 
       <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2024</h3>
-
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)', marginBlockEnd: 'calc(var(--content-h3-top) / 2)', fontStyle: 'italic' }}>Freelance UX Designer supporting Windscope Ltd, Bristol, UK</h3>
       <ul className="experience-list">
-        <li>Freelance UX Designer supporting Windscope Ltd, Bristol, UK</li>
-        <li>Subscription feature</li>
+        <li>Subscription feature.</li>
       </ul>
 
       <h3>Tools</h3>
