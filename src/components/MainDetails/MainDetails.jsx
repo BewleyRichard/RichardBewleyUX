@@ -28,10 +28,10 @@ function MainDetails({ onHeaderClick }) {
 
       <h3>Experience</h3>
       <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2024 - 2025</h3>
-      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)', fontStyle: 'italic'}}>Freelance UX Designer supporting Ada Mode Ltd, Bristol, UK</h3>
-
 
     <ul className="experience-list">
+        <li>Freelance UX Designer supporting Ada Mode Ltd, Bristol, UK</li>
+        <li>Works:</li>
         <li>Atlas LLM, UX audit and referencing feature,</li>
         <li>ATS, Autonomous Transfer System interface,</li>
         <li>B2B weather hazard alert reporting interface,</li>
@@ -40,8 +40,9 @@ function MainDetails({ onHeaderClick }) {
       </ul>
 
       <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2024</h3>
-      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)', marginBlockEnd: 'calc(var(--content-h3-top) / 2)', fontStyle: 'italic' }}>Freelance UX Designer supporting Windscope Ltd, Bristol, UK</h3>
       <ul className="experience-list">
+        <li>Freelance UX Designer supporting Windscope Ltd, Bristol, UK</li>
+        <li>Works:</li>
         <li>Subscription feature.</li>
       </ul>
 
