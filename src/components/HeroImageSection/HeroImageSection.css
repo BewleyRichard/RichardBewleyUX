@@ -19,12 +19,12 @@
     width: 66.66%;
     height: 100%;
     flex-shrink: 0;
-    overflow: hidden; /* prevent both vertical and horizontal scroll */
+    overflow: hidden; /* prevents both vertical and horizontal scroll */
   }
 
 }
 
-/* Remove top margin from first heading ADD NEW MARGIN LATER*/
+/* Removes top margin from first heading*/
 .hero-image-section > h1:first-child,
 .hero-image-section > h2:first-child,
 .hero-image-section > h3:first-child,
@@ -39,7 +39,7 @@
   box-sizing: border-box;
   /* Restore original container-based scaling */
   font-size: clamp(1.875rem, 5cqw, 3rem);
-  /* Spacing between the image here, some fine tuning used to account for the  */
+  /* Spacing between the image here */
   margin-bottom: calc(var(--space-lg) - 3px);
 }
 

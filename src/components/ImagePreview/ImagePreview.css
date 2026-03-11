@@ -1,13 +1,13 @@
 .image-preview {
   position: fixed;
-  inset: 0; /* This is shorthand for top: 0; right: 0; bottom: 0; left: 0; */
+  inset: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000; /* High z-index to be on top of everything */
+  z-index: 1000; /* Places on top of everything */
   cursor: pointer;
   padding: var(--space-md);
 }

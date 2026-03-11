@@ -109,7 +109,7 @@
   }
 }
 
-/* Desktop: Match LeftSidebar overlay behavior inside MainDetails/SingleProject */
+/* Desktop: Match LeftSidebar overlay behaviour inside MainDetails/SingleProject */
 @media (min-width: 768px) {
   .main-details .scroll-tracking-header,
   .single-project .scroll-tracking-header {

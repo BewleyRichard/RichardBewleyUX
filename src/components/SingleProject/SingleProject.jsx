@@ -4,7 +4,7 @@ import "./SingleProject.css";
 import ScrollTrackingHeader from "../ScrollTrackingHeader.jsx";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import ImagePreview from "../ImagePreview/ImagePreview.jsx"; // 1. Import the component
+import ImagePreview from "../ImagePreview/ImagePreview.jsx"; 
 
 function SingleProject({ selectedProjectId, onHeaderClick }) {
   const project = projects.find((p) => p.id === selectedProjectId);
