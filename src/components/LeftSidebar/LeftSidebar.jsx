@@ -61,7 +61,7 @@ function LeftSidebar({ selectedProjectId, onSelectProject, onHeaderClick, onAbou
       </ul>
 
       <div className="contact-details">
-        <a href="mailto:your-email@example.com">Email</a>
+        <a href="mailto:RichardBewley@Proton.me">Email</a>
         <a href="/cv/your-cv.pdf" download>
           CV
         </a>
