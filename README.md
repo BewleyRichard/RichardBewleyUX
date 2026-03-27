@@ -1,5 +1,4 @@
 # Richard Bewley UX Design — Portfolio
-
 A personal portfolio website showcasing UX design work, built with React and Vite.
 
 🌐 **Live site:** [bewleyrichard.github.io/RichardBewleyUX](https://bewleyrichard.github.io/RichardBewleyUX/)

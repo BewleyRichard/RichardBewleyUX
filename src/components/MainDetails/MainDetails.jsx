@@ -50,7 +50,10 @@ function MainDetails({ onHeaderClick }) {
       <ul className="small-list">
         <li>Figma</li>
         <li>FigJam</li>
-        <li>Miro</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>GitHub</li>
       </ul>
     </div>
   );
