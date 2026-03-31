@@ -27,23 +27,23 @@ function MainDetails({ onHeaderClick }) {
       </p>
 
       <h3>Experience</h3>
-      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2024 - 2025</h3>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)', marginBlockEnd: '0' }}>Freelance UX Designer supporting Ada Mode Ltd, Bristol, UK</h3>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: '0', marginBlockEnd: '0', fontStyle: 'italic' }}>2024 - 2025</h3>
 
     <ul className="experience-list">
-        <li>Freelance UX Designer supporting Ada Mode Ltd, Bristol, UK</li>
         <li>Works:</li>
-        <li>Atlas LLM, UX audit and referencing feature,</li>
-        <li>ATS, Autonomous Transfer System interface,</li>
-        <li>B2B weather hazard alert reporting interface,</li>
-        <li>Chat bot interface, early Atlas LLM product,</li>
-        <li>Temperature monitoring dashboard.</li>
+        <li className="bulleted">Atlas LLM, UX audit and referencing feature</li>
+        <li className="bulleted">ATS, Autonomous Transfer System interface</li>
+        <li className="bulleted">B2B weather hazard alert reporting interface</li>
+        <li className="bulleted">Chat bot interface, early Atlas LLM product</li>
+        <li className="bulleted">Temperature monitoring dashboard</li>
       </ul>
 
-      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-bottom)',marginBlockEnd: 'calc(var(--content-h3-top) / 2)'}}>2024</h3>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: 'var(--content-h3-top)', marginBlockEnd: '0' }}>Freelance UX Designer supporting Windscope Ltd, Bristol, UK</h3>
+      <h3 style={{ textDecoration: 'none', marginBlockStart: '0', marginBlockEnd: '0', fontStyle: 'italic' }}>2024</h3>
       <ul className="experience-list">
-        <li>Freelance UX Designer supporting Windscope Ltd, Bristol, UK</li>
         <li>Works:</li>
-        <li>Subscription feature.</li>
+        <li className="bulleted">Subscription feature</li>
       </ul>
 
       <h3>Tools</h3>

@@ -77,6 +77,12 @@
   font-style: italic;
 }
 
+/* In MainDetails.css */
+.main-details .experience-list li.bulleted {
+  list-style-type: disc;
+  margin-left: var(--space-md);
+}
+
 
 
 
